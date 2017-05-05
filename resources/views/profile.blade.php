@@ -11,6 +11,7 @@
 		<h3>Add side nav-bar</h3>
 		<h3>Add user info on right</h3>
 	</div>
+	
 	<div id="sideProfile">
 		<div id="profilePicture"></div>
 		<div class="profileInfo"></div>
