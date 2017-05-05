@@ -1,5 +1,26 @@
-.logo {
+h1
+{
+	margin: 0;
+	padding: 0;
+
+}
+body
+{
+	margin: 0 auto;
+	padding: 0;
+}
+
+.logo
+{
+}
+
+.navBar 
+{
+	height: 40px;
+	width: 100%;
+	font-family: 'Muli', sans-serif;
 	text-align: center;
-	background-color: #000;
-	color: #fff;
+	background-color: #FFF;
+	color: #000;
+	
 }
