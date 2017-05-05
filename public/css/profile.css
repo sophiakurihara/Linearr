@@ -1,0 +1,68 @@
+#sideNavBar
+{
+	width: 23%;
+	height: 700px;
+	background-color: #231F20;
+	float:left;
+	text-align: center;
+	color: #FFF;
+	display: inline-block;
+	
+}
+
+#sideProfile
+{
+	width: 23%;
+	height: 700px;
+	float: right;
+	background-color: #EAEAEA;
+	display: inline-block;
+	
+}
+
+#middleContainer
+{
+	width: 49.9%;
+	
+	padding: 2%;
+	height: 650px;
+	background-color: #FFF;
+	text-align: center;
+	float:left;
+	box-shadow: -60px 0px 100px -90px #000000, 60px 0px 100px -90px #000000;
+	display: inline-block;
+}
+
+
+.aboutPicture
+{
+	width: 100%;
+	height: 25px;
+	border: 1px solid black;
+}
+
+#profilePicture
+{
+	height: 120px;
+	width: 120px;
+	margin-left: 26%;
+	margin-top: 8%;
+	border-radius: 50%;
+	border:1px solid black;
+}
+
+.profileInfo
+{
+	width: 80%;
+	height: 500px;
+	margin-top: 30px;
+	margin-left: 9.5%;
+	border: 1px solid black;
+}
+
+.settingsIcon
+{
+	width: 10%;
+	height: 10px;
+	border: 1px solid black;
+}
