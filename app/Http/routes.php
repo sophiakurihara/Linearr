@@ -18,3 +18,11 @@ Route::get('/', function () {
 Route::get('/profile', function () {
 	return view('profile');
 });
+
+// Events pages
+Route::get('/events', function() {
+	return view('events/index');
+});
+Route::get('/events/create', function () {
+	return view('events/create');
+});
