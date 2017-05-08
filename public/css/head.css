@@ -1,26 +1,8 @@
-h1
-{
+.logo {
+	background-color: #333366;
+	color: #fff;
+	text-align: center;
 	margin: 0;
 	padding: 0;
-
-}
-body
-{
-	margin: 0 auto;
-	padding: 0;
-}
-
-.logo
-{
-}
-
-.navBar 
-{
-	height: 40px;
-	width: 100%;
-	font-family: 'Muli', sans-serif;
-	text-align: center;
-	background-color: #FFF;
-	color: #000;
-
+	font-family: 'Sansation', sans-serif;
 }

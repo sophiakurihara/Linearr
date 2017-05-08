@@ -1,6 +1,14 @@
 @extends('layouts.master')
 
+@section('additional_css')
+
+<link rel="stylesheet" href="/css/home.css">
+
+@stop
+
 @section('content')
+<img src="/img/giphy.gif">
+
 <div class="row">
 
 <div class="col-md-6">
