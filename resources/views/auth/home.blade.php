@@ -8,6 +8,12 @@
 
 @section('content')
 
+<?php $errors->has('firstname') ? $redBorder1 = 'style="background-color: darkred;"' : $redBorder1 = false ?>
+<?php $errors->has('lastname') ? $redBorder2 = 'style="background-color: darkred;"' : $redBorder2 = false ?>
+<?php $errors->has('email') ? $redBorder3 = 'style="background-color: darkred;"' : $redBorder3 = false ?>
+<?php $errors->has('phone') ? $redBorder4 = 'style="background-color: darkred;"' : $redBorder4 = false ?>
+<?php $errors->has('password') ? $redBorder5 = 'style="background-color: darkred;"' : $redBorder5 = false ?>
+
 <div class="banner-image">
     <img src="/img/giphy.gif">
 
@@ -23,11 +29,11 @@
         <form action=" {{ action('UsersController@registerUser') }}" method="POST">
             
             {{ csrf_field() }}
-            <label for="firstname">First Name:</label><input type="text" name="first_name" id="firstname" placeholder="{{ $errors->has('firstname') ? 'Please enter your first name' : 'First name' }}" value="{{ $errors->has('firstname') ? '' : old('firstname') }}">
-            <label for="lastname">Last Name:</label><input type="text" name="last_name" id="lastname" placeholder="{{ $errors->has('lastname') ? 'Please enter your last name' : 'Last name' }}" value="{{ $errors->has('lastname') ? '' : old('lastname') }}">
-            <label for="email">E-Mail:</label><input type="text" name="email" id="email" placeholder="{{ $errors->has('email') ? 'Please enter your email address' : 'Email' }}" value="{{ $errors->has('email') ? '' : old('email') }}">
-            <label for="phone">Phone:</label><input type="text" name="phone" id="phone" placeholder="{{ $errors->has('phone') ? 'Please enter your phone number' : 'Phone' }}" value="{{ $errors->has('phone') ? '' : old('phone') }}">
-            <label for="password">Password:</label><input type="text" name="password" id="password" placeholder="{{ $errors->has('password') ? 'Please enter your password' : 'Password' }}">
+            <label for="firstname">First Name:</label><input type="text" name="firstname" <?php echo $redBorder1; ?> id="firstname" placeholder="{{ $errors->has('firstname') ? 'Please enter your first name' : 'First name' }}" value="{{ $errors->has('firstname') ? '' : old('firstname') }}">
+            <label for="lastname">Last Name:</label><input type="text" name="lastname" <?php echo $redBorder2; ?> id="lastname" placeholder="{{ $errors->has('lastname') ? 'Please enter your last name' : 'Last name' }}" value="{{ $errors->has('lastname') ? '' : old('lastname') }}">
+            <label for="email">E-Mail:</label><input type="text" name="email" id="email" <?php echo $redBorder3; ?> placeholder="{{ $errors->has('email') ? 'Please enter your email address' : 'Email' }}" value="{{ $errors->has('email') ? '' : old('email') }}">
+            <label for="phone">Phone:</label><input type="text" name="phone" id="phone" <?php echo $redBorder4; ?> placeholder="{{ $errors->has('phone') ? 'Please enter your phone number' : 'Phone' }}" value="{{ $errors->has('phone') ? '' : old('phone') }}">
+            <label for="password">Password:</label><input type="password" name="password" <?php echo $redBorder5; ?> id="password" placeholder="{{ $errors->has('password') ? 'Please enter your password' : 'Password' }}">
             {!! method_field('POST') !!}
 
             <button type="submit" class="login-button">Register</button>
@@ -48,16 +54,11 @@
 
 </div>
 
-<?php
-
-if(!empty($errors)) {
-    $string = "";
-    foreach($errors as $error) {
-        $string .= "$error, ";
-    }
-}
-
-?>
+<?php $errors->has('firstname') ? $clicked = "true" : $clicked = "false" ?>
+<?php $errors->has('lastname') ? $clicked = "true" : $clicked = "false" ?>
+<?php $errors->has('email') ? $clicked = "true" : $clicked = "false" ?>
+<?php $errors->has('phone') ? $clicked = "true" : $clicked = "false" ?>
+<?php $errors->has('password') ? $clicked = "true" : $clicked = "false" ?>
 
 <script src="/js/jquery/10.8.3/jquery.min.js" type="text/javascript"></script>
 <script src="/js/jquery/jquery-3.2.0.min.js" type="text/javascript"></script>
@@ -65,9 +66,15 @@ if(!empty($errors)) {
 <script>
 
 $(document).ready(function(){
-    var errors = [];
-
-
+    var clicked = '<?php echo $clicked; ?>';
+    console.log(clicked);
+    if(clicked === "true") {
+        setTimeout(function(){
+            $(".banner-buttons").addClass("hide");
+            $(".banner-right-register").removeClass("hide");
+            $(".banner-right-register").fadeIn(400);
+        }, 200);
+    }
 
     $("#login").click(function(e){
         e.preventDefault();
