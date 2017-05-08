@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
+use Hash;
 
 class UsersController extends Controller
 {
@@ -23,6 +24,13 @@ class UsersController extends Controller
         ];
 
         $this->validate($request, $rules);
+
+        $user->first_name = $request->firstname;
+        $user->last_name = $request->lastname;
+        $user->email = $request->email;
+        $user->phone = $request->phone;
+        $user->password = Hash::make($request->password);
+
         $user->save();
 
         return redirect()->action('UsersController@displayLogin');
