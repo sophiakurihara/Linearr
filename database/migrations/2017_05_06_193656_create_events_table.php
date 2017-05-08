@@ -13,8 +13,8 @@ class CreateEventsTable extends Migration
     public function up()
     {
         //creating events table 
-        Schema::create('scheduledEvents', function(Blueprint $table){
-            $table->increments('id');
+        Schema::create('events', function(Blueprint $table){
+            $table->increments('id')->unsigned();
             $table->text('description'); 
             $table->dateTime('date_of_event');
             $table->integer('created_by')->unsigned();
@@ -33,6 +33,6 @@ class CreateEventsTable extends Migration
     public function down()
     {
         //Drop Events 
-        Schema::drop('scheduledEvents');
+        Schema::drop('events');
     }
 }

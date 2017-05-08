@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Contact;
 
-class ContactsTable extends Seeder
+class ContactsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -19,11 +20,11 @@ class ContactsTable extends Seeder
         	//creating the object
         	$contact = new Contact();
         	//populating data in the column names
-        	$contact->$faker->firstName;
-        	$contact->$faker->lastName; 
-        	$contact->$faker->middleName;
-        	$contact->$faker->email;
-        	$contact->$faker->phoneNumber;
+            $contact->belongs_to = 4;
+        	$contact->first_name = $faker->firstName;
+        	$contact->last_name = $faker->lastName; 
+        	$contact->email = $faker->email;
+        	$contact->phone_number = $faker->phoneNumber;
         	//saving the entry/contact info
         	$contact->save();
         }
