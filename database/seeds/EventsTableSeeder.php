@@ -23,8 +23,8 @@ class EventsTableSeeder extends Seeder
         	//event targeting the column of x,y,z 
         	$scheduledEvent->description = $faker->paragraph;
         	$scheduledEvent->date_of_event = $faker->date;
-        	$scheduledEvent->created_by = 1;
-        	$scheduledEvent->sent_to = "8084362462";
+        	$scheduledEvent->created_by = \App\User::all()->random()->id;
+        	$scheduledEvent->sent_to = "2107748500";
         	$scheduledEvent->save();
         }
     }

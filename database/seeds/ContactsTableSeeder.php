@@ -20,7 +20,7 @@ class ContactsTableSeeder extends Seeder
         	//creating the object
         	$contact = new Contact();
         	//populating data in the column names
-            $contact->belongs_to = 4;
+            $contact->belongs_to = \App\User::all()->random()->id;
         	$contact->first_name = $faker->firstName;
         	$contact->last_name = $faker->lastName; 
         	$contact->email = $faker->email;
