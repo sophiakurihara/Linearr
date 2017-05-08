@@ -11,11 +11,8 @@
 </head>
 <body>
 	<div class="logo">
-<<<<<<< HEAD
+
 		<img class="linearr" src="/img/Linearr_logo_transparent.png">
-=======
-		<div class="logo"><h1>Linearr</h1></div>
->>>>>>> 92bbcbd2c2bcff86f99aa498bf753c4d9c0b7402
 	</div>
 
 	<!-- place navbar here in master -->
