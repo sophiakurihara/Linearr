@@ -7,84 +7,66 @@
 @stop
 
 @section('content')
-<img src="/img/giphy.gif">
 
-<div class="row">
+<div class="banner-image">
+    <img src="/img/giphy.gif">
 
-<div class="col-md-6">
-<h1>Login</h1>
-<form class="form-horizontal" method="POST" action="{{ action('Auth\AuthController@postLogin') }}">
-    {!! csrf_field() !!}
-
-<div class="form-group">
-        <label for="email" class="col-md-2">Email</label>
-    <div class="col-md-8">
-        <input type="email" name="email" value="{{ old('email') }}" class="form-control">
+    <div class="banner-buttons">
+        <a href="#login" id="login">Login</a>
+        <a href="#register" id="register">Register</a>
     </div>
-</div>
-    
-<div class="form-group">
-        <label for="password" class="col-md-2">Password</label>
-    <div class="col-md-8">
-        <input type="password" name="password" id="password" class="form-control">
-    </div>
-</div>
 
-<div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-        <div class="checkbox">
-        <input type="checkbox" name="remember"> Remember Me
+    <div class="banner-right-register hide">
+        <div class="banner-right-title">
+            <h1>Register</h1>
         </div>
+        <form>
+            <label for="firstname">First Name:</label><input type="text" id="firstname">
+            <label for="lastname">Last Name:</label><input type="text" id="lastname">
+            <label for="email">E-Mail:</label><input type="text" id="email">
+            <label for="phone">Phone:</label><input type="text" id="phone">
+            <button type="submit" class="login-button">Register</button>
+        </form>
     </div>
-</div>
 
-<div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-primary">Login</button>
-    </div>
-</div>
-</form>
-</div>
-
-<div class="col-md-6">
-    <h1>Sign Up</h1>
-<form class="form-horizontal" method="POST" action="{{ action('Auth\AuthController@postRegister')}}">
-    {!! csrf_field() !!}
-
-<div class="form-group">
-        <label for="name" class="col-md-2">Name</label>
-    <div class="col-md-8">
-        <input type="text" name="name" value="{{ old('name') }}" class="form-control">
-    </div>
-</div>
-
-    <div class="form-group">
-        <label for="email" class="col-md-2">Email</label>
-        <div class="col-md-8">
-        <input type="email" name="email" value="{{ old('email') }}" class="form-control">
+    <div class="banner-right-login hide">
+        <div class="banner-right-title">
+            <h1>Login</h1>
         </div>
+        <form>
+            <label for="email">Email:</label><input type="text" id="email">
+            <label for="password">Password:</label><input type="text" id="password">
+            <button type="submit" class="login-button">Login</button>
+        </form>
     </div>
 
-    <div class="form-group">
-        <label for="password" class="col-md-2">Password</label>
-        <div class="col-md-8">
-        <input type="password" name="password" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="password_confirmation" class="col-md-2">Confirm Password</label>
-        <div class="col-md-8">
-        <input type="password" name="password_confirmation" class="form-control">
-        </div>
-    </div>
-
-    <div>
-        <button type="submit" class="btn btn-primary">Register</button>
-    </div>
-</form>
 </div>
-</div>
+
+<script src="/js/jquery/10.8.3/jquery.min.js" type="text/javascript"></script>
+<script src="/js/jquery/jquery-3.2.0.min.js" type="text/javascript"></script>
+
+<script>
+
+$(document).ready(function(){
+    $("#login").click(function(){
+        $(".banner-buttons").fadeOut(400);
+        setTimeout(function(){
+            $(".banner-right-login").removeClass("hide");
+            $(".banner-right-login").fadeIn(400);
+        }, 440);
+    });
+    $("#register").click(function(){
+        $(".banner-buttons").fadeOut(400);
+        setTimeout(function(){
+            $(".banner-right-register").removeClass("hide");
+            $(".banner-right-register").fadeIn(400);
+        }, 440);
+    });
+});
+
+</script>
+
+
 @stop
 
 
