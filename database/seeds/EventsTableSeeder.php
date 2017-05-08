@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Events;
+use App\Event;
 
 class EventsTableSeeder extends Seeder
 {
@@ -18,13 +18,13 @@ class EventsTableSeeder extends Seeder
         for ($i = 0; $i <= 10; $i++)
         {
         	//creating an object for the event 
-        	$scheduledEvent = new scheduledEvent();
+        	$scheduledEvent = new Event();
         	//populating faker data
         	//event targeting the column of x,y,z 
         	$scheduledEvent->description = $faker->paragraph;
-        	$scheduledEvent->dateTime = $faker->date;
-        	$scheduledEvent->created_by = 1;
-        	$scheduledEvent->sent_to = "8084362462";
+        	$scheduledEvent->date_of_event = $faker->date;
+        	$scheduledEvent->created_by = \App\User::all()->random()->id;
+        	$scheduledEvent->sent_to = "2107748500";
         	$scheduledEvent->save();
         }
     }

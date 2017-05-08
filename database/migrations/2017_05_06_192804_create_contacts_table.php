@@ -14,15 +14,14 @@ class CreateContactsTable extends Migration
     {
         //creating Contacts Table
         Schema::create('contacts', function(Blueprint $table){
-            $table->increments('id');
+            $table->increments('id')->unsigned();
             $table->integer('belongs_to')->unsigned();
             // no one can create a contact unless it's the user (id). 
-            $table->foreign('belongs_to')->reference('id')->on('users');
+            $table->foreign('belongs_to')->references('id')->on('users');
             $table->string('email', 100)->unique();
             $table->string('first_name');
-            $table->string('middle_name');
             $table->string('last_name');
-            $table->integer('phone_number')->unsigned()->unique();
+            $table->string('phone_number');
             $table->timestamps();
         });
     }
