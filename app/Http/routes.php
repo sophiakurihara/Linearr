@@ -15,24 +15,4 @@ Route::get('/', function () {
     return view('auth/home');
 });
 
-Route::get('/profile', function () {
-	return view('profile');
-});
-
-// Events pages
-Route::get('/events', function() {
-	return view('events/index');
-});
-Route::get('/events/create', function () {
-	return view('events/create');
-});
-
-// Authentication routes
-Route::get('/login', 'Auth\AuthController@getLogin');
-Route::post('/login', 'Auth\AuthController@postLogin');
-Route::get('/logout', 'Auth\AuthController@getLogout');
-
-// Registration routes...
-Route::get('/register', 'Auth\AuthController@getRegister');
-Route::post('/register', 'Auth\AuthController@postRegister');
-
+Route::post('/register', 'UsersController@registerUser');
