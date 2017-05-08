@@ -7,7 +7,10 @@
 @stop
 
 @section('content')
-<img src="/img/giphy.gif">
+
+<div class="banner-image">
+    <img src="/img/giphy.gif">
+</div>
 
 <div class="row">
 

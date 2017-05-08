@@ -1,6 +1,31 @@
-img {
-	width: 100%;
-	position: center;
-	margin: 0;
-	padding: 0;
+h1 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 200;
+	font-size: 25px;
+	padding-top: 28px;
+	padding-bottom: 30px;
+}
+
+.banner-image > img {
+	background-size: cover;
+	height: 100%;
+    vertical-align: top;
+}
+
+.banner-image {
+    position: relative;
+    height: 434px;
+	width: auto;
+    -webkit-box-shadow: 0px 3px 17px 4px rgba(65,86,47,1);
+    -moz-box-shadow: 0px 3px 17px 4px rgba(65,86,47,1);
+	box-shadow: 0 4px 14px -4px gray;
+}
+
+.banner-image:after {
+    content: '\A';
+    position: absolute;
+    height: 100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: 0;
 }
