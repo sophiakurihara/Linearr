@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -14,7 +15,11 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // $this->call(UserTableSeeder::class);
+
+        //add in all seeders that you want to seed the db with when you call php artisan db:seed
+        $this->call(ContactsTableSeeder::class);
+        $this->call(UserTableSeeder::class);
+        $this->call(EventsTableSeeder::class);
 
         Model::reguard();
     }
