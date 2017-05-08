@@ -57,6 +57,8 @@ if(!empty($errors)) {
     }
 }
 
+?>
+
 <script src="/js/jquery/10.8.3/jquery.min.js" type="text/javascript"></script>
 <script src="/js/jquery/jquery-3.2.0.min.js" type="text/javascript"></script>
 
