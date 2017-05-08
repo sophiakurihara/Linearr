@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="logo">
-		<div class="logo"><h1>LINEARR</h1></div>
+		<img class="linearr" src="/img/Linearr_logo_transparent.png">
 	</div>
 
 	<!-- place navbar here in master -->
