@@ -8,11 +8,11 @@
 
 @section('content')
 
-<?php $errors->has('firstname') ? $redBorder1 = 'style="background-color: darkred;"' : $redBorder1 = false ?>
-<?php $errors->has('lastname') ? $redBorder2 = 'style="background-color: darkred;"' : $redBorder2 = false ?>
-<?php $errors->has('email') ? $redBorder3 = 'style="background-color: darkred;"' : $redBorder3 = false ?>
-<?php $errors->has('phone') ? $redBorder4 = 'style="background-color: darkred;"' : $redBorder4 = false ?>
-<?php $errors->has('password') ? $redBorder5 = 'style="background-color: darkred;"' : $redBorder5 = false ?>
+<?php $errors->has('firstname') ? $redBorder1 = 'style="color: darkred; font-weight: bold;"' : $redBorder1 = false ?>
+<?php $errors->has('lastname') ? $redBorder2 = 'style="color: darkred; font-weight: bold;"' : $redBorder2 = false ?>
+<?php $errors->has('email') ? $redBorder3 = 'style="color: darkred; font-weight: bold;"' : $redBorder3 = false ?>
+<?php $errors->has('phone') ? $redBorder4 = 'style="color: darkred; font-weight: bold;"' : $redBorder4 = false ?>
+<?php $errors->has('password') ? $redBorder5 = 'style="color: darkred; font-weight: bold;"' : $redBorder5 = false ?>
 
 <div class="banner-image">
     <img src="/img/giphy.gif">
@@ -27,13 +27,13 @@
             <h1>Register</h1>
         </div>
         <form action=" {{ action('UsersController@registerUser') }}" method="POST">
-            
+
             {{ csrf_field() }}
-            <label for="firstname">First Name:</label><input type="text" name="firstname" <?php echo $redBorder1; ?> id="firstname" placeholder="{{ $errors->has('firstname') ? 'Please enter your first name' : 'First name' }}" value="{{ $errors->has('firstname') ? '' : old('firstname') }}">
-            <label for="lastname">Last Name:</label><input type="text" name="lastname" <?php echo $redBorder2; ?> id="lastname" placeholder="{{ $errors->has('lastname') ? 'Please enter your last name' : 'Last name' }}" value="{{ $errors->has('lastname') ? '' : old('lastname') }}">
-            <label for="email">E-Mail:</label><input type="text" name="email" id="email" <?php echo $redBorder3; ?> placeholder="{{ $errors->has('email') ? 'Please enter your email address' : 'Email' }}" value="{{ $errors->has('email') ? '' : old('email') }}">
-            <label for="phone">Phone:</label><input type="text" name="phone" id="phone" <?php echo $redBorder4; ?> placeholder="{{ $errors->has('phone') ? 'Please enter your phone number' : 'Phone' }}" value="{{ $errors->has('phone') ? '' : old('phone') }}">
-            <label for="password">Password:</label><input type="password" name="password" <?php echo $redBorder5; ?> id="password" placeholder="{{ $errors->has('password') ? 'Please enter your password' : 'Password' }}">
+            <label for="firstname" <?php echo $redBorder1; ?>>First Name:</label><input type="text" name="firstname" id="firstname" placeholder="{{ $errors->has('firstname') ? 'Please enter your first name' : 'First name' }}" value="{{ $errors->has('firstname') ? '' : old('firstname') }}">
+            <label for="lastname" <?php echo $redBorder2; ?>>Last Name:</label><input type="text" name="lastname" id="lastname" placeholder="{{ $errors->has('lastname') ? 'Please enter your last name' : 'Last name' }}" value="{{ $errors->has('lastname') ? '' : old('lastname') }}">
+            <label for="email" <?php echo $redBorder3; ?>>E-Mail:</label><input type="text" name="email" id="email" placeholder="{{ $errors->has('email') ? 'Please enter your email address' : 'Email' }}" value="{{ $errors->has('email') ? '' : old('email') }}">
+            <label for="phone" <?php echo $redBorder4; ?>>Phone:</label><input type="text" name="phone" id="phone" placeholder="{{ $errors->has('phone') ? 'Please enter your phone number' : 'Phone' }}" value="{{ $errors->has('phone') ? '' : old('phone') }}">
+            <label for="password" <?php echo $redBorder5; ?>>Password:</label><input type="password" name="password" id="password" placeholder="{{ $errors->has('password') ? 'Please enter your password' : 'Password' }}">
             {!! method_field('POST') !!}
 
             <button type="submit" class="login-button">Register</button>
