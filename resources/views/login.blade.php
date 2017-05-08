@@ -11,29 +11,7 @@
 <div class="banner-image">
     <img src="/img/giphy.gif">
 
-    <div class="banner-buttons">
-        <a href="#login" id="login">Login</a>
-        <a href="#register" id="register">Register</a>
-    </div>
-
-    <div class="banner-right-register hide">
-        <div class="banner-right-title">
-            <h1>Register</h1>
-        </div>
-        <form action=" {{ action('UsersController@registerUser') }}" method="POST">
-            
-            {{ csrf_field() }}
-            <label for="firstname">First Name:</label><input type="text" name="first_name" id="firstname">
-            <label for="lastname">Last Name:</label><input type="text" name="last_name" id="lastname">
-            <label for="email">E-Mail:</label><input type="text" name="email" id="email">
-            <label for="phone">Phone:</label><input type="text" name="phone" id="phone">
-            
-            <button type="submit" class="login-button">Register</button>
-
-        </form>
-    </div>
-
-    <div class="banner-right-login hide">
+    <div class="banner-right-login">
         <div class="banner-right-title">
             <h1>Login</h1>
         </div>
@@ -52,20 +30,7 @@
 <script>
 
 $(document).ready(function(){
-    $("#login").click(function(){
-        $(".banner-buttons").fadeOut(400);
-        setTimeout(function(){
-            $(".banner-right-login").removeClass("hide");
-            $(".banner-right-login").fadeIn(400);
-        }, 440);
-    });
-    $("#register").click(function(){
-        $(".banner-buttons").fadeOut(400);
-        setTimeout(function(){
-            $(".banner-right-register").removeClass("hide");
-            $(".banner-right-register").fadeIn(400);
-        }, 440);
-    });
+    $(".banner-right-login").fadeIn(400);
 });
 
 </script>
