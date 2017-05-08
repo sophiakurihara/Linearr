@@ -1,9 +1,14 @@
-h1 {
-	font-family: 'Lato', sans-serif;
-	font-weight: 200;
-	font-size: 25px;
-	padding-top: 28px;
-	padding-bottom: 30px;
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+.banner-buttons {
+	float: left;
+	width: 400px;
+	margin-top: 190px;
+	margin-left: 15%;
 }
 
 .banner-image > img {
@@ -31,9 +36,16 @@ h1 {
     opacity: 0;
 }
 
-.banner-right {
+.banner-right-register {
 	float: left;
+	display: none;
 	padding-top: 1%;
+	padding-left: 10%;
+}
+.banner-right-login {
+	float: left;
+	display:none;
+	padding-top: 2%;
 	padding-left: 10%;
 }
 
@@ -43,6 +55,66 @@ h1 {
 }
 
 .banner-right-title > h1 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 200;
+	font-size: 25px;
+	color: black;
+}
+
+h1 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 200;
+	font-size: 25px;
+	padding-top: 28px;
+	padding-bottom: 30px;
+}
+
+.hide {
+	display: none;
+}
+
+#login {
+	padding: 16px 64px;
+	background-color: #161B33;
+	color: white;
+	border-radius: 4px;
+}
+#register {
+	padding: 16px 54px;
+	background-color: #DE0D92;
+	color: white;
+	border-radius: 4px;
+}
+
+.login-button {
+	float: right;
+	padding: 10px;
+	margin-right: 5px;
+	border-radius: 2px;
+	border: 0px;
+	background-color: #114B5F;
+	color: white;
+}
+
+.login-button:hover {
+	background-color: #58818f;
+	color: white;
+}
+
+.login-left {
+	float: left;
+	padding-left: 10%;
+	padding-top: 1%;
+	width: 50%;
+	background-color: white;
+}
+
+.login-left-title {
+	margin-left: 122px;
+	margin-bottom: 20px;
+}
+
+.login-left-title > h1 {
 	font-family: 'Lato', sans-serif;
 	font-weight: 200;
 	font-size: 25px;
@@ -73,6 +145,10 @@ label {
 	color: #114B5F;
 }
 
+input:focus, textarea:focus {
+    outline: none;
+}
+
 form, input {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -80,5 +156,5 @@ form, input {
 }
 
 form {
-    width: 500px;
+    width: 430px;
 }
