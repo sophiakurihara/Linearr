@@ -67,10 +67,6 @@ if(!empty($errors)) {
 $(document).ready(function(){
     var errors = [];
 
-    if() {
-
-    }
-
 
 
     $("#login").click(function(e){
