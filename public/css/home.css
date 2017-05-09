@@ -52,7 +52,8 @@ body {
 .banner-right-register {
 	float: left;
 	display: none;
-	padding-left: 10%;
+	padding-left: 12%;
+	margin-top: -1%;
 }
 .banner-right-login {
 	float: left;
@@ -114,10 +115,9 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 }
 .invalid-credentials {
 	color: black;
-	margin-left: 1%;
-	margin-right: 2%;
+	margin-left: -30px;
+	margin-top: -30px;
 	padding: 8px 0px;
-	border-bottom: 1px solid #e1e1e1;
 	font-size: 13px;
 	font-family: 'Lato', sans-serif;
 	font-weight: 200;
