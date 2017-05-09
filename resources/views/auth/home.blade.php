@@ -23,14 +23,12 @@
             <a href="login" id="login">Login</a>
             <a href="register" id="register">Register</a>
         </div>
-<<<<<<< HEAD
-
         <div class="banner-right-register hide">
             <div class="banner-right-title">
                 <h1>Register</h1>
             </div>
             <form action=" {{ action('UsersController@registerUser') }}" method="POST">
-=======
+
         <form action=" {{ action('Auth\AuthController@postRegister') }}" method="POST">
 
             {{ csrf_field() }}
