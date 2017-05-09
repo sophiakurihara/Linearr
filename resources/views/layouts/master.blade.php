@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="/css/head.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @yield ('additional_css')
@@ -27,5 +28,12 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
+  <div class="footer">
+    <div class="contactUsIcons">
+      <div class="facebook"><a href=""></a></div>
+      <div class="tumbler"><a href=""></a></div>
+      <div class="twitter"><a href=""></a></div>
+    </div>
+  </div>
 </body>
 </html>

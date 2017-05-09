@@ -18,16 +18,17 @@
 
 <div class="banner-image">
     <img src="/img/giphy.gif">
-
-    <div class="banner-buttons">
-        <a href="login" id="login">Login</a>
-        <a href="register" id="register">Register</a>
-    </div>
-
-    <div class="banner-right-register hide">
-        <div class="banner-right-title">
-            <h1>Register</h1>
+    <div class="loginRegisterContainer">
+        <div class="banner-buttons">
+            <a href="login" id="login">Login</a>
+            <a href="register" id="register">Register</a>
         </div>
+        <div class="banner-right-register hide">
+            <div class="banner-right-title">
+                <h1>Register</h1>
+            </div>
+            <form action=" {{ action('UsersController@registerUser') }}" method="POST">
+
         <form action=" {{ action('Auth\AuthController@postRegister') }}" method="POST">
 
             {{ csrf_field() }}
@@ -37,10 +38,20 @@
             <label for="phone" <?php echo $redBorder4; ?>>Phone:</label><input type="text" name="phone" id="phone" placeholder="{{ $errors->has('phone') ? 'Please enter your phone number' : 'Phone' }}" value="{{ $errors->has('phone') ? '' : old('phone') }}">
             <label for="password" <?php echo $redBorder5; ?>>Password:</label><input type="password" name="password" id="password" placeholder="{{ $errors->has('password') ? 'Please enter your password' : 'Password' }}">
             <label for="password_confirmation" <?php echo $redBorder6; ?>>Confirm Password:</label><input type="password" name="password_confirmation" id="password_confirmation" placeholder="{{ $errors->has('password_confirmation') ? 'Please confirm your password' : 'Confirm Password' }}">
+>>>>>>> aea3ddaffeb8bacef4042d2f6d3821636f9559bd
 
-            <button type="submit" class="login-button">Register</button>
+                {{ csrf_field() }}
+                <label for="firstname" <?php echo $redBorder1; ?>>First Name:</label><input type="text" name="firstname" id="firstname" placeholder="{{ $errors->has('firstname') ? 'Please enter your first name' : 'First name' }}" value="{{ $errors->has('firstname') ? '' : old('firstname') }}">
+                <label for="lastname" <?php echo $redBorder2; ?>>Last Name:</label><input type="text" name="lastname" id="lastname" placeholder="{{ $errors->has('lastname') ? 'Please enter your last name' : 'Last name' }}" value="{{ $errors->has('lastname') ? '' : old('lastname') }}">
+                <label for="email" <?php echo $redBorder3; ?>>E-Mail:</label><input type="text" name="email" id="email" placeholder="{{ $errors->has('email') ? 'Please enter your email address' : 'Email' }}" value="{{ $errors->has('email') ? '' : old('email') }}">
+                <label for="phone" <?php echo $redBorder4; ?>>Phone:</label><input type="text" name="phone" id="phone" placeholder="{{ $errors->has('phone') ? 'Please enter your phone number' : 'Phone' }}" value="{{ $errors->has('phone') ? '' : old('phone') }}">
+                <label for="password" <?php echo $redBorder5; ?>>Password:</label><input type="password" name="password" id="password" placeholder="{{ $errors->has('password') ? 'Please enter your password' : 'Password' }}">
+                {!! method_field('POST') !!}
 
-        </form>
+                <button type="submit" class="login-button">Register</button>
+
+            </form>
+        </div>
     </div>
 
     <div class="banner-right-login hide">
