@@ -6,12 +6,18 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\User;
+use Session;
 use Auth;
 use Hash;
 
 class UsersController extends Controller
 {
     public function registerUser(Request $request) {
+
+        // check if the user is logged in and if they are, redirect them to the homepage
+        if(Auth::check()) {
+            return redirect()->action('UsersController@displayHomepage');
+        }
 
         $user = new User();
 
@@ -56,14 +62,32 @@ class UsersController extends Controller
     }
 
     public function displayLogin() {
+        // check if the user is logged in and if they are, redirect them to the homepage
+        if(Auth::check()) {
+            return redirect()->action('UsersController@displayHomepage');
+        }
         return view('login');
     }
 
     public function displayRegister() {
+        // check if the user is logged in and if they are, redirect them to the homepage
+        if(Auth::check()) {
+            return redirect()->action('UsersController@displayHomepage');
+        }
         return view('register');
     }
 
     public function displayHomepage() {
-
+        if(Auth::check()) {
+            return view('loggedin.home');
+        }
+        return view('home');
     }
+
+    public function logout() {
+        Auth::logout();
+        Session::flush();
+        return redirect()->action('UsersController@displayHomepage');
+    }
+
 }

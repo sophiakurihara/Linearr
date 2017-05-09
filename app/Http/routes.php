@@ -11,12 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('auth/home');
-});
+Route::get('/', 'UsersController@displayHomepage');
 
 Route::post('/register', 'UsersController@registerUser');
 Route::get('/register', 'UsersController@displayRegister');
 
 Route::post('/login', 'UsersController@loginUser');
 Route::get('/login', 'UsersController@displayLogin');
+
+Route::get('/logout', 'UsersController@logout');
