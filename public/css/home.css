@@ -58,7 +58,7 @@ body {
 	float: left;
 	display:none;
 	padding-top: 2%;
-	padding-left: 10%;
+	padding-left: 13%;
 }
 
 .banner-right-title {
@@ -73,12 +73,22 @@ body {
 	color: black;
 }
 
-h1 {
+h1.login {
 	font-family: 'Lato', sans-serif;
 	font-weight: 200;
 	font-size: 25px;
 	padding-top: 28px;
 	padding-bottom: 30px;
+	margin-left: -30px;
+}
+
+h1.register {
+	font-family: 'Lato', sans-serif;
+	font-weight: 200;
+	font-size: 25px;
+	padding-top: 28px;
+	padding-bottom: 30px;
+	margin-left: -30px;
 }
 
 /* good so far */
@@ -135,11 +145,13 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 }
 .login-button {
 	float: right;
-	padding: 10px;
-	margin-right: 5px;
-	border-radius: 2px;
+	padding: 8px 14px;
+	margin-top: -20px;
+	margin-right: 35px;
+	border-radius: 1px;
 	border: 0px;
 	background-color: #114B5F;
+	opacity: 0.6;
 	color: white;
 	transition: 0.5s;
 }
@@ -147,7 +159,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 .login-button:hover {
 	background-color: #58818f;
 	color: white;
-	opacity: 0.9;
+	opacity: 0.3;
 }
 
 .login-left {
@@ -174,24 +186,27 @@ label, input {
     display: inline-block;
     vertical-align: baseline;
     width: 125px;
-    color: #114B5F;
-
 }
 
 input {
-	background-color: #114B5F;
+	background-color: transparent;
 	border: 0px;
-	padding: 10px;
-	margin-bottom: 10px;
-	color: white;
+	padding: 0px 0px 4px 0px;
+	border-bottom: 1px solid #58818f;
+	margin-bottom: 24px;
+	color: black;
     width: 300px;
-	border-radius: 2px;
+	border-radius: 0px;
 }
 
 label {
 	font-family: 'Lato', sans-serif;
 	font-weight: 200;
 	color: #114B5F;
+	font-size: 16px;
+	margin-right: -30px;
+	margin-top: 4px;
+	/*vertical-align: bottom;*/
 }
 
 input:focus, textarea:focus {
@@ -206,6 +221,11 @@ form, input {
 
 form {
     width: 430px;
+}
+
+.form-inputs {
+	margin-top: -20px;
+	margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1200px) 

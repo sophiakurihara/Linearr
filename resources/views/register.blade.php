@@ -19,18 +19,18 @@
 
     <div class="banner-right-register">
         <div class="banner-right-title">
-            <h1>Register</h1>
+            <h1 class="register">Register</h1>
         </div>
         <form action="{{ action('UsersController@registerUser') }}" method="POST">
 
             {{ csrf_field() }}
-
-            <label for="first_name" <?php echo $redBorder1; ?>>First Name:</label><input type="text" name="first_name" id="first_name" placeholder="{{ $errors->has('first_name') ? 'Please enter your first name' : 'First name' }}" value="{{ $errors->has('first_name') ? '' : old('first_name') }}">
-            <label for="last_name" <?php echo $redBorder2; ?>>Last Name:</label><input type="text" name="last_name" id="last_name" placeholder="{{ $errors->has('last_name') ? 'Please enter your last name' : 'Last name' }}" value="{{ $errors->has('last_name') ? '' : old('last_name') }}">
-            <label for="email" <?php echo $redBorder3; ?>>E-Mail:</label><input type="text" name="email" id="email" placeholder="{{ $errors->has('email') ? 'Please enter your email address' : 'Email' }}" value="{{ $errors->has('email') ? '' : old('email') }}">
-            <label for="phone" <?php echo $redBorder4; ?>>Phone:</label><input type="text" name="phone" id="phone" placeholder="{{ $errors->has('phone') ? 'Please enter your phone number' : 'Phone' }}" value="{{ $errors->has('phone') ? '' : old('phone') }}">
-            <label for="password" <?php echo $redBorder5; ?>>Password:</label><input type="password" name="password" id="password" placeholder="{{ $errors->has('password') ? 'Please enter your password' : 'Password' }}">
-
+            <div class="form-inputs">
+                <label for="first_name" <?php echo $redBorder1; ?>>First Name:</label><input type="text" name="first_name" id="first_name" placeholder="{{ $errors->has('first_name') ? 'Please enter your first name' : 'First name' }}" value="{{ $errors->has('first_name') ? '' : old('first_name') }}" autocomplete="off">
+                <label for="last_name" <?php echo $redBorder2; ?>>Last Name:</label><input type="text" name="last_name" id="last_name" placeholder="{{ $errors->has('last_name') ? 'Please enter your last name' : 'Last name' }}" value="{{ $errors->has('last_name') ? '' : old('last_name') }}" autocomplete="off">
+                <label for="email" <?php echo $redBorder3; ?>>E-Mail:</label><input type="text" name="email" id="email" placeholder="{{ $errors->has('email') ? 'Please enter your email address' : 'Email' }}" value="{{ $errors->has('email') ? '' : old('email') }}" autocomplete="off">
+                <label for="phone" <?php echo $redBorder4; ?>>Phone:</label><input type="text" name="phone" id="phone" placeholder="{{ $errors->has('phone') ? 'Please enter your phone number' : 'Phone' }}" value="{{ $errors->has('phone') ? '' : old('phone') }}" autocomplete="off">
+                <label for="password" <?php echo $redBorder5; ?>>Password:</label><input type="password" name="password" id="password" placeholder="{{ $errors->has('password') ? 'Please enter your password' : 'Password' }}" autocomplete="off">
+            </div>
             {{ method_field('POST') }}
 
             <button type="submit" class="login-button">Register</button>

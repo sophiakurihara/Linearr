@@ -14,7 +14,9 @@
 </head>
 <body>
 	<div class="logo">
-        <a href="/">Linearr</a>
+        <a href="/">
+		    <img class="linearr" src="/img/Linearr_logo_transparent.png">
+        </a>
 	</div>
 
 	<!-- place navbar here in master -->
