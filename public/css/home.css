@@ -16,7 +16,15 @@ a:hover {
 	float: left;
 	background-size: cover;
 	height: 100%;
+	width: 50%;
     vertical-align: top;
+}
+
+.loginRegisterContainer
+{
+	height: 433px;
+	width: 50%;
+	float: left;
 }
 
 .banner-image {
@@ -102,6 +110,8 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	border-radius: 4px;
 }
 
+
+
 .login-button {
 	float: right;
 	padding: 10px;
@@ -174,3 +184,83 @@ form, input {
 form {
     width: 430px;
 }
+
+@media screen and (min-width: 1200px) 
+{
+	.banner-image 
+	{
+    position: relative;
+    height: 440px;
+	width: auto;
+    -webkit-box-shadow: 0px 3px 17px 4px rgba(65,86,47,1);
+    -moz-box-shadow: 0px 3px 17px 4px rgba(65,86,47,1);
+	box-shadow: 0 4px 14px -4px gray;
+	}
+
+}
+
+ @media only screen and (min-device-width: 1200px) and (max-device-width: 1400px) {
+  
+   
+	.banner-image 
+	{
+	    position: relative;
+	    height: 434px;
+		width: auto;
+	    -webkit-box-shadow: 0px 3px 17px 4px rgba(65,86,47,1);
+	    -moz-box-shadow: 0px 3px 17px 4px rgba(65,86,47,1);
+		box-shadow: 0 4px 14px -4px gray;
+	}
+}
+
+ @media only screen and (min-device-width: 600px) and (max-device-width: 1200px)
+ {
+	.banner-image 
+	{
+	    position: relative;
+	    height: 300px;
+		width: auto;
+	    -webkit-box-shadow: 0px 3px 17px 4px rgba(65,86,47,1);
+	    -moz-box-shadow: 0px 3px 17px 4px rgba(65,86,47,1);
+		box-shadow: 0 4px 14px -4px gray;
+	}
+}
+
+@media only screen and (max-width: 600px)
+{
+	.banner-image > img
+	{
+		display: none !important;
+	}
+}
+
+@media only screen and (min-device-width: 601px)
+{
+	.loginRegisterContainer
+	{
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 600px)
+{
+	.loginRegisterContainer
+	{
+		width: 100%;
+	}
+}
+
+
+
+@media only screen and (min-device-width: 750px) and (max-width: 440px)
+{
+	.banner-buttons
+	{
+		margin-left: 35%;
+		text-align: center;
+	}
+}
+
+
+
+
