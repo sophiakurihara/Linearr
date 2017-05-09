@@ -13,17 +13,15 @@ use Hash;
 class UsersController extends Controller
 {
     public function registerUser(Request $request) {
-
         // check if the user is logged in and if they are, redirect them to the homepage
         if(Auth::check()) {
             return redirect()->action('UsersController@displayHomepage');
         }
 
-        $user = new User();
 
         $rules = [
-            'firstname' => 'required|max:30',
-            'lastname' => 'required|max:30',
+            'first_name' => 'required|max:30',
+            'last_name' => 'required|max:30',
             'email' => 'required|max:50',
             'phone' => 'required|max:13',
             'password' => 'required|max:16'
@@ -31,8 +29,9 @@ class UsersController extends Controller
 
         $this->validate($request, $rules);
 
-        $user->first_name = $request->firstname;
-        $user->last_name = $request->lastname;
+        $user = new User();
+        $user->first_name = $request->first_name;
+        $user->last_name = $request->last_name;
         $user->email = $request->email;
         $user->phone = $request->phone;
         $user->password = Hash::make($request->password);

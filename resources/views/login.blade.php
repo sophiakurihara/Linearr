@@ -26,6 +26,7 @@
 
             <label for="email">Email:</label><input type="text" placeholder="{{ $errors->has('email') ? $errors->first('email') : '' }}" value="{{ $errors->has('email') ? '' : old('email') }}"name="email" id="email">
             <label for="password">Password:</label><input type="password" placeholder="{{ $errors->has('password') ? $errors->first('password') : '' }}" name="password" id="password">
+
             <button type="submit" class="login-button">Login</button>
 
             {{ method_field('POST') }}
