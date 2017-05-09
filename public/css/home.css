@@ -16,7 +16,15 @@ a:hover {
 	float: left;
 	background-size: cover;
 	height: 100%;
+	width: 50%;
     vertical-align: top;
+}
+
+.loginRegisterContainer
+{
+	height: 433px;
+	width: 50%;
+	float: left;
 }
 
 .banner-image {
@@ -69,26 +77,38 @@ h1 {
 	padding-bottom: 30px;
 }
 
+/* good so far */
+
 .hide {
 	display: none;
 }
 
 input::-webkit-input-placeholder { /* WebKit browsers */
-    color:    #ddd;
+    color:    #888;
 }
 
 input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    #ddd;
+    color:    #888;
 }
 
 input::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    #ddd;
+    color:    #888;
 }
 
 input:-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:    #ddd;
+    color:    #888;
 }
-
+.invalid-credentials {
+	color: black;
+	margin-left: 1%;
+	margin-right: 2%;
+	padding: 8px 0px;
+	border-bottom: 1px solid #e1e1e1;
+	font-size: 13px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 200;
+	color: #114B5F;
+}
 #login {
 	padding: 16px 64px;
 	background-color: #161B33;
@@ -173,4 +193,87 @@ form, input {
 
 form {
     width: 430px;
+}
+
+@media screen and (min-width: 1200px) 
+{
+	.banner-image 
+	{
+    position: relative;
+    height: 440px;
+	width: auto;
+    -webkit-box-shadow: 0px 3px 17px 4px rgba(65,86,47,1);
+    -moz-box-shadow: 0px 3px 17px 4px rgba(65,86,47,1);
+	box-shadow: 0 4px 14px -4px gray;
+	}
+
+}
+
+ @media only screen and (min-device-width: 1200px) and (max-device-width: 1400px) {
+  
+   
+	.banner-image 
+	{
+	    position: relative;
+	    height: 434px;
+		width: auto;
+	    -webkit-box-shadow: 0px 3px 17px 4px rgba(65,86,47,1);
+	    -moz-box-shadow: 0px 3px 17px 4px rgba(65,86,47,1);
+		box-shadow: 0 4px 14px -4px gray;
+	}
+}
+
+ @media only screen and (min-device-width: 600px) and (max-device-width: 1200px)
+ {
+	.banner-image 
+	{
+	    position: relative;
+	    height: 300px;
+		width: auto;
+	    -webkit-box-shadow: 0px 3px 17px 4px rgba(65,86,47,1);
+	    -moz-box-shadow: 0px 3px 17px 4px rgba(65,86,47,1);
+		box-shadow: 0 4px 14px -4px gray;
+	}
+}
+
+@media only screen and (max-width: 600px)
+{
+	.banner-image > img
+	{
+		display: none !important;
+	}
+}
+
+@media only screen and (min-device-width: 601px)
+{
+	.loginRegisterContainer
+	{
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 600px)
+{
+	.loginRegisterContainer
+	{
+		width: 100%;
+	}
+}
+
+@media only screen and (min-device-width: 750px) and (max-width: 440px)
+{
+	.banner-buttons
+	{
+		margin-left: 35%;
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 900px)
+{
+	.banner-buttons
+	{
+		margin-left: 40%;
+		text-align: center;
+	}
 }

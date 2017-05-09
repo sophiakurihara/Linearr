@@ -14,11 +14,22 @@
     <div class="banner-right-login">
         <div class="banner-right-title">
             <h1>Login</h1>
+                @if(session()->has('incorrect_login'))
+                    <div class="invalid-credentials">
+                        {{ session()->get('incorrect_login') }}
+                    </div>
+                @endif
         </div>
-        <form>
-            <label for="email">Email:</label><input type="text" id="email">
-            <label for="password">Password:</label><input type="text" id="password">
+        <form action="{{ action('UsersController@loginUser') }}" method="POST">
+
+            {{ csrf_field() }}
+
+            <label for="email">Email:</label><input type="text" placeholder="{{ $errors->has('email') ? $errors->first('email') : '' }}" value="{{ $errors->has('email') ? '' : old('email') }}"name="email" id="email">
+            <label for="password">Password:</label><input type="password" placeholder="{{ $errors->has('password') ? $errors->first('password') : '' }}" name="password" id="password">
             <button type="submit" class="login-button">Login</button>
+
+            {{ method_field('POST') }}
+
         </form>
     </div>
 
