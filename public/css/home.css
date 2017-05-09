@@ -1,9 +1,11 @@
-
 a {
 	text-decoration: none;
 }
 a:hover {
 	text-decoration: none;
+}
+body {
+	background-color: #f1f1f1;
 }
 .banner-buttons {
 	float: left;
@@ -35,6 +37,7 @@ a:hover {
     -webkit-box-shadow: 0px 3px 17px 4px rgba(65,86,47,1);
     -moz-box-shadow: 0px 3px 17px 4px rgba(65,86,47,1);
 	box-shadow: 0 4px 14px -4px gray;
+	background-color: white;
 }
 
 .banner-image:after {
@@ -115,14 +118,21 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	background-color: #161B33;
 	color: white;
 	border-radius: 4px;
+	transition: 0.5s;
+}
+#login:hover {
+	opacity: 0.8;
 }
 #register {
 	padding: 15px 55.1px;
 	background-color: #DE0D92;
 	color: white;
 	border-radius: 4px;
+	transition: 0.5s;
 }
-
+#register:hover {
+	opacity: 0.8;
+}
 .login-button {
 	float: right;
 	padding: 10px;
@@ -131,11 +141,13 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	border: 0px;
 	background-color: #114B5F;
 	color: white;
+	transition: 0.5s;
 }
 
 .login-button:hover {
 	background-color: #58818f;
 	color: white;
+	opacity: 0.9;
 }
 
 .login-left {
