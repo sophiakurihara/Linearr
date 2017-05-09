@@ -12,8 +12,7 @@ use Hash;
 
 class UsersController extends Controller
 {
-    public function registerUser(Request $request) {
-
+    public function registerUser() {
         // check if the user is logged in and if they are, redirect them to the homepage
         if(Auth::check()) {
             return redirect()->action('UsersController@displayHomepage');
@@ -68,7 +67,7 @@ class UsersController extends Controller
         }
         return view('login');
     }
-
+    
     public function displayRegister() {
         // check if the user is logged in and if they are, redirect them to the homepage
         if(Auth::check()) {
