@@ -15,7 +15,7 @@
         <div class="banner-right-title">
             <h1>Login</h1>
         </div>
-        <form>
+        <form action="{{ action('Auth\AuthController@postLogin') }}"> 
             <label for="email">Email:</label><input type="text" id="email">
             <label for="password">Password:</label><input type="text" id="password">
             <button type="submit" class="login-button">Login</button>

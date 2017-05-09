@@ -15,5 +15,13 @@ Route::get('/', function () {
     return view('auth/home');
 });
 
-Route::post('/register', 'UsersController@registerUser');
-Route::get('/login', 'UsersController@displayLogin');
+Route::get('/profile/{profile}', 'UsersController@index');
+
+// Registration routes...
+Route::get('/register', 'Auth\AuthController@getRegister');
+Route::post('/register', 'Auth\AuthController@postRegister');
+
+// Authentication routes...
+Route::get('/login', 'Auth\AuthController@getLogin');
+Route::post('/login', 'Auth\AuthController@postLogin');
+Route::get('/logout', 'Auth\AuthController@getLogout');
