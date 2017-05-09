@@ -1,9 +1,11 @@
-
 a {
 	text-decoration: none;
 }
 a:hover {
 	text-decoration: none;
+}
+body {
+	background-color: #f1f1f1;
 }
 .banner-buttons {
 	float: left;
@@ -35,6 +37,7 @@ a:hover {
     -webkit-box-shadow: 0px 3px 17px 4px rgba(65,86,47,1);
     -moz-box-shadow: 0px 3px 17px 4px rgba(65,86,47,1);
 	box-shadow: 0 4px 14px -4px gray;
+	background-color: white;
 }
 
 .banner-image:after {
@@ -49,13 +52,14 @@ a:hover {
 .banner-right-register {
 	float: left;
 	display: none;
-	padding-left: 10%;
+	padding-left: 12%;
+	margin-top: -1%;
 }
 .banner-right-login {
 	float: left;
 	display:none;
 	padding-top: 2%;
-	padding-left: 10%;
+	padding-left: 13%;
 }
 
 .banner-right-title {
@@ -70,12 +74,22 @@ a:hover {
 	color: black;
 }
 
-h1 {
+h1.login {
 	font-family: 'Lato', sans-serif;
 	font-weight: 200;
 	font-size: 25px;
 	padding-top: 28px;
 	padding-bottom: 30px;
+	margin-left: -30px;
+}
+
+h1.register {
+	font-family: 'Lato', sans-serif;
+	font-weight: 200;
+	font-size: 25px;
+	padding-top: 28px;
+	padding-bottom: 30px;
+	margin-left: -30px;
 }
 
 /* good so far */
@@ -101,10 +115,9 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 }
 .invalid-credentials {
 	color: black;
-	margin-left: 1%;
-	margin-right: 2%;
+	margin-left: -30px;
+	margin-top: -30px;
 	padding: 8px 0px;
-	border-bottom: 1px solid #e1e1e1;
 	font-size: 13px;
 	font-family: 'Lato', sans-serif;
 	font-weight: 200;
@@ -115,27 +128,38 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	background-color: #161B33;
 	color: white;
 	border-radius: 4px;
+	transition: 0.5s;
+}
+#login:hover {
+	opacity: 0.8;
 }
 #register {
 	padding: 15px 55.1px;
 	background-color: #DE0D92;
 	color: white;
 	border-radius: 4px;
+	transition: 0.5s;
 }
-
+#register:hover {
+	opacity: 0.8;
+}
 .login-button {
 	float: right;
-	padding: 10px;
-	margin-right: 5px;
-	border-radius: 2px;
+	padding: 8px 14px;
+	margin-top: -20px;
+	margin-right: 35px;
+	border-radius: 1px;
 	border: 0px;
 	background-color: #114B5F;
+	opacity: 0.6;
 	color: white;
+	transition: 0.5s;
 }
 
 .login-button:hover {
 	background-color: #58818f;
 	color: white;
+	opacity: 0.3;
 }
 
 .login-left {
@@ -162,24 +186,27 @@ label, input {
     display: inline-block;
     vertical-align: baseline;
     width: 125px;
-    color: #114B5F;
-
 }
 
 input {
-	background-color: #114B5F;
+	background-color: transparent;
 	border: 0px;
-	padding: 10px;
-	margin-bottom: 10px;
-	color: white;
+	padding: 0px 0px 4px 0px;
+	border-bottom: 1px solid #58818f;
+	margin-bottom: 24px;
+	color: black;
     width: 300px;
-	border-radius: 2px;
+	border-radius: 0px;
 }
 
 label {
 	font-family: 'Lato', sans-serif;
 	font-weight: 200;
 	color: #114B5F;
+	font-size: 16px;
+	margin-right: -30px;
+	margin-top: 4px;
+	/*vertical-align: bottom;*/
 }
 
 input:focus, textarea:focus {
@@ -194,6 +221,11 @@ form, input {
 
 form {
     width: 430px;
+}
+
+.form-inputs {
+	margin-top: -20px;
+	margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1200px) 
