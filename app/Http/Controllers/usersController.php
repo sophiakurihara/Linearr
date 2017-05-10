@@ -18,7 +18,6 @@ class UsersController extends Controller
             return redirect()->action('UsersController@displayHomepage');
         }
 
-
         $rules = [
             'first_name' => 'required|max:30',
             'last_name' => 'required|max:30',
@@ -78,12 +77,12 @@ class UsersController extends Controller
 
     public function displayHomepage() {
         if(Auth::check()) {
-            return view('loggedin.home');
+            return redirect()->action('UsersController@displayMyProfile', ['user_id' => Auth::id()]);
         }
         return view('home');
     }
 
-    public function displayMyProfile() {
+    public function displayMyProfile($user_id) {
         if(Auth::check()) {
             return view('loggedin.myProfile');
         }
