@@ -12,10 +12,10 @@
 
 <div class="userLeftControllPanel">
 	<div class="x">x</div>
-	<div class="userLeftControllPanel-sub-sections firstControlPanel-sub-section sub-section-text">My Events</div>
-	<div class="userLeftControllPanel-sub-sections sub-section-text">Create Event</div>
-	<div class="userLeftControllPanel-sub-sections sub-section-text"> Contacts</div>
-	<div class="userLeftControllPanel-sub-sections sub-section-text">Edit Profile</div>
+	<div id="myEvents" class="userLeftControllPanel-sub-sections firstControlPanel-sub-section sub-section-text">My Events</div>
+	<div id="createEvent" class="userLeftControllPanel-sub-sections sub-section-text">Create Event</div>
+	<div id="contacts" class="userLeftControllPanel-sub-sections sub-section-text"> Contacts</div>
+	<div id="editProfile" class="userLeftControllPanel-sub-sections sub-section-text">Edit Profile</div>
 	<div class="userLeftControllPanel-sub-sections sub-section-text"><a href="logout">Logout</a></div>
 	
 	<div class="settings"></div>
@@ -90,6 +90,23 @@
 			</p>
 		</div>
 	</div>
+	<div id="myEventsRight">
+		<div class="x-right"><b>x</b></div>
+		<div class="userRightControllPanel">
+			
+			<div class="eventContainer">
+				<div class="userRightControllPanel-sub-sections myEventsTitle"><h4><b>Alex's 6th Birthday!</b></h4></div>
+				<div class="userRightControllPanel-sub-sections myEventsDate"><b>Date:</b></b> August 2017</div>
+				<div class="userRightControllPanel-sub-sections myEventsTime"><b>Time:</b> 4:00pm - 8:00pm</div>
+				<div class="userRightControllPanel-sub-sections myEventsDescription"><b>Description:</b> 
+				<br>
+				Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+				</div>
+			</div>
+		</div>
+
+		
+	</div>
 
 	<script src="/js/jquery/10.8.3/jquery.min.js" type="text/javascript"></script>
 	<script src="/js/jquery/jquery-3.2.0.min.js" type="text/javascript"></script>
@@ -163,6 +180,32 @@
 			}
 		});
 	</script>
+	<script>
+		// on .click of myEvents subsection content in users panel 
+		$(document).ready(function(){
+			$("#myEvents").click(function(){
+		    	$("#calendarContainer").animate({width: "50%"});
+				$("#myEventsRight").fadeIn();
+				$("#myEventsRight").animate({width: "26%"});
+			});
+		});
+	</script>
+	<script>
+		// on .click of Create Event subsection content in users panel 
+
+
+	</script>
+	<script>
+		// on .click of contacts subsection content in users panel 
+
+
+	</script>
+	<script>
+		// on .click of edit profile subsection content in users panel 
+
+
+	</script>
+	
 
 @stop
 

@@ -8,6 +8,7 @@ a:hover
 	color:inherit;
 	text-decoration: none;
 }
+
 .userLeftControllPanel
 {
 	width: 20%;
@@ -53,7 +54,7 @@ a:hover
 .settings
 {
 	height: 30px;
-	width: 10%;
+	width: 30px;
 	margin-left: 90%;
 	background-size: cover;
 	background-position: center center;
@@ -67,9 +68,10 @@ body {font-family: Verdana, sans-serif;}
 
 #calendarContainer
 {
-	width: 50%;
+	width: 75%;
 	height: auto;
 	float: left;
+    display: inline-block;
 	margin-left: 2%;
 	margin-top: 2%;
 }
@@ -197,3 +199,77 @@ body {font-family: Verdana, sans-serif;}
 	float: right;
 	color: white;
 }
+
+#myEventsRight
+{
+
+    display: none;
+    width: 1%;
+    margin-top: 2%;
+    height: 670px;
+    float: right;
+    background-color: #EEE;
+}
+
+.x-right
+{
+    
+    float: left;
+    margin-left: 9px;
+    margin-top: 9px;
+    font-size: 14px;
+    color: #000;
+}
+
+.userRightControllPanel
+{
+    width: 75%;
+    height: 100%;
+    float: left;
+    margin-left: 8%;
+    padding: 2.5%;
+    background-color: #EEE;
+}
+
+.userRightControllPanel-sub-sections
+{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15%;
+    border-bottom: 2px solid black;
+}
+
+.myEventsTitle
+{
+    margin-top: 21%;
+    text-align: center;
+
+}
+
+.myEventsDate
+{
+    float:left;
+    margin-bottom: 2px;
+    border-bottom: none;
+
+}
+
+.myEventsTime
+{
+    float:left;
+    margin-bottom: 2px;
+   
+}
+
+.myEventsDescription
+{
+    width: 100%;
+    height: auto;
+}
+
+.eventContainer
+{
+    width: 75%;
+    height: auto;
+}
+
