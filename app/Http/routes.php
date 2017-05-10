@@ -21,4 +21,4 @@ Route::get('/login', 'UsersController@displayLogin');
 
 Route::get('/logout', 'UsersController@logout');
 
-Route::get('/profile', 'UsersController@displayMyProfile');
+Route::get('/profile/{user_id}', 'UsersController@displayMyProfile');
