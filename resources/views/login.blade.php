@@ -43,7 +43,7 @@
 <script>
 
 $(document).ready(function(){
-    $(".banner-right-login").fadeIn(400);
+    $(".banner-right-login").fadeIn(800);
 });
 
 </script>
