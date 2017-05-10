@@ -75,7 +75,7 @@ body {font-family: Verdana, sans-serif;}
 	width: 80%;
 	height: auto;
 	float: left;
-    display: inline-block;
+    /*display: inline-block;*/
 	/*margin-left: 2%;*/
 	/*margin-top: 2%;*/
 }
@@ -83,7 +83,7 @@ body {font-family: Verdana, sans-serif;}
 .month {
     padding: 70px 25px;
     width: 100%;
-    background: black;
+    background: #222;
 }
 
 /* Month list */

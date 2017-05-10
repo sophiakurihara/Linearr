@@ -6,7 +6,6 @@
 	float:left;
 	text-align: center;
 	color: #FFF;
-	display: inline-block;
 	
 }
 
@@ -16,7 +15,6 @@
 	height: 700px;
 	float: right;
 	background-color: #EAEAEA;
-	display: inline-block;
 	
 }
 
@@ -30,7 +28,6 @@
 	text-align: center;
 	float:left;
 	box-shadow: -60px 0px 100px -90px #000000, 60px 0px 100px -90px #000000;
-	display: inline-block;
 }
 
 
