@@ -6,11 +6,21 @@ a
 .userLeftControllPanel
 {
 	width: 20%;
-	height: 700px;
+	height: 854px;
 	float: left;
 	padding: 2.5%;
-	display: inline-block;
 	background-color: #114b5f;
+}
+
+.userLeftControllPanel-arrow
+{
+    display: none;
+	width: 1px;
+	height: 854px;
+    vertical-align: middle;
+	float: left;
+	background-color: #114b5f;
+    color: black;
 }
 
 .userLeftControllPanel-sub-sections

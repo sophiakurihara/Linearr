@@ -4,75 +4,97 @@
 
 <link rel="stylesheet" href="/css/myProfile.css">
 
+<style>
+
+.hide {
+	display: none;
+}
+.x {
+	margin-top: -9%;
+	float: right;
+	color: white;
+}
+
+</style>
+
 @stop
 
 @section('loggedin_content')
 
+<div class="userLeftControllPanel-arrow"></div>
+
 <div class="userLeftControllPanel">
-	<div class="userLeftControllPanel-sub-sections firstControlPanel-sub-section sub-section-text sub-section-text:hover">My Events</div>
-	<div class="userLeftControllPanel-sub-sections sub-section-text sub-section-text:hover">Create Event</div>
-	<div class="userLeftControllPanel-sub-sections sub-section-text sub-section-text:hover"> Contacts</div>
-	<div class="userLeftControllPanel-sub-sections sub-section-text sub-section-text:hover">Edit Profile</div>
-	<div class="userLeftControllPanel-sub-sections sub-section-text sub-section-text:hover"><a href="logout">Logout</a></div>
+	<div class="x">x</div>
+	<div class="userLeftControllPanel-sub-sections firstControlPanel-sub-section sub-section-text">My Events</div>
+	<div class="userLeftControllPanel-sub-sections sub-section-text">Create Event</div>
+	<div class="userLeftControllPanel-sub-sections sub-section-text"> Contacts</div>
+	<div class="userLeftControllPanel-sub-sections sub-section-text">Edit Profile</div>
+	<div class="userLeftControllPanel-sub-sections sub-section-text"><a href="logout">Logout</a></div>
 	
 	<div class="settings"></div>
 </div>
+
 <div id="calendarContainer">
-	<div class="month"> 
-		<ul>
-		  <li class="prev">&#10094;</li>
-		  <li class="next">&#10095;</li>
-		  <li>
-		    August<br>
-		    <span style="font-size:18px">2016</span>
-		  </li>
-		</ul>
-	</div>
 
-	<ul class="weekdays">
-	  <li>Mo</li>
-	  <li>Tu</li>
-	  <li>We</li>
-	  <li>Th</li>
-	  <li>Fr</li>
-	  <li>Sa</li>
-	  <li>Su</li>
-	</ul>
+</div>
 
-	<ul class="days"> 
-	  <li>1</li>
-	  <li>2</li>
-	  <li>3</li>
-	  <li>4</li>
-	  <li>5</li>
-	  <li>6</li>
-	  <li>7</li>
-	  <li>8</li>
-	  <li>9</li>
-	  <li><span class="active">10</span></li>
-	  <li>11</li>
-	  <li>12</li>
-	  <li>13</li>
-	  <li>14</li>
-	  <li>15</li>
-	  <li>16</li>
-	  <li>17</li>
-	  <li>18</li>
-	  <li>19</li>
-	  <li>20</li>
-	  <li>21</li>
-	  <li>22</li>
-	  <li>23</li>
-	  <li>24</li>
-	  <li>25</li>
-	  <li>26</li>
-	  <li>27</li>
-	  <li>28</li>
-	  <li>29</li>
-	  <li>30</li>
-	  <li>31</li>
-	</ul>
-</div>	
+<script src="/js/jquery/10.8.3/jquery.min.js" type="text/javascript"></script>
+<script src="/js/jquery/jquery-3.2.0.min.js" type="text/javascript"></script>
+
+<script>
+	$(document).ready(function(){
+
+		$('.x').click(function(){
+			clicked = "yes";
+			$('.userLeftControllPanel-sub-sections').addClass('hide');
+			$('.settings').addClass('hide');
+
+			$('.userLeftControllPanel').animate({
+				"width":"1px",
+				"padding":"0",
+				"margin":"0"
+			}, 300);
+
+			setTimeout(function(){
+				$('.userLeftControllPanel').fadeOut(100);
+			}, 300);
+
+
+			setTimeout(function(){
+				$('.userLeftControllPanel-arrow').fadeIn(100);
+				$('.userLeftControllPanel-arrow').animate({
+					"width":"10px"
+				}, 400);
+			}, 300);
+
+		});
+
+		$('.userLeftControllPanel-arrow').click(function(){
+			$('.userLeftControllPanel-arrow').animate({
+				"width":"1px"
+			}, 400);
+
+			setTimeout(function(){
+				$('.userLeftControllPanel-arrow').fadeOut(10);
+			}, 404);
+
+			setTimeout(function(){
+
+				$('.userLeftControllPanel').fadeIn(100);
+
+				$('.userLeftControllPanel').animate({
+					"width":"20%",
+					"padding":"2.5%"
+				}, 300);
+
+				setTimeout(function(){
+					$('.userLeftControllPanel-sub-sections').fadeIn(200).removeClass('hide');
+					$('.settings').fadeIn(200).removeClass('hide');
+				}, 310);
+			}, 410);
+		});
+	});
+</script>
 
 @stop
 
