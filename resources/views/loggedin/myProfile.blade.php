@@ -184,8 +184,8 @@
 		// on .click of myEvents subsection content in users panel 
 		$(document).ready(function(){
 			$("#myEvents").click(function(){
-		    	$("#calendarContainer").animate({width: "50%"});
-				$("#myEventsRight").fadeIn();
+		    	$("#calendarContainer").animate({width: "54%"});
+				$("#myEventsRight").fadeIn(.1);
 				$("#myEventsRight").animate({width: "26%"});
 			});
 		});

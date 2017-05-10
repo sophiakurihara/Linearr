@@ -9,6 +9,10 @@ a:hover
 	text-decoration: none;
 }
 
+body {
+    background-color: #ddd;
+}
+
 .userLeftControllPanel
 {
 	width: 20%;
@@ -68,12 +72,12 @@ body {font-family: Verdana, sans-serif;}
 
 #calendarContainer
 {
-	width: 75%;
+	width: 80%;
 	height: auto;
 	float: left;
     display: inline-block;
-	margin-left: 2%;
-	margin-top: 2%;
+	/*margin-left: 2%;*/
+	/*margin-top: 2%;*/
 }
 /* Month header */
 .month {
@@ -205,10 +209,10 @@ body {font-family: Verdana, sans-serif;}
 
     display: none;
     width: 1%;
-    margin-top: 2%;
+    /*margin-top: 2%;*/
     height: 670px;
     float: right;
-    background-color: #EEE;
+    background-color: #ddd;
 }
 
 .x-right
@@ -226,9 +230,9 @@ body {font-family: Verdana, sans-serif;}
     width: 75%;
     height: 100%;
     float: left;
-    margin-left: 8%;
+    /*margin-left: 8%;*/
     padding: 2.5%;
-    background-color: #EEE;
+    background-color: transparent;
 }
 
 .userRightControllPanel-sub-sections
@@ -269,6 +273,7 @@ body {font-family: Verdana, sans-serif;}
 
 .eventContainer
 {
+    background-color: #ddd;
     width: 75%;
     height: auto;
 }
