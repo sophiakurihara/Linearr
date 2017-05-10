@@ -12,17 +12,6 @@ a
 	background-color: #114b5f;
 }
 
-.userLeftControllPanel-arrow
-{
-    display: none;
-	width: 1px;
-	height: 854px;
-    vertical-align: middle;
-	float: left;
-	background-color: #114b5f;
-    color: black;
-}
-
 .userLeftControllPanel-sub-sections
 {
 	width: 100%;
