@@ -1,0 +1,70 @@
+.footer
+{
+	height: 400px;
+	width: 100%;
+	margin-top: 200px;
+	background-color: #114b5f;
+}
+
+.contactUsIcons
+{
+	width: 600px;
+	height: 100px;
+	margin-left: 39%;
+	margin-top: 160px;
+	display: inline-block;
+}
+
+.facebook
+{
+	height: 50px;
+	width: 50px;
+	float: left;
+	margin-left: 8%;
+	background-size: cover; 
+	background-position: center center;
+	background-image: url('/img/facebookIcon.png');
+}
+
+.tumbler
+{
+	height: 50px;
+	width: 50px;
+	float: left;
+	margin-left: 8%;
+	background-size: cover; 
+	background-position: center center;
+	background-image: url('/img/tumbler.png');
+}
+
+.twitter
+{
+	height: 50px;
+	width: 50px;
+	float: left;
+	margin-left: 8%;
+	background-size: cover; 
+	background-position: center center;
+	background-image: url('/img/twittericon.png');
+}
+
+@media only screen and (min-device-width: 600px)
+{
+	.footer
+	{
+		
+		width: 100%;
+		margin: auto 0;
+		background-color: #114b5f;
+	}
+
+}
+
+
+@media only screen and (max-width: 1150px) and (min-width: 400px)
+{
+	.contactUsIcons
+	{
+		margin-left: 14%;
+	}
+}

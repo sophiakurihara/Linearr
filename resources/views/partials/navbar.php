@@ -1,5 +1,5 @@
 
-@extends(layouts.master)
+@extends('layouts.master')
 
 @section('content')
 
@@ -7,6 +7,5 @@
 	
 
 </div>
-
 
 @stop
