@@ -20,3 +20,5 @@ Route::post('/login', 'UsersController@loginUser');
 Route::get('/login', 'UsersController@displayLogin');
 
 Route::get('/logout', 'UsersController@logout');
+
+Route::get('/profile', 'UsersController@displayMyProfile');

@@ -53,7 +53,7 @@ class UsersController extends Controller
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password]) === true) {
             $request->session()->put('LOGGED_IN_USER', $request->username);
             $request->session()->put('AUTH', true);
-            return redirect()->action('UsersController@displayHomepage');
+            return redirect()->action('UsersController@displayMyProfile');
         } else {
             $request->session()->flash('incorrect_login', 'Invalid credentials - Try again');
         }
@@ -81,6 +81,13 @@ class UsersController extends Controller
             return view('loggedin.home');
         }
         return view('home');
+    }
+
+    public function displayMyProfile() {
+        if(Auth::check()) {
+            return view('loggedin.myProfile');
+        }
+        return redirect()->action('UsersController@displayHomepage');
     }
 
     public function logout() {

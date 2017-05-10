@@ -52,7 +52,7 @@
 <script>
 
 $(document).ready(function(){
-    $(".banner-right-register").fadeIn(400);
+    $(".banner-right-register").fadeIn(800);
 });
 
 </script>
