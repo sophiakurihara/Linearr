@@ -344,7 +344,7 @@ input {
 }
 
 label, input {
-    display: inline-block;
+    
     vertical-align: baseline;
     color: #114B5F;
     width: 125px;
