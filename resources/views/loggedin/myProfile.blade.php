@@ -13,7 +13,7 @@
 <div class="userLeftControllPanel">
 	<div class="x">x</div>
 	<div id="myEvents" class="userLeftControllPanel-sub-sections firstControlPanel-sub-section sub-section-text">My Events</div>
-	<div id="createEvent" class="userLeftControllPanel-sub-sections sub-section-text">Create Event</div>
+	<div id="createEvent" class="userLeftControllPanel-sub-sections sub-section-text"><a href="create-event">Create Event</a></div>
 	<div id="contacts" class="userLeftControllPanel-sub-sections sub-section-text"> Contacts</div>
 	<div id="editProfile" class="userLeftControllPanel-sub-sections sub-section-text">Edit Profile</div>
 	<div class="userLeftControllPanel-sub-sections sub-section-text"><a href="logout">Logout</a></div>
@@ -38,6 +38,7 @@
 			</p>
 		</div>
 	</div>
+
 	<div id="myEventsRight">
 		<div class="x-right"><b>x</b></div>
 		<div class="userRightControllPanel">
@@ -52,8 +53,6 @@
 				</div>
 			</div>
 		</div>
-
-		
 	</div>
 
 	<script src="/js/jquery/10.8.3/jquery.min.js" type="text/javascript"></script>
@@ -162,9 +161,7 @@
 
 
 	</script>
-	
 	<script>
-
 		$(document).ready(function() {
 
 			// Speed up calls to hasOwnProperty
@@ -238,14 +235,7 @@
 					console.log("Error: " + events);
 				}
 			});
-
-
-
-
-
-
 		});
-
 	</script>
 
 @stop
