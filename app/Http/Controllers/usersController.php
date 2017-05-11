@@ -39,12 +39,6 @@ class UsersController extends Controller
 
         return redirect()->action('UsersController@displayLogin');
 
-
-        $twilio = new \App\Twilio;
-        $twilio->content = $request->first_name;
-        $twilio->number = '+12107748500';
-        $twilio->sendText($number, $content);
-
     }
 
     public function loginUser(Request $request) {
@@ -58,6 +52,11 @@ class UsersController extends Controller
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password]) === true) {
             $request->session()->put('LOGGED_IN_USER', $request->username);
             $request->session()->put('AUTH', true);
+            
+            // this will send an SMS containing the email of logged in user;
+            // $twilio = new \App\Twilio();
+            // $twilio->sendText('+12107748500', $request->email);
+            
             return redirect()->action('UsersController@displayHomepage');
         } else {
             $request->session()->flash('incorrect_login', 'Invalid credentials - Try again');
