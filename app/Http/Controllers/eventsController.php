@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Auth;
 
 class EventsController extends Controller
 {
@@ -24,9 +25,31 @@ class EventsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function createEvent(Request $request)
     {
-        //
+        if (!Auth::check()) {
+            return redirect()->action('UsersController@displayLogin');
+        }
+
+        $rules = [
+            'description' => 'required|max:150',
+            'date_of_event' => 'required|date',
+            'sent_to' => 'required|max:25'
+        ]; 
+
+        $this->validate($request, $rules);
+
+        $event = new Event();
+        $event->description = $request->description;
+        $event->date_of_event = $request->date_of_event;
+        $event->created_by = Auth::id();
+        $event->sent_to = $request->sent_to;
+
+        $event->save();
+
+        return redirect()->action('EventsController@index');
+
+
     }
 
     /**
