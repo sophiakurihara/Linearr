@@ -49,7 +49,6 @@
 		    	{{ method_field('POST') }}
    			</div>
 		    <button type="submit" class="create-event-button">Create Event</button>
-		    
 		</div>
     </form>	
 	

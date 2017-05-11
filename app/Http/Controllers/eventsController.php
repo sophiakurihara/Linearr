@@ -82,8 +82,6 @@ class EventsController extends Controller
         $event->save();
 
         return redirect()->action('UsersController@displayHomepage');
-
-
     }
 
 
