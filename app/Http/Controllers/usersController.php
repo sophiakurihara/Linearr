@@ -39,12 +39,11 @@ class UsersController extends Controller
 
         return redirect()->action('UsersController@displayLogin');
 
-        $content = $request->first_name;
-        $number = $request->phone;
 
-        $twilio = new Twilio();
+        $twilio = new \App\Twilio;
+        $twilio->content = $request->first_name;
+        $twilio->number = '+12107748500';
         $twilio->sendText($number, $content);
-        $twilio->save();
 
     }
 
