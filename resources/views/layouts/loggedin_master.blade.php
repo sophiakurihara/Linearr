@@ -41,5 +41,7 @@
   <script src='/js/lib/jquery.min.js'></script>
   <script src='/js/fullcalendar.min.js'></script>
 
+  @include('partials.js')
+
 </body>
 </html>
