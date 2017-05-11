@@ -52,6 +52,15 @@ class EventsController extends Controller
 
     }
 
+    public function showCreateEvent()
+    {
+        if(!Auth::check()){
+            return redirect()->action('UsersController@displayLogin');
+        }
+
+        return view('loggedin.events');
+    }
+
     /**
      * Store a newly created resource in storage.
      *

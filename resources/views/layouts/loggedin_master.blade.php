@@ -20,7 +20,6 @@
 		    <img class="linearr" src="/img/Linearr_logo_transparent.png">
         </a>
 	</div>
-
         <!-- place navbar here in master -->
         @yield('loggedin_content')
 
@@ -44,4 +43,3 @@
 
 </body>
 </html>
-
