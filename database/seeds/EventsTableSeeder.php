@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\User;
 use App\Event;
 
 class EventsTableSeeder extends Seeder
@@ -24,7 +25,7 @@ class EventsTableSeeder extends Seeder
         	$scheduledEvent->title = $faker->streetName;
         	$scheduledEvent->description = $faker->paragraph;
         	$scheduledEvent->date_of_event = $faker->date;
-        	$scheduledEvent->created_by = \App\User::all()->random()->id;
+        	$scheduledEvent->created_by = User::all()->random()->id;
         	$scheduledEvent->sent_to = "2107748500";
         	$scheduledEvent->save();
         }

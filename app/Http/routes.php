@@ -21,9 +21,14 @@ Route::get('/login', 'UsersController@displayLogin');
 
 Route::get('/logout', 'UsersController@logout');
 
+
 Route::get('/text-me', function() {
 	$t = new \App\Twilio;
 	$t->sendText('+12107748500', 'hey!');
 });
+
+Route::get('/create-event', 'EventsController@showCreateEvent');
+Route::post('/create-event', 'EventsController@createEvent');
+
 Route::get('/get-calendar-events', 'EventsController@fullCalendarEvents');
 
