@@ -3,6 +3,7 @@
 @section('additional_css')
 
 <link rel="stylesheet" href="/css/myProfile.css">
+<link href="/css/jquery-ui.css" rel="stylesheet">
 
 @stop
 
