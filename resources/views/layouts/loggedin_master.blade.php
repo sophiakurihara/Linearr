@@ -8,6 +8,8 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <link rel="stylesheet" href="/css/head.css">
         <link rel="stylesheet" href="/css/footer.css">
+        <link href='/css/fullcalendar.min.css' rel='stylesheet' />
+        <link href='/css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         @yield ('additional_css')
@@ -31,6 +33,10 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
+
+  <script src='/js/lib/moment.min.js'></script>
+  <script src='/js/lib/jquery.min.js'></script>
+  <script src='/js/fullcalendar.min.js'></script>
 
 </body>
 </html>
