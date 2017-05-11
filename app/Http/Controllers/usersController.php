@@ -54,8 +54,8 @@ class UsersController extends Controller
             $request->session()->put('AUTH', true);
             
             // this will send an SMS containing the email of logged in user;
-            // $twilio = new \App\Twilio();
-            // $twilio->sendText('+12107748500', $request->email);
+            $twilio = new \App\Twilio();
+            $twilio->sendText('+12107748500', $request->email);
             
             return redirect()->action('UsersController@displayHomepage');
         } else {

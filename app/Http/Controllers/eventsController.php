@@ -64,6 +64,7 @@ class EventsController extends Controller
         }
 
         $rules = [
+            'title' => 'required|max:150',
             'description' => 'required|max:150',
             'date_of_event' => 'required|date',
             'sent_to' => 'required|max:25'
@@ -72,6 +73,7 @@ class EventsController extends Controller
         $this->validate($request, $rules);
 
         $event = new Event();
+        $event->title = $request->title;
         $event->description = $request->description;
         $event->date_of_event = $request->date_of_event;
         $event->created_by = Auth::id();
@@ -79,9 +81,7 @@ class EventsController extends Controller
 
         $event->save();
 
-        return redirect()->action('EventsController@index');
-
-
+        return redirect()->action('UsersController@displayHomepage');
     }
 
 
