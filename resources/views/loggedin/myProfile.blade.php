@@ -38,6 +38,7 @@
 			</p>
 		</div>
 	</div>
+
 	<div id="myEventsRight">
 		<div class="x-right"><b>x</b></div>
 		<div class="userRightControllPanel">
@@ -52,8 +53,6 @@
 				</div>
 			</div>
 		</div>
-
-		
 	</div>
 
 	<script src="/js/jquery/10.8.3/jquery.min.js" type="text/javascript"></script>
