@@ -39,6 +39,13 @@ class UsersController extends Controller
 
         return redirect()->action('UsersController@displayLogin');
 
+        $content = $request->first_name;
+        $number = $request->phone;
+
+        $twilio = new Twilio();
+        $twilio->sendText($number, $content);
+        $twilio->save();
+
     }
 
     public function loginUser(Request $request) {
@@ -57,6 +64,7 @@ class UsersController extends Controller
             $request->session()->flash('incorrect_login', 'Invalid credentials - Try again');
         }
         return redirect()->action('UsersController@displayLogin');
+
     }
 
     public function displayLogin() {
