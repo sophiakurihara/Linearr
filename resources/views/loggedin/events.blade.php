@@ -120,10 +120,14 @@
 	<script>
 		// on .click of myEvents subsection content in users panel 
 		$(document).ready(function(){
-	    	$("#calendarContainer").animate({width: "54%"});
-			$("#myEventsRight").fadeIn(.1);
-			$("#myEventsRight").animate({width: "26%"});
+	    	$("#calendarContainer").animate({
+				width: "54%"
 			});
+			setTimeout(function(){
+				$("#myEventsRight").fadeIn(.1);
+				$("#myEventsRight").animate({width: "26%"});
+			}, 500);
+		});
 	</script>
 <!-- 	<script>
 		// on .click of myEvents subsection content in users panel 
