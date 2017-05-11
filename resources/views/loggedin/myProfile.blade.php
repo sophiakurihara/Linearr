@@ -22,60 +22,7 @@
 </div>
 
 	<div id="calendarContainer">
-		<div class="month"> 
-			<ul>
-			  <li class="prev">&#10094;</li>
-			  <li class="next">&#10095;</li>
-			  <li>
-			    August<br>
-			    <span style="font-size:18px">2016</span>
-			  </li>
-			</ul>
-		</div>
-
-		<ul class="weekdays">
-		  <li>Mo</li>
-		  <li>Tu</li>
-		  <li>We</li>
-		  <li>Th</li>
-		  <li>Fr</li>
-		  <li>Sa</li>
-		  <li>Su</li>
-		</ul>
-
-		<ul class="days"> 
-		  <li class="myBtn1">1</li>
-		  <li class="myBtn2">2</li>
-		  <li class="myBtn3">3</li>
-		  <li class="myBtn4">4</li>
-		  <li class="myBtn5">5</li>
-		  <li class="myBtn6">6</li>
-		  <li class="myBtn7">7</li>
-		  <li class="myBtn8">8</li>
-		  <li class="myBtn9">9</li>
-		  <li class="myBtn10"><span class="active">10</span></li>
-		  <li class="myBtn11">11</li>
-		  <li class="myBtn12">12</li>
-		  <li class="myBtn13">13</li>
-		  <li class="myBtn14">14</li>
-		  <li class="myBtn15">15</li>
-		  <li class="myBtn16">16</li>
-		  <li class="myBtn17">17</li>
-		  <li class="myBtn18">18</li>
-		  <li class="myBtn19">19</li>
-		  <li class="myBtn20">20</li>
-		  <li class="myBtn21">21</li>
-		  <li class="myBtn22">22</li>
-		  <li class="myBtn23">23</li>
-		  <li class="myBtn24">24</li>
-		  <li class="myBtn25">25</li>
-		  <li class="myBtn26">26</li>
-		  <li class="myBtn27">27</li>
-		  <li class="myBtn28">28</li>
-		  <li class="myBtn29">29</li>
-		  <li class="myBtn30">30</li>
-		  <li class="myBtn31">31</li>
-		</ul>
+		<div id="calendar"></div>
 	</div>	
 	<!-- The Modal -->
 	<div id="myModal" class="modal">
@@ -214,6 +161,75 @@
 
 	</script>
 	
+	<script>
+
+		$(document).ready(function() {
+
+			$('#calendar').fullCalendar({
+				defaultDate: '2017-05-12',
+				editable: true,
+				eventLimit: true, // allow "more" link when too many events
+				events: [
+					{
+						title: 'All Day Event',
+						start: '2017-05-01'
+					},
+					{
+						title: 'Long Event',
+						start: '2017-05-07',
+						end: '2017-05-10'
+					},
+					{
+						id: 999,
+						title: 'Repeating Event',
+						start: '2017-05-09T16:00:00'
+					},
+					{
+						id: 999,
+						title: 'Repeating Event',
+						start: '2017-05-16T16:00:00'
+					},
+					{
+						title: 'Conference',
+						start: '2017-05-11',
+						end: '2017-05-13'
+					},
+					{
+						title: 'Meeting',
+						start: '2017-05-12T10:30:00',
+						end: '2017-05-12T12:30:00'
+					},
+					{
+						title: 'Lunch',
+						start: '2017-05-12T12:00:00'
+					},
+					{
+						title: 'Meeting',
+						start: '2017-05-12T14:30:00'
+					},
+					{
+						title: 'Happy Hour',
+						start: '2017-05-12T17:30:00'
+					},
+					{
+						title: 'Dinner',
+						start: '2017-05-12T20:00:00'
+					},
+					{
+						title: 'Birthday Party',
+						start: '2017-05-13T07:00:00'
+					},
+					{
+						title: 'Click for Google',
+						url: 'http://google.com/',
+						start: '2017-05-28'
+					}
+				]
+			});
+			
+		});
+
+	</script>
 
 @stop
 
