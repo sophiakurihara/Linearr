@@ -79,11 +79,8 @@ body {font-family: Verdana, sans-serif;}
 	height: auto;
 	float: left;
     background-color: white;
-    padding: 2% 10%;
+    padding: 2% 5%;
     display: none;
-    /*display: inline-block;*/
-	/*margin-left: 2%;*/
-	/*margin-top: 2%;*/
 }
 /* Month header */
 .month {
@@ -352,4 +349,16 @@ label, input {
     vertical-align: baseline;
     color: #114B5F;
     width: 125px;
+}
+
+.dateInput
+{
+    background-color: transparent;
+    border: 0px;
+    padding: 0px 0px 4px 0px;
+    border-bottom: 1px solid #58818f;
+    margin-bottom: 24px;
+    color: black;
+    width: 70%;
+    border-radius: 0px;
 }
