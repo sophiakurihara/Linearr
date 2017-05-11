@@ -208,10 +208,7 @@ body {font-family: Verdana, sans-serif;}
 .x {
 	margin-top: -9%;
 	float: right;
-    margin-right: -17%;
 	color: white;
-    background-color: black;
-    padding: 4px;
 }
 
 .x:hover {
