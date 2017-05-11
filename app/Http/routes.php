@@ -25,3 +25,5 @@ Route::get('/text-me', function() {
 	$t = new \App\Twilio;
 	$t->sendText('+12107748500', 'hey!');
 });
+Route::get('/get-calendar-events', 'EventsController@fullCalendarEvents');
+

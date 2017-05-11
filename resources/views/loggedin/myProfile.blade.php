@@ -23,7 +23,8 @@
 
 	<div id="calendarContainer">
 		<div id="calendar"></div>
-	</div>	
+	</div>
+
 	<!-- The Modal -->
 	<div id="myModal" class="modal">
 		<!-- Modal content -->
@@ -70,7 +71,7 @@
 					"padding":"0",
 					"margin":"0"
 				}, 300);
-
+				
 				setTimeout(function(){
 					$('.userLeftControllPanel').fadeOut(100);
 				}, 300);
@@ -79,14 +80,14 @@
 					$('.userLeftControllPanel-arrow').fadeIn(100);
 					$('.userLeftControllPanel-arrow').animate({
 						"width":"10px"
-					}, 400);
+					}, 200);
 				}, 300);
 
 				setTimeout(function(){
 					$('#calendarContainer').animate({
 						"width":"99.4%"
 					}, 400);
-				}, 310);
+				}, 210);
 			});
 
 			$('.userLeftControllPanel-arrow').click(function(){
@@ -98,14 +99,15 @@
 					"width":"1px"
 				}, 400);
 
+
 				setTimeout(function(){
 					$('.userLeftControllPanel-arrow').fadeOut(10);
+					//$('.userLeftControllPanel-arrow').css("background-color", "#114b5f");
 				}, 404);
 
 				setTimeout(function(){
 
 					$('.userLeftControllPanel').fadeIn(100);
-
 					$('.userLeftControllPanel').animate({
 						"width":"20%",
 						"padding":"2.5%"
@@ -165,68 +167,55 @@
 
 		$(document).ready(function() {
 
-			$('#calendar').fullCalendar({
-				defaultDate: '2017-05-12',
-				editable: true,
-				eventLimit: true, // allow "more" link when too many events
-				events: [
-					{
-						title: 'All Day Event',
-						start: '2017-05-01'
-					},
-					{
-						title: 'Long Event',
-						start: '2017-05-07',
-						end: '2017-05-10'
-					},
-					{
-						id: 999,
-						title: 'Repeating Event',
-						start: '2017-05-09T16:00:00'
-					},
-					{
-						id: 999,
-						title: 'Repeating Event',
-						start: '2017-05-16T16:00:00'
-					},
-					{
-						title: 'Conference',
-						start: '2017-05-11',
-						end: '2017-05-13'
-					},
-					{
-						title: 'Meeting',
-						start: '2017-05-12T10:30:00',
-						end: '2017-05-12T12:30:00'
-					},
-					{
-						title: 'Lunch',
-						start: '2017-05-12T12:00:00'
-					},
-					{
-						title: 'Meeting',
-						start: '2017-05-12T14:30:00'
-					},
-					{
-						title: 'Happy Hour',
-						start: '2017-05-12T17:30:00'
-					},
-					{
-						title: 'Dinner',
-						start: '2017-05-12T20:00:00'
-					},
-					{
-						title: 'Birthday Party',
-						start: '2017-05-13T07:00:00'
-					},
-					{
-						title: 'Click for Google',
-						url: 'http://google.com/',
-						start: '2017-05-28'
-					}
-				]
-			});
+			function isEmpty(obj) {
+				for(var key in obj) {
+					if(obj.hasOwnProperty(key))
+						return false;
+				}
+				return true;
+			}
 			
+			$.ajax({
+				url: '/get-calendar-events',
+				method: "GET",
+				dataType: "JSON",
+				success: function(events) {
+					if(!isEmpty(events)) {
+						var array = [];
+						for(var i = 0; i < events.length; i++) {
+							array.push({
+								title: events[i].title,
+								start: events[i].date_of_event
+							});
+						}
+						$('#calendar').fullCalendar({
+							defaultDate: '2017-05-12',
+							editable: true,
+							eventLimit: true, // allow "more" link when too many events
+							events: array
+						});
+					} else {
+							$('#calendar').fullCalendar({
+							defaultDate: '2017-05-12',
+							editable: true,
+							eventLimit: true, // allow "more" link when too many events
+							events: [{
+								title: "No Events"
+							}]
+						});
+					}
+				// run the calendar - with populated data
+				}, error: function(events) {
+					// run the calendar with no data
+					console.log("Error: " + events);
+				}
+			});
+
+
+
+
+
+
 		});
 
 	</script>
