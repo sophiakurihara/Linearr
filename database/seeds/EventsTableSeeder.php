@@ -22,7 +22,7 @@ class EventsTableSeeder extends Seeder
         	$scheduledEvent = new Event();
         	//populating faker data
         	//event targeting the column of x,y,z 
-            $scheduledEvent->title = $faker->word;
+        	$scheduledEvent->title = $faker->streetName;
         	$scheduledEvent->description = $faker->paragraph;
         	$scheduledEvent->date_of_event = $faker->date;
         	$scheduledEvent->created_by = User::all()->random()->id;
