@@ -53,7 +53,7 @@
 					"width":"1px",
 					"padding":"0",
 					"margin":"0"
-				}, 300);
+				}, 400);
 				
 				setTimeout(function(){
 					$('.userLeftControllPanel').fadeOut(100);
@@ -70,13 +70,15 @@
 					$('#calendarContainer').animate({
 						"width":"99.4%"
 					}, 400);
-				}, 210);
+				}, 400);
 			});
 
 			$('.userLeftControllPanel-arrow').click(function(){
-				$('#calendarContainer').animate({
-					"width":"80%"
-				}, 400);
+				setTimeout(function(){
+					$('#calendarContainer').animate({
+						"width":"80%"
+					}, 400);		
+				}, 210);
 
 				$('.userLeftControllPanel-arrow').animate({
 					"width":"1px"

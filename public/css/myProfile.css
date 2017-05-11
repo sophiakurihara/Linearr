@@ -16,7 +16,7 @@ body {
 .userLeftControllPanel
 {
 	width: 20%;
-	height: 860px;
+	height: 880px;
 	float: left;
 	padding: 2.5%;
 	background-color: #114b5f;
@@ -218,9 +218,8 @@ body {font-family: Verdana, sans-serif;}
 
 #myEventsRight
 {
-
     display: none;
-    width: 1%;
+    width: 26%;
     height: 670px;
     float: right;
     background-color: #ddd;
