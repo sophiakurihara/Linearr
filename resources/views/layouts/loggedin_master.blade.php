@@ -20,7 +20,6 @@
 		    <img class="linearr" src="/img/Linearr_logo_transparent.png">
         </a>
 	</div>
-
         <!-- place navbar here in master -->
         @yield('loggedin_content')
 
@@ -38,6 +37,9 @@
         <script src='/js/lib/jquery.min.js'></script>
         <script src='/js/fullcalendar.min.js'></script>
 
+  <script src='/js/lib/moment.min.js'></script>
+  <script src='/js/lib/jquery.min.js'></script>
+  <script src='/js/fullcalendar.min.js'></script>
+
 </body>
 </html>
-

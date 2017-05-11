@@ -220,7 +220,6 @@ body {font-family: Verdana, sans-serif;}
 
     display: none;
     width: 1%;
-    /*margin-top: 2%;*/
     height: 670px;
     float: right;
     background-color: #ddd;
@@ -241,7 +240,7 @@ body {font-family: Verdana, sans-serif;}
     width: 75%;
     height: 100%;
     float: left;
-    /*margin-left: 8%;*/
+    display:none;
     padding: 2.5%;
     background-color: transparent;
 }
@@ -285,7 +284,68 @@ body {font-family: Verdana, sans-serif;}
 .eventContainer
 {
     background-color: #ddd;
+    display: inline-block;
     width: 75%;
     height: auto;
 }
 
+.createEventContainer
+{
+    background-color: #ddd;
+    display: inline-block;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid grey;
+    background-color: white;
+    width: 75%;
+    margin-left: 12%;
+    margin-top: 12%;
+    height: 350px;
+}
+
+.create-form-group
+{
+    width: 80%;
+    display: inline-block;
+    height: 200px;
+}
+
+.create-event-button {
+    float: right;
+    padding: 8px 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 13%;
+    margin-left: 50px;
+    border-radius: 1px;
+    border: 0px;
+    width: 75%;
+    background-color: #114B5F;
+    opacity: 0.6;
+    color: white;
+    transition: 0.5s;
+}
+
+.create-event-button:hover {
+    background-color: #58818f;
+    color: white;
+    opacity: 0.3;
+}
+
+input {
+    background-color: transparent;
+    border: 0px;
+    padding: 0px 0px 4px 0px;
+    border-bottom: 1px solid #58818f;
+    margin-bottom: 24px;
+    color: black;
+    width: 70%;
+    border-radius: 0px;
+}
+
+label, input {
+    display: inline-block;
+    vertical-align: baseline;
+    color: #114B5F;
+    width: 125px;
+}

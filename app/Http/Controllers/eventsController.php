@@ -21,6 +21,36 @@ class EventsController extends Controller
     {
         //
     }
+     public function showCreateEvent()
+    {
+        if(!Auth::check()){
+            return redirect()->action('UsersController@displayLogin');
+        }
+
+        return view('loggedin.events');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -54,8 +84,10 @@ class EventsController extends Controller
 
     }
 
+
     public function fullCalendarEvents() {
         $events = Event::where('created_by', '=', Auth::id())->get();
+
 
         if($events->isEmpty()) {
             return Response::JSON("Nothing found.");
