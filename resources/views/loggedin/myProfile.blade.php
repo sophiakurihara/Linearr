@@ -115,7 +115,6 @@
 		$(document).ready(function(){
 
 			$('.x').click(function(){
-				clicked = "yes";
 				$('.userLeftControllPanel-sub-sections').addClass('hide');
 				$('.settings').addClass('hide');
 
@@ -128,7 +127,6 @@
 				setTimeout(function(){
 					$('.userLeftControllPanel').fadeOut(100);
 				}, 300);
-
 
 				setTimeout(function(){
 					$('.userLeftControllPanel-arrow').fadeIn(100);
@@ -145,7 +143,6 @@
 			});
 
 			$('.userLeftControllPanel-arrow').click(function(){
-
 				$('#calendarContainer').animate({
 					"width":"80%"
 				}, 400);
@@ -173,15 +170,16 @@
 					}, 310);
 				}, 410);
 			});
+
 		});
 	</script>
 
 	<script>
 		$(document).ready(function(){
+			var clicked
 			for(let i = 0; i <= 31; i++)
 			{
 				$(".myBtn" + i).click(function(){
-					console.log("you clicked" + i);
 					$("#myModal").css("display", "block");
 				});
 				$(".close").click(function(){
