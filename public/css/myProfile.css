@@ -293,8 +293,14 @@ body {font-family: Verdana, sans-serif;}
 {
     background-color: #ddd;
     display: inline-block;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid grey;
+    background-color: white;
     width: 75%;
-    height: auto;
+    margin-left: 12%;
+    margin-top: 12%;
+    height: 350px;
 }
 
 .create-form-group
@@ -304,20 +310,23 @@ body {font-family: Verdana, sans-serif;}
     height: 200px;
 }
 
-.login-button {
+.create-event-button {
     float: right;
     padding: 8px 14px;
-    margin-top: -20px;
-    margin-right: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 13%;
+    margin-left: 50px;
     border-radius: 1px;
     border: 0px;
+    width: 75%;
     background-color: #114B5F;
     opacity: 0.6;
     color: white;
     transition: 0.5s;
 }
 
-.login-button:hover {
+.create-event-button:hover {
     background-color: #58818f;
     color: white;
     opacity: 0.3;
@@ -337,5 +346,6 @@ input {
 label, input {
     display: inline-block;
     vertical-align: baseline;
+    color: #114B5F;
     width: 125px;
 }

@@ -41,14 +41,15 @@
 	<form method="POST" action="{{ action('EventsController@createEvent') }}">
 	{!! csrf_field()!!}
 	<div id="myEventsRight">
-		<div class="eventContainer">
-			<label for="title">Title:</label><input type="text" name="title" id="title" placeholder="{{ $errors->has('title') ? 'Please enter your event title' : 'title' }}" value="{{ $errors->has('title') ? '' : old('title') }}" autocomplete="off">
-                <label for="description">Description:</label><input type="text" name="description" id="description" placeholder="{{ $errors->has('description') ? 'Please enter your last name' : 'Last name' }}" value="{{ $errors->has('description') ? '' : old('description') }}" autocomplete="off">
-                <label for="date_of_event">E-Mail:</label><input type="text" name="date_of_event" id="date_of_event" placeholder="{{ $errors->has('date_of_event') ? 'Please enter your date_of_event address' : 'date_of_event' }}" value="{{ $errors->has('date_of_event') ? '' : old('date_of_event') }}" autocomplete="off">
-                <label for="sent_to">sent_to:</label><input type="text" name="sent_to" id="sent_to" placeholder="{{ $errors->has('sent_to') ? 'Please enter your sent_to number' : 'sent_to' }}" value="{{ $errors->has('sent_to') ? '' : old('sent_to') }}" autocomplete="off">
+		<div class="createEventContainer">
+			<label for="title">Title:</label><input type="text" name="title" id="title"  autocomplete="off">
+                <label for="description">Description:</label><input type="text" name="description" id="description" value="{{ $errors->has('description') ? '' : old('description') }}" autocomplete="off">
+                <label for="date_of_event">Date:</label><input type="text" name="date_of_event" id="date_of_event" value="{{ $errors->has('date_of_event') ? '' : old('date_of_event') }}" autocomplete="off">
+                <label for="sent_to">Invite Contacts:</label><input type="text" name="sent_to" id="sent_to" value="{{ $errors->has('sent_to') ? '' : old('sent_to') }}" autocomplete="off">
 		    	{{ method_field('POST') }}
-		        <button type="submit" class="login-button">Create Event</button>
    			</div>
+		    <button type="submit" class="create-event-button">Create Event</button>
+		    
 		</div>
     </form>	
 	
