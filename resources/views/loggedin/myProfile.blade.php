@@ -137,9 +137,19 @@
 					}, 400);
 				}, 300);
 
+				setTimeout(function(){
+					$('#calendarContainer').animate({
+						"width":"99.4%"
+					}, 400);
+				}, 310);
 			});
 
 			$('.userLeftControllPanel-arrow').click(function(){
+
+				$('#calendarContainer').animate({
+					"width":"80%"
+				}, 400);
+
 				$('.userLeftControllPanel-arrow').animate({
 					"width":"1px"
 				}, 400);
