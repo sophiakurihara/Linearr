@@ -124,9 +124,8 @@
 				width: "54%"
 			});
 			setTimeout(function(){
-				$("#myEventsRight").fadeIn(.1);
-				$("#myEventsRight").animate({width: "26%"});
-			}, 500);
+				$("#myEventsRight").fadeIn(1400);
+			}, 300);
 		});
 	</script>
 <!-- 	<script>
