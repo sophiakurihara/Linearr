@@ -62,7 +62,6 @@
 		$(document).ready(function(){
 
 			$('.x').click(function(){
-				clicked = "yes";
 				$('.userLeftControllPanel-sub-sections').addClass('hide');
 				$('.settings').addClass('hide');
 
@@ -76,7 +75,6 @@
 					$('.userLeftControllPanel').fadeOut(100);
 				}, 300);
 
-
 				setTimeout(function(){
 					$('.userLeftControllPanel-arrow').fadeIn(100);
 					$('.userLeftControllPanel-arrow').animate({
@@ -84,9 +82,18 @@
 					}, 400);
 				}, 300);
 
+				setTimeout(function(){
+					$('#calendarContainer').animate({
+						"width":"99.4%"
+					}, 400);
+				}, 310);
 			});
 
 			$('.userLeftControllPanel-arrow').click(function(){
+				$('#calendarContainer').animate({
+					"width":"80%"
+				}, 400);
+
 				$('.userLeftControllPanel-arrow').animate({
 					"width":"1px"
 				}, 400);
@@ -110,15 +117,16 @@
 					}, 310);
 				}, 410);
 			});
+
 		});
 	</script>
 
 	<script>
 		$(document).ready(function(){
+			var clicked
 			for(let i = 0; i <= 31; i++)
 			{
 				$(".myBtn" + i).click(function(){
-					console.log("you clicked" + i);
 					$("#myModal").css("display", "block");
 				});
 				$(".close").click(function(){
@@ -152,7 +160,6 @@
 
 
 	</script>
-		
 	<script>
 
 		$(document).ready(function() {
