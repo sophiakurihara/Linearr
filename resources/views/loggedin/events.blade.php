@@ -37,18 +37,22 @@ $( "#datepicker" ).datepicker();
 
 			<form method="POST" action="{{ action('EventsController@createEvent') }}">
 			{!! csrf_field()!!}
-			<div id="myEventsRight">
-				<div class="createEventContainer">
-					<label for="title">Title:</label><input type="text" name="title" id="title"  autocomplete="off">
-		                <label for="description">Description:</label>
-		                <input type="text" name="description" id="description" value="{{ $errors->has('description') ? '' : old('description') }}" autocomplete="off">
-		                <p>Date: <input type="text" id="datepicker"></p>
-		                <label for="sent_to">Invite Contacts:</label>
-		                <input type="text" name="sent_to" id="sent_to" value="{{ $errors->has('sent_to') ? '' : old('sent_to') }}" autocomplete="off">
-				    	{{ method_field('POST') }}
-		   			</div>
-				    <button type="submit" class="create-event-button">Create Event</button>
+				<div class="create-event-input-container">
+					<div class="modal-content-div">
+						<input for="title" placeholder= "Title" type="text" name="title" class="modal-content-title-input"  autocomplete="off">
+					</div>
+					<div class="modal-content-div">
+			            <textarea rows="3" cols="40" type="text" for="description" placeholder="Description" name="description" id="description" value="{{ $errors->has('description') ? '' : old('description') }}" autocomplete="off"></textarea>
+					</div>
+					<div class="modal-content-div">
+			            <input type="text" for="date_of_event" name="date_of_event" placeholder="Date" id="datepicker" value="{{ $errors->has('date_of_event') ? '' : old('date_of_event') }}">
+			        </div>
+			        <div class="modal-content-div">         
+			            <input for="sent_to" placeholder="Contacts" type="text" name="sent_to" id="sent_to" value="{{ $errors->has('sent_to') ? '' : old('sent_to') }}" autocomplete="off">
+					</div>
 				</div>
+				{{ method_field('POST') }}
+				<button type="submit" class="create-event-button">Create Event</button>
 		    </form>	
 		</div>
 	</div> 

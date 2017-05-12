@@ -29,7 +29,7 @@
         </div>
 
         <div id="myEvents" class="userLeftControllPanel-sub-sections firstControlPanel-sub-section sub-section-text"><a href="/">My Events</a></div>
-        <div id="createEvent" class="userLeftControllPanel-sub-sections sub-section-text"><a href="create-event">Create Event</a></div>
+        <div class="userLeftControllPanel-sub-sections sub-section-text"><a id="createEvent"href="create-event">Create Event</a></div>
         <div id="contacts" class="userLeftControllPanel-sub-sections sub-section-text"> Contacts</div>
         <div id="editProfile" class="userLeftControllPanel-sub-sections sub-section-text">Edit Profile</div>
         <div class="userLeftControllPanel-sub-sections sub-section-text"><a href="logout">Logout</a></div>
@@ -167,7 +167,7 @@
 
 				setTimeout(function(){
 					$('#calendarContainer').animate({
-						"width":"99.4%"
+						"width":"99%"
 					}, 400);
 				}, 400);
 			});
@@ -208,17 +208,15 @@
 	</script>
 
 	<script>
-		$(document).ready(function(){
-			var clicked
-			for(let i = 0; i <= 31; i++)
-			{
-				$(".myBtn" + i).click(function(){
-					$("#myModal").css("display", "block");
-				});
-				$(".close").click(function(){
-					$("#myModal").css("display", "none");
-				});
-			}
+		$(document).ready(function()
+		{
+			$("a#createEvent").click(function(e){
+				e.preventDefault();
+				$("#myModal").css("display", "block");
+			});
+			$(".close").click(function(){
+				$("#myModal").css("display", "none");
+			});
 		});
 	</script>
 
