@@ -68,120 +68,8 @@
 
 @stop
 
-<<<<<<< HEAD
 @section('js')
 
-
-	<script>
-		$(document).ready(function(){
-
-			$('.x').click(function(){
-				$('.userLeftControllPanel-sub-sections').addClass('hide');
-				$('.settings').addClass('hide');
-
-				$('.userLeftControllPanel').animate({
-					"width":"1px",
-					"padding":"0",
-					"margin":"0"
-				}, 300);
-
-				setTimeout(function(){
-					$('.userLeftControllPanel').fadeOut(100);
-				}, 300);
-
-				setTimeout(function(){
-					$('.userLeftControllPanel-arrow').fadeIn(100);
-					$('.userLeftControllPanel-arrow').animate({
-						"width":"10px"
-					}, 400);
-				}, 300);
-
-				setTimeout(function(){
-					$('#calendarContainer').animate({
-						"width":"99.4%"
-					}, 400);
-				}, 310);
-			});
-
-			$('.userLeftControllPanel-arrow').click(function(){
-				$('#calendarContainer').animate({
-					"width":"80%"
-				}, 400);
-
-				$('.userLeftControllPanel-arrow').animate({
-					"width":"1px"
-				}, 400);
-
-				setTimeout(function(){
-					$('.userLeftControllPanel-arrow').fadeOut(10);
-				}, 404);
-
-				setTimeout(function(){
-
-					$('.userLeftControllPanel').fadeIn(100);
-
-					$('.userLeftControllPanel').animate({
-						"width":"20%",
-						"padding":"2.5%"
-					}, 300);
-
-					setTimeout(function(){
-						$('.userLeftControllPanel-sub-sections').fadeIn(200).removeClass('hide');
-						$('.settings').fadeIn(200).removeClass('hide');
-					}, 310);
-				}, 410);
-			});
-
-		});
-	</script>
-	<script type="text/javascript">
-	$(document).ready(function(){
-		$( "#datepicker" ).datepicker();
-	});
-	</script>
-
-=======
->>>>>>> master
-<!-- 	<script>
-		$(document).ready(function(){
-			var clicked
-			for(let i = 0; i <= 31; i++)
-			{
-				$(".myBtn" + i).click(function(){
-					$("#myModal").css("display", "block");
-				});
-				$(".close").click(function(){
-					$("#myModal").css("display", "none");
-				});
-			}
-		});
-	</script> -->
-<!-- 	<script>
-		// on .click of myEvents subsection content in users panel 
-		$(document).ready(function(){
-			$("#createEvent").click(function(){
-		    	$("#calendarContainer").animate({width: "54%"});
-				$("#myEventsRight").fadeIn(.1);
-				$("#myEventsRight").animate({width: "26%"});
-			});
-		});
-	</script> -->
-		<!-- // on .click of Create Event subsection content in users panel  -->
-
-
-	
-	<script>
-		// on .click of contacts subsection content in users panel 
-
-
-	</script>
-	<script>
-		// on .click of edit profile subsection content in users panel 
-
-
-	</script>
-
-	@section('js')
 
 	<script>
 		// on .click of myEvents subsection content in users panel 
@@ -197,4 +85,4 @@
 		});
 	</script>
 
-	@stop
+@stop

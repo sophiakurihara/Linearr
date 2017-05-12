@@ -78,12 +78,7 @@ body {font-family: Verdana, sans-serif;}
 	width: 80%;
 	height: auto;
 	float: left;
-<<<<<<< HEAD
-    background-color: white;
-    padding: 2% 5%;
-=======
-    padding: 2% 10%;
->>>>>>> master
+    padding: 2% 4%;
     display: none;
 }
 /* Month header */
