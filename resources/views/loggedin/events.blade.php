@@ -38,46 +38,7 @@
 
 @stop
 
-<!-- 	<script>
-		$(document).ready(function(){
-			var clicked
-			for(let i = 0; i <= 31; i++)
-			{
-				$(".myBtn" + i).click(function(){
-					$("#myModal").css("display", "block");
-				});
-				$(".close").click(function(){
-					$("#myModal").css("display", "none");
-				});
-			}
-		});
-	</script> -->
-<!-- 	<script>
-		// on .click of myEvents subsection content in users panel 
-		$(document).ready(function(){
-			$("#createEvent").click(function(){
-		    	$("#calendarContainer").animate({width: "54%"});
-				$("#myEventsRight").fadeIn(.1);
-				$("#myEventsRight").animate({width: "26%"});
-			});
-		});
-	</script> -->
-		<!-- // on .click of Create Event subsection content in users panel  -->
-
-
-	
-	<script>
-		// on .click of contacts subsection content in users panel 
-
-
-	</script>
-	<script>
-		// on .click of edit profile subsection content in users panel 
-
-
-	</script>
-
-	@section('js')
+@section('js')
 
 	<script>
 		// on .click of myEvents subsection content in users panel 
@@ -93,4 +54,4 @@
 		});
 	</script>
 
-	@stop
+@stop

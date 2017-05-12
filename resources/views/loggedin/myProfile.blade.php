@@ -40,32 +40,4 @@
 
 @stop
 
-	<!--
-	<script>
-		// on .click of myEvents subsection content in users panel 
-		$(document).ready(function(){
-			$("#myEvents").click(function(){
-		    	$("#calendarContainer").animate({width: "54%"});
-				$("#myEventsRight").fadeIn(.1);
-				$("#myEventsRight").animate({width: "26%"});
-			});
-		});
-	</script>
-	-->
-	<script>
-		// on .click of Create Event subsection content in users panel 
-
-
-	</script>
-	<script>
-		// on .click of contacts subsection content in users panel 
-
-
-	</script>
-	<script>
-		// on .click of edit profile subsection content in users panel 
-
-
-	</script>
-
 
