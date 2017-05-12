@@ -37,6 +37,8 @@
         <div class="settings"></div>
     </div>
 
+    <div class="loading"><img src="../../img/loading-large.gif" width="40"></div>
+
 	<div id="calendarContainer">
 		<div id="calendar"></div>
 	</div>
