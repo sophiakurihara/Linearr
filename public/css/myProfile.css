@@ -10,7 +10,7 @@ a:hover
 }
 
 body {
-    background-color: #114B5F;
+    background-color: white;
 }
 
 .userLeftControllPanel
@@ -78,7 +78,6 @@ body {font-family: Verdana, sans-serif;}
 	width: 80%;
 	height: auto;
 	float: left;
-    background-color: white;
     padding: 2% 10%;
     display: none;
     /*display: inline-block;*/
@@ -213,6 +212,7 @@ body {font-family: Verdana, sans-serif;}
     background-color: white;
 	float: right;
 	color: #114B5F;
+    display: none;
 }
 
 .x:hover {
@@ -351,4 +351,10 @@ label, input {
     vertical-align: baseline;
     color: #114B5F;
     width: 125px;
+}
+
+.loading {
+    position: relative;
+    top: 300px;
+    left: 40%;
 }

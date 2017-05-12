@@ -38,71 +38,6 @@
 
 @stop
 
-@section('js')
-
-	<script>
-		$(document).ready(function(){
-
-			$('.x').click(function(){
-				$('.userLeftControllPanel-sub-sections').addClass('hide');
-				$('.settings').addClass('hide');
-
-				$('.userLeftControllPanel').animate({
-					"width":"1px",
-					"padding":"0",
-					"margin":"0"
-				}, 300);
-
-				setTimeout(function(){
-					$('.userLeftControllPanel').fadeOut(100);
-				}, 300);
-
-				setTimeout(function(){
-					$('.userLeftControllPanel-arrow').fadeIn(100);
-					$('.userLeftControllPanel-arrow').animate({
-						"width":"10px"
-					}, 400);
-				}, 300);
-
-				setTimeout(function(){
-					$('#calendarContainer').animate({
-						"width":"99.4%"
-					}, 400);
-				}, 310);
-			});
-
-			$('.userLeftControllPanel-arrow').click(function(){
-				$('#calendarContainer').animate({
-					"width":"80%"
-				}, 400);
-
-				$('.userLeftControllPanel-arrow').animate({
-					"width":"1px"
-				}, 400);
-
-				setTimeout(function(){
-					$('.userLeftControllPanel-arrow').fadeOut(10);
-				}, 404);
-
-				setTimeout(function(){
-
-					$('.userLeftControllPanel').fadeIn(100);
-
-					$('.userLeftControllPanel').animate({
-						"width":"20%",
-						"padding":"2.5%"
-					}, 300);
-
-					setTimeout(function(){
-						$('.userLeftControllPanel-sub-sections').fadeIn(200).removeClass('hide');
-						$('.settings').fadeIn(200).removeClass('hide');
-					}, 310);
-				}, 410);
-			});
-
-		});
-	</script>
-
 <!-- 	<script>
 		$(document).ready(function(){
 			var clicked
@@ -117,17 +52,6 @@
 			}
 		});
 	</script> -->
-	<script>
-		// on .click of myEvents subsection content in users panel 
-		$(document).ready(function(){
-	    	$("#calendarContainer").animate({
-				width: "54%"
-			});
-			setTimeout(function(){
-				$("#myEventsRight").fadeIn(1400);
-			}, 300);
-		});
-	</script>
 <!-- 	<script>
 		// on .click of myEvents subsection content in users panel 
 		$(document).ready(function(){
@@ -152,7 +76,21 @@
 
 
 	</script>
-	
-@stop
 
+	@section('js')
 
+	<script>
+		// on .click of myEvents subsection content in users panel 
+		$(document).ready(function(){
+			setTimeout(function(){
+				$("#calendarContainer").animate({
+					width: "54%"
+				});
+				setTimeout(function(){
+					$("#myEventsRight").fadeIn(1400);
+				}, 300);
+			}, 500);
+		});
+	</script>
+
+	@stop

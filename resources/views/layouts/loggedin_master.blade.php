@@ -33,6 +33,8 @@
         <div class="settings"></div>
     </div>
 
+    <div class="loading"><img src="../../img/loading-large.gif" width="40"></div>
+
 	<div id="calendarContainer">
 		<div id="calendar"></div>
 	</div>
@@ -43,11 +45,84 @@
 	<script src="/js/jquery/jquery-3.2.0.min.js" type="text/javascript"></script>
 
     <script>
-    $(document).ready(function(){ 
-        $("#calendarContainer").fadeIn(400);
+    $(document).ready(function(){
+        setTimeout(function(){
+            $('.loading').fadeOut(200);
+        }, 300);
+
+        setTimeout(function(){
+            $('.x').fadeIn(600);
+            $("#calendarContainer").fadeIn(600);
+            $("#calendarContainer").css("background-color", "white");
+        }, 500);
+
+        // Speed up calls to hasOwnProperty
+        var hasOwnProperty = Object.prototype.hasOwnProperty;
+
+        function isEmpty(obj) {
+
+            // null and undefined are "empty"
+            if (obj == null) return true;
+
+            // Assume if it has a length property with a non-zero value
+            // that that property is correct.
+            if (obj.length > 0)    return false;
+            if (obj.length === 0)  return true;
+
+            // If it isn't an object at this point
+            // it is empty, but it can't be anything *but* empty
+            // Is it empty?  Depends on your application.
+            if (typeof obj !== "object") return true;
+
+            // Otherwise, does it have any properties of its own?
+            // Note that this doesn't handle
+            // toString and valueOf enumeration bugs in IE < 9
+            for (var key in obj) {
+                if (hasOwnProperty.call(obj, key)) return false;
+            }
+
+            return true;
+        }
+
+        setTimeout(function(){
+            $.ajax({
+                url: '/get-calendar-events',
+                method: "GET",
+                dataType: "JSON",
+                success: function(events) {
+                        var array = [];
+                        for(var i = 0; i < events.length; i++) {
+                            array.push({
+                                id: events[i].id,
+                                title: events[i].title,
+                                start: events[i].date_of_event
+                            });
+                        }
+
+                        if(!isEmpty(events[0].title)) {
+                            $('#calendar').fullCalendar({
+                                defaultDate: '2017-05-12',
+                                editable: true,
+                                eventLimit: true, // allow "more" link when too many events
+                                events: array
+                            });
+                        } else {
+                            $('#calendar').fullCalendar({
+                                defaultDate: '2017-05-12',
+                                editable: true,
+                                eventLimit: true // allow "more" link when too many events
+                            });
+                        }
+                    // run the calendar - with populated data
+                }, error: function(events) {
+                    console.log("Error");
+                }
+            });
+        }, 480);
     });
+
     </script>
-    @yield('js')
+
 
     @include('partials.below_banner')
 
@@ -65,7 +140,88 @@
     <script src='/js/fullcalendar.min.js'></script>
 
 
-  @include('partials.js')
+	<script>
+		$(document).ready(function(){
+
+			$('.x').click(function(){
+				console.log("x clicked");
+				$('.userLeftControllPanel-sub-sections').addClass('hide');
+				$('.settings').addClass('hide');
+
+				$('.userLeftControllPanel').animate({
+					"width":"1px",
+					"padding":"0",
+					"margin":"0"
+				}, 400);
+				
+				setTimeout(function(){
+					$('.userLeftControllPanel').fadeOut(100);
+				}, 300);
+
+				setTimeout(function(){
+					$('.userLeftControllPanel-arrow').fadeIn(100);
+					$('.userLeftControllPanel-arrow').animate({
+						"width":"10px"
+					}, 200);
+				}, 300);
+
+				setTimeout(function(){
+					$('#calendarContainer').animate({
+						"width":"99.4%"
+					}, 400);
+				}, 400);
+			});
+
+			$('.userLeftControllPanel-arrow').click(function(){
+				setTimeout(function(){
+					$('#calendarContainer').animate({
+						"width":"80%"
+					}, 400);		
+				}, 210);
+
+				$('.userLeftControllPanel-arrow').animate({
+					"width":"1px"
+				}, 400);
+
+
+				setTimeout(function(){
+					$('.userLeftControllPanel-arrow').fadeOut(10);
+					//$('.userLeftControllPanel-arrow').css("background-color", "#114b5f");
+				}, 404);
+
+				setTimeout(function(){
+
+					$('.userLeftControllPanel').fadeIn(100);
+					$('.userLeftControllPanel').animate({
+						"width":"20%",
+						"padding":"2.5%"
+					}, 300);
+
+					setTimeout(function(){
+						$('.userLeftControllPanel-sub-sections').fadeIn(200).removeClass('hide');
+						$('.settings').fadeIn(200).removeClass('hide');
+					}, 310);
+				}, 410);
+			});
+
+		});
+	</script>
+
+	<script>
+		$(document).ready(function(){
+			var clicked
+			for(let i = 0; i <= 31; i++)
+			{
+				$(".myBtn" + i).click(function(){
+					$("#myModal").css("display", "block");
+				});
+				$(".close").click(function(){
+					$("#myModal").css("display", "none");
+				});
+			}
+		});
+	</script>
+    @yield('js')
 
 </body>
 </html>
