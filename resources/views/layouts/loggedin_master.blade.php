@@ -18,7 +18,6 @@
 	<div class="logo">
         <a href="/">Vigley</a>
 	</div>
-        
 
     <div class="userLeftControllPanel-arrow"></div>
 
