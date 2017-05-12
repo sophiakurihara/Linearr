@@ -81,6 +81,11 @@ class EventsController extends Controller
 
         $event->save();
 
+        $newEvent = $event->title . PHP_EOL . $event->description . PHP_EOL . $event->date_of_event;
+
+        $twilio = new \App\Twilio();
+        $twilio->sendText('+12107748500', $newEvent);
+
         return redirect()->action('UsersController@displayHomepage');
     }
 

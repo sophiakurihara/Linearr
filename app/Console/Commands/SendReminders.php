@@ -22,6 +22,7 @@ class SendReminders extends Command implements SelfHandling
      *
      * @return void
      */
+      
     public function handle()
     {
         echo 'Hello world';
