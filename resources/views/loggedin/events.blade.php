@@ -7,23 +7,7 @@
 @stop
 
 @section('loggedin_content')
-
-<div class="userLeftControllPanel-arrow"></div>
-
-<div class="userLeftControllPanel">
-	<div class="x">x</div>
-	<div id="myEvents" class="userLeftControllPanel-sub-sections firstControlPanel-sub-section sub-section-text">My Events</div>
-	<div class="userLeftControllPanel-sub-sections sub-section-text" id="createEvent"><a href="create-event">Create Event</a></div>
-	<div id="contacts" class="userLeftControllPanel-sub-sections sub-section-text"> Contacts</div>
-	<div id="editProfile" class="userLeftControllPanel-sub-sections sub-section-text">Edit Profile</div>
-	<div class="userLeftControllPanel-sub-sections sub-section-text"><a href="logout">Logout</a></div>
 	
-	<div class="settings"></div>
-</div>
-
-	<div id="calendarContainer">
-		<div id="calendar"></div>
-	</div>	
 	<!-- The Modal -->
 	<div id="myModal" class="modal">
 		<!-- Modal content -->
@@ -50,10 +34,11 @@
    			</div>
 		    <button type="submit" class="create-event-button">Create Event</button>
 		</div>
-    </form>	
-	
-	<script src="/js/jquery/10.8.3/jquery.min.js" type="text/javascript"></script>
-	<script src="/js/jquery/jquery-3.2.0.min.js" type="text/javascript"></script>
+    </form>
+
+@stop
+
+@section('js')
 
 	<script>
 		$(document).ready(function(){
@@ -135,10 +120,13 @@
 	<script>
 		// on .click of myEvents subsection content in users panel 
 		$(document).ready(function(){
-	    	$("#calendarContainer").animate({width: "54%"});
-			$("#myEventsRight").fadeIn(.1);
-			$("#myEventsRight").animate({width: "26%"});
+	    	$("#calendarContainer").animate({
+				width: "54%"
 			});
+			setTimeout(function(){
+				$("#myEventsRight").fadeIn(1400);
+			}, 300);
+		});
 	</script>
 <!-- 	<script>
 		// on .click of myEvents subsection content in users panel 
@@ -164,6 +152,7 @@
 
 
 	</script>
+	
 @stop
 
 

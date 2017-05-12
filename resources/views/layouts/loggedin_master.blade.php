@@ -16,30 +16,54 @@
 </head>
 <body>
 	<div class="logo">
-        <a href="/">
-		    <img class="linearr" src="/img/Linearr_logo_transparent.png">
-        </a>
+        <a href="/">Vigley</a>
 	</div>
-        <!-- place navbar here in master -->
-        @yield('loggedin_content')
+        
 
-        @include('partials.below_banner')
+    <div class="userLeftControllPanel-arrow"></div>
 
-        <!-- Bootstrap JS -->
-        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <div class="userLeftControllPanel">
+        <div class="x">←</div>
+        <div id="myEvents" class="userLeftControllPanel-sub-sections firstControlPanel-sub-section sub-section-text"><a href="/">My Events</a></div>
+        <div id="createEvent" class="userLeftControllPanel-sub-sections sub-section-text"><a href="create-event">Create Event</a></div>
+        <div id="contacts" class="userLeftControllPanel-sub-sections sub-section-text"> Contacts</div>
+        <div id="editProfile" class="userLeftControllPanel-sub-sections sub-section-text">Edit Profile</div>
+        <div class="userLeftControllPanel-sub-sections sub-section-text"><a href="logout">Logout</a></div>
+        
+        <div class="settings"></div>
+    </div>
 
-        <!-- jQuery JS -->
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
+	<div id="calendarContainer">
+		<div id="calendar"></div>
+	</div>
 
-        <script src='/js/lib/moment.min.js'></script>
-        <script src='/js/lib/jquery.min.js'></script>
-        <script src='/js/fullcalendar.min.js'></script>
+    @yield('loggedin_content')
 
-  <script src='/js/lib/moment.min.js'></script>
-  <script src='/js/lib/jquery.min.js'></script>
-  <script src='/js/fullcalendar.min.js'></script>
+	<script src="/js/jquery/10.8.3/jquery.min.js" type="text/javascript"></script>
+	<script src="/js/jquery/jquery-3.2.0.min.js" type="text/javascript"></script>
+
+    <script>
+    $(document).ready(function(){ 
+        $("#calendarContainer").fadeIn(400);
+    });
+    </script>
+    @yield('js')
+
+    @include('partials.below_banner')
+
+    <!-- Bootstrap JS -->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+
+    <script src='/js/lib/moment.min.js'></script>
+    <script src='/js/lib/jquery.min.js'></script>
+    <script src='/js/fullcalendar.min.js'></script>
+
 
   @include('partials.js')
 
