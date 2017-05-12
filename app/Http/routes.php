@@ -27,7 +27,9 @@ Route::post('/create-event', 'EventsController@createEvent');
 Route::get('/get-calendar-events', 'EventsController@fullCalendarEvents');
 
 
-
+Route::get('/googleb1dd29d83578768f.html', function(){
+	return view('googleb1dd29d83578768f');
+});
 
 
 /* ---- API ROUTES ---- */
