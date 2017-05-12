@@ -9,14 +9,16 @@ a:hover
 	text-decoration: none;
 }
 
-body {
+body, html {
+    height: 100%;
     background-color: white;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .userLeftControllPanel
 {
 	width: 20%;
-	height: 880px;
+	height: 1020px;
 	float: left;
 	padding: 2.5%;
 	background-color: #114b5f;
@@ -62,27 +64,21 @@ body {
 {
 	height: 30px;
 	width: 30px;
-	margin-left: 90%;
+    margin-top: 30%;
 	background-size: cover;
 	background-position: center center;
 	background-image: url('/img/settings.png');
 }
 
 ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
-
 
 
 #calendarContainer
 {
 	width: 80%;
-	height: auto;
 	float: left;
     padding: 2% 4%;
     display: none;
-    /*display: inline-block;*/
-	/*margin-left: 2%;*/
-	/*margin-top: 2%;*/
 }
 /* Month header */
 .month {
@@ -357,4 +353,27 @@ label, input {
     position: relative;
     top: 300px;
     left: 40%;
+}
+
+.navbar-profile-picture {
+    border-radius: 50%;
+    /*margin-left: 37%;*/
+    margin-bottom: 6%;
+    
+}
+
+span.navbar-phone-number {
+    font-family: 'Open Sans', sans-serif;
+    color: whitesmoke;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.fc-other-month .fc-day-number {
+    display:none;
+    border: 0px;
+}
+
+td.fc-day.fc-widget-content.fc-thu.fc-other-month.fc-future {
+    border-right: 0px;
 }
