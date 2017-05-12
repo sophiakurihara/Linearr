@@ -68,6 +68,7 @@
 
 @stop
 
+<<<<<<< HEAD
 @section('js')
 
 
@@ -139,6 +140,8 @@
 	});
 	</script>
 
+=======
+>>>>>>> master
 <!-- 	<script>
 		$(document).ready(function(){
 			var clicked
@@ -153,17 +156,6 @@
 			}
 		});
 	</script> -->
-	<script>
-		// on .click of myEvents subsection content in users panel 
-		$(document).ready(function(){
-	    	$("#calendarContainer").animate({
-				width: "54%"
-			});
-			setTimeout(function(){
-				$("#myEventsRight").fadeIn(1400);
-			}, 300);
-		});
-	</script>
 <!-- 	<script>
 		// on .click of myEvents subsection content in users panel 
 		$(document).ready(function(){
@@ -188,7 +180,21 @@
 
 
 	</script>
-	
-@stop
 
+	@section('js')
 
+	<script>
+		// on .click of myEvents subsection content in users panel 
+		$(document).ready(function(){
+			setTimeout(function(){
+				$("#calendarContainer").animate({
+					width: "54%"
+				});
+				setTimeout(function(){
+					$("#myEventsRight").fadeIn(1400);
+				}, 300);
+			}, 500);
+		});
+	</script>
+
+	@stop

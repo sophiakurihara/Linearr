@@ -10,7 +10,7 @@ a:hover
 }
 
 body {
-    background-color: #114B5F;
+    background-color: white;
 }
 
 .userLeftControllPanel
@@ -78,8 +78,12 @@ body {font-family: Verdana, sans-serif;}
 	width: 80%;
 	height: auto;
 	float: left;
+<<<<<<< HEAD
     background-color: white;
     padding: 2% 5%;
+=======
+    padding: 2% 10%;
+>>>>>>> master
     display: none;
 }
 /* Month header */
@@ -210,6 +214,7 @@ body {font-family: Verdana, sans-serif;}
     background-color: white;
 	float: right;
 	color: #114B5F;
+    display: none;
 }
 
 .x:hover {
@@ -350,6 +355,7 @@ label, input {
     width: 125px;
 }
 
+
 .dateInput
 {
     background-color: transparent;
@@ -361,3 +367,10 @@ label, input {
     width: 70%;
     border-radius: 0px;
 }
+
+.loading {
+    position: relative;
+    top: 300px;
+    left: 40%;
+}
+
