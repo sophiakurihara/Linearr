@@ -18,12 +18,16 @@
 	<div class="logo">
         <a href="/">Vigley</a>
 	</div>
-        
 
     <div class="userLeftControllPanel-arrow"></div>
 
     <div class="userLeftControllPanel">
         <div class="x">←</div>
+
+        <div class="navbar-profile-picture">
+            <img src="../../img/default.png" width="50"><span class="navbar-phone-number">818-793-9268</span>
+        </div>
+
         <div id="myEvents" class="userLeftControllPanel-sub-sections firstControlPanel-sub-section sub-section-text"><a href="/">My Events</a></div>
         <div id="createEvent" class="userLeftControllPanel-sub-sections sub-section-text"><a href="create-event">Create Event</a></div>
         <div id="contacts" class="userLeftControllPanel-sub-sections sub-section-text"> Contacts</div>
@@ -47,7 +51,7 @@
         $("#calendarContainer").fadeIn(400);
     });
     </script>
-    @yield('js')
+
 
     @include('partials.below_banner')
 
@@ -59,10 +63,92 @@
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
 
-
     <script src='/js/lib/moment.min.js'></script>
     <script src='/js/lib/jquery.min.js'></script>
     <script src='/js/fullcalendar.min.js'></script>
+
+	<script>
+		$(document).ready(function(){
+
+			$('.x').click(function(){
+				$('.userLeftControllPanel-sub-sections').addClass('hide');
+				$('.settings').addClass('hide');
+
+				$('.userLeftControllPanel').animate({
+					"width":"1px",
+					"padding":"0",
+					"margin":"0"
+				}, 400);
+				
+				setTimeout(function(){
+					$('.userLeftControllPanel').fadeOut(100);
+				}, 300);
+
+				setTimeout(function(){
+					$('.userLeftControllPanel-arrow').fadeIn(100);
+					$('.userLeftControllPanel-arrow').animate({
+						"width":"10px"
+					}, 200);
+				}, 300);
+
+				setTimeout(function(){
+					$('#calendarContainer').animate({
+						"width":"99.4%"
+					}, 400);
+				}, 400);
+			});
+
+			$('.userLeftControllPanel-arrow').click(function(){
+				setTimeout(function(){
+					$('#calendarContainer').animate({
+						"width":"80%"
+					}, 400);		
+				}, 210);
+
+				$('.userLeftControllPanel-arrow').animate({
+					"width":"1px"
+				}, 400);
+
+
+				setTimeout(function(){
+					$('.userLeftControllPanel-arrow').fadeOut(10);
+					//$('.userLeftControllPanel-arrow').css("background-color", "#114b5f");
+				}, 404);
+
+				setTimeout(function(){
+
+					$('.userLeftControllPanel').fadeIn(100);
+					$('.userLeftControllPanel').animate({
+						"width":"20%",
+						"padding":"2.5%"
+					}, 300);
+
+					setTimeout(function(){
+						$('.userLeftControllPanel-sub-sections').fadeIn(200).removeClass('hide');
+						$('.settings').fadeIn(200).removeClass('hide');
+					}, 310);
+				}, 410);
+			});
+
+		});
+	</script>
+
+	<script>
+		$(document).ready(function(){
+			var clicked
+			for(let i = 0; i <= 31; i++)
+			{
+				$(".myBtn" + i).click(function(){
+					$("#myModal").css("display", "block");
+				});
+				$(".close").click(function(){
+					$("#myModal").css("display", "none");
+				});
+			}
+		});
+	</script>
+
+    @yield('js')
 
 </body>
 </html>
