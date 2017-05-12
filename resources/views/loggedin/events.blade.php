@@ -44,6 +44,7 @@ $( "#datepicker" ).datepicker();
 					<div class="modal-content-div">
 			            <textarea rows="3" cols="40" type="text" for="description" placeholder="Description" name="description" id="description" value="{{ $errors->has('description') ? '' : old('description') }}" autocomplete="off"></textarea>
 					</div>
+					
 					<div class="modal-content-div">
 			            <input type="text" for="date_of_event" name="date_of_event" placeholder="Date" id="datepicker" value="{{ $errors->has('date_of_event') ? '' : old('date_of_event') }}">
 			        </div>
