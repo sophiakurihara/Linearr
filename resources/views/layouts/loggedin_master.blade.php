@@ -18,12 +18,16 @@
 	<div class="logo">
         <a href="/">Vigley</a>
 	</div>
-        
 
     <div class="userLeftControllPanel-arrow"></div>
 
     <div class="userLeftControllPanel">
         <div class="x">←</div>
+
+        <div class="navbar-profile-picture">
+            <img src="../../img/default.png" width="50"><span class="navbar-phone-number">818-793-9268</span>
+        </div>
+
         <div id="myEvents" class="userLeftControllPanel-sub-sections firstControlPanel-sub-section sub-section-text"><a href="/">My Events</a></div>
         <div id="createEvent" class="userLeftControllPanel-sub-sections sub-section-text"><a href="create-event">Create Event</a></div>
         <div id="contacts" class="userLeftControllPanel-sub-sections sub-section-text"> Contacts</div>
@@ -123,7 +127,6 @@
 
     </script>
 
-
     @include('partials.below_banner')
 
     <!-- Bootstrap JS -->
@@ -134,17 +137,14 @@
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
 
-
     <script src='/js/lib/moment.min.js'></script>
     <script src='/js/lib/jquery.min.js'></script>
     <script src='/js/fullcalendar.min.js'></script>
-
 
 	<script>
 		$(document).ready(function(){
 
 			$('.x').click(function(){
-				console.log("x clicked");
 				$('.userLeftControllPanel-sub-sections').addClass('hide');
 				$('.settings').addClass('hide');
 
@@ -221,6 +221,7 @@
 			}
 		});
 	</script>
+
     @yield('js')
 
 </body>
