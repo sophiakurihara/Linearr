@@ -27,10 +27,6 @@ Route::post('/create-event', 'EventsController@createEvent');
 Route::get('/get-calendar-events', 'EventsController@fullCalendarEvents');
 
 
-Route::get('/googleb1dd29d83578768f.html', function(){
-	return view('googleb1dd29d83578768f');
-});
-
 
 /* ---- API ROUTES ---- */
 
@@ -38,6 +34,11 @@ Route::get('/googleb1dd29d83578768f.html', function(){
 Route::get('/text-me', function() {
 	$t = new \App\Twilio;
 	$t->sendText('+12107748500', 'hey!');
+});
+
+// Keeps the google site verified
+Route::get('/googleb1dd29d83578768f.html', function(){
+	return view('googleb1dd29d83578768f');
 });
 
 Route::get('contact/import/google', ['as'=>'google.import', 'uses'=>'ContactsController@importGoogleContact']);
