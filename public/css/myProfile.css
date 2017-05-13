@@ -175,11 +175,47 @@ ul {list-style-type: none;}
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 40px;
+    margin: 15% 15% 0% 39.5%; /* 15% from the top and centered */
+    padding: 10px;
     border: 1px solid #888;
-    width: 60%; /* Could be more or less, depending on screen size */
-    height: 40%;
+    width: 40%; /* Could be more or less, depending on screen size */
+    height: 500px;
+    border-radius: none;
+}
+
+.modal-content-div
+{
+    width: 90%;
+    height: 60px;
+    margin-bottom: 5%;
+}
+
+.create-event-input-container
+{
+    width: 70%;
+    height: 300px;
+    float: right;
+    margin-right: 5%;
+    margin-top: 12%;
+    
+}
+
+
+::-webkit-input-placeholder 
+{
+    color: #114b5f;
+    font-weight: bold;
+    opacity: .7;
+}
+
+textarea
+{
+    resize: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-style: 1px solid;
+    border-bottom-color: #114b5f;
 }
 
 /* The Close Button */
@@ -256,7 +292,6 @@ ul {list-style-type: none;}
 {
     margin-top: 21%;
     text-align: center;
-
 }
 
 .myEventsDate
@@ -288,7 +323,7 @@ ul {list-style-type: none;}
     height: auto;
 }
 
-.createEventContainer
+/*.createEventContainer
 {
     background-color: #ddd;
     display: inline-block;
@@ -301,7 +336,7 @@ ul {list-style-type: none;}
     margin-top: 12%;
     height: 350px;
 }
-
+*/
 .create-form-group
 {
     width: 80%;
@@ -314,11 +349,11 @@ ul {list-style-type: none;}
     padding: 8px 14px;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-right: 13%;
+    margin-right: 25%;
     margin-left: 50px;
     border-radius: 1px;
     border: 0px;
-    width: 75%;
+    width: 53%;
     background-color: #114B5F;
     opacity: 0.6;
     color: white;
@@ -338,15 +373,34 @@ input {
     border-bottom: 1px solid #58818f;
     margin-bottom: 24px;
     color: black;
-    width: 70%;
+    width: 83.5%;
     border-radius: 0px;
 }
 
-label, input {
-    
-    vertical-align: baseline;
+label 
+{
+
+    font-size: 20px;
     color: #114B5F;
-    width: 125px;
+    width: 30%;
+}
+
+.titleLabel
+{
+    width: 12%;
+}
+
+
+.dateInput
+{
+    background-color: transparent;
+    border: 0px;
+    padding: 0px 0px 4px 0px;
+    border-bottom: 1px solid #58818f;
+    margin-bottom: 24px;
+    color: black;
+    width: 70%;
+    border-radius: 0px;
 }
 
 .loading {
@@ -357,7 +411,6 @@ label, input {
 
 .navbar-profile-picture {
     border-radius: 50%;
-    /*margin-left: 37%;*/
     margin-bottom: 6%;
     
 }
