@@ -81,21 +81,14 @@ class EventsController extends Controller
         // break the phone numbers into an array
         $event->save();
 
-
-        // break the phone numbers into an array
-        // $phoneArray = explode(', ', '', $request->phone);
-
-        $phoneArray = explode(', ', $request->sent_to);
-
+        $phoneNumbers = str_replace('-', '', $request->sent_to);
+        $phoneArray = explode(', ', $phoneNumbers);
 
         foreach($phoneArray as $phoneNumber) {
             $newEvent = $event->title . PHP_EOL . $event->description . PHP_EOL . $event->date_of_event;
             $twilio = new \App\Twilio();
             $twilio->sendText($phoneNumber, $newEvent);            
         }
-
-
-
 
 
         return redirect()->action('UsersController@displayHomepage');
