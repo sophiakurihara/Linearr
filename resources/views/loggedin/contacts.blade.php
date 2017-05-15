@@ -1,9 +1,11 @@
 @extends('layouts.loggedin_master')
 
 @section('additional_css')
+	<link rel="stylesheet" href="/css/myProfile.css">
+@stop
 
-<link rel="stylesheet" href="/css/myProfile.css">
-
+@section('additional_css_tables')
+	<link rel="stylesheet" href="/css/tables.css">
 @stop
 
 @section('loggedin_content')
@@ -12,6 +14,30 @@
 	<div id="calendarContainer">
             <h1>Contacts</h1>
             <hr>
+
+			<table class="table-fill">
+			<thead>
+			<tr>
+				<th class="text-left">First Name</th>
+				<th class="text-left">Last Name</th>
+				<th class="text-left">Phone</th>
+				<th class="text-left">Email</th>
+			</tr>
+			</thead>
+
+			<tbody class="table-hover">
+			@foreach($contacts as $contact)
+				<tr>
+					<td class="text-left">{{ $contact->first_name}}</td>
+					<td class="text-left">{{ $contact->last_name}}</td>
+					<td class="text-left">{{ $contact->phone_number}}</td>
+					<td class="text-left">{{ $contact->email}}</td>
+				</tr>
+
+			@endforeach
+			
+			</tbody>
+			</table>
 	</div>	
 
 
