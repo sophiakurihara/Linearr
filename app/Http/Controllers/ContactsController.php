@@ -58,4 +58,28 @@ class ContactsController extends Controller
         }
         return redirect()->action('UsersController@displayHomepage');
     }
+
+    public function addContact(Request $request) {
+        if(Auth::check()) {
+            $rules = [
+                'first_name' => 'required',
+                'last_name' => 'required',
+                'email' => 'required',
+                'phone_number' => 'required'
+            ];
+
+            $this->validate($request, $rules);
+
+            $contact = new Contact();
+            $contact->first_name = $request->first_name;
+            $contact->last_name = $request->last_name;
+            $contact->first_name = $request->email;
+            $contact->first_name = $request->phone_number;
+            $contact->belongs_to = Auth::id();
+
+            $contact->save();
+            return redirect()->action('ContactsController@showContactsPage');
+        }
+        return redirect()->action('UsersController@displayHomepage');
+    }
 }
