@@ -31,7 +31,6 @@
 				<tr>
 					<div class="editingRows profilePicture"><div class="settingsIcon"></div>Profile Picture</div>
 						<!-- Instead of text, insert the profile picture where the text is located .... upon click of the edit png/href a have pop up to choose from your desktop/finder etc.  -->
-						
 					<div class="editingRows firstName"><div class="settingsIcon"></div>First Name</div>
 					<div class="editingRows lastName"><div class="settingsIcon"></div>Last Name</div>
 					<div class="editingRows phoneNumber"><div class="settingsIcon"></div>Phone Number</div>
