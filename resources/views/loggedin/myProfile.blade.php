@@ -5,11 +5,13 @@
 <link rel="stylesheet" href="/css/myProfile.css">
 <link href="/css/jquery-ui.css" rel="stylesheet">
 
-
 @stop
 
 @section('loggedin_content')
 
+	<div id="calendarContainer">
+		<div id="calendar"></div>
+	</div>
 		<!-- The Modal -->
 
 	<div id="myModal" class="modal">

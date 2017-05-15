@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Auth;
 
 class ContactsController extends Controller
 {
@@ -46,5 +47,12 @@ class ContactsController extends Controller
             // return to google login url
             return redirect((string)$url);
         }
+    }
+
+    public function showContactsPage() {
+        if(Auth::check()) {
+            return view('loggedin.contacts');
+        }
+        return redirect()->action('UsersController@displayHomepage');
     }
 }
