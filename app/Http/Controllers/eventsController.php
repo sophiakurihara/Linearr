@@ -67,7 +67,7 @@ class EventsController extends Controller
             'title' => 'required|max:150',
             'description' => 'required|max:150',
             'date_of_event' => 'required|date',
-            'sent_to' => 'required|max:25'
+            'sent_to' => 'required'
         ]; 
 
         $this->validate($request, $rules);
@@ -82,29 +82,29 @@ class EventsController extends Controller
         $event->save();
 
         // break the phone numbers into an array
-        $phoneArray = explode(', ', '', $request->phone);
+        // $phoneArray = explode(', ', '', $request->phone);
 
-        foreach($phoneArray as $phoneNumber) {
-            $newEvent = $event->title . PHP_EOL . $event->description . PHP_EOL . $event->date_of_event;
-            $twilio = new \App\Twilio();
-            $twilio->sendText($phoneNumber, $newEvent);            
-        }
-
-
-        // $people = array(
-        //     '+12107748500' => "Sophia",
-        //     '+12103022954' => "Kyle",
-        //     '+18187939268' => "Cam",
-        //     '+18084362462' => "Phil"
-        // );
-
-        // foreach ($people as $number => $name) {
-
-        // $newEvent = $event->title . PHP_EOL . $event->description . PHP_EOL . $event->date_of_event;
-        // $twilio = new \App\Twilio();
-        // $twilio->sendText($number, $newEvent);
-        
+        // foreach($phoneArray as $phoneNumber) {
+        //     $newEvent = $event->title . PHP_EOL . $event->description . PHP_EOL . $event->date_of_event;
+        //     $twilio = new \App\Twilio();
+        //     $twilio->sendText($phoneNumber, $newEvent);            
         // }
+
+
+        $people = array(
+            '210-774-8500' => "Sophia",
+            '2103022954' => "Kyle",
+            '8187939268' => "Cam",
+            '8084362462' => "Phil"
+        );
+
+        foreach ($people as $number => $name) {
+
+        $newEvent = $event->title . PHP_EOL . $event->description . PHP_EOL . $event->date_of_event;
+        $twilio = new \App\Twilio();
+        $twilio->sendText($number, $newEvent);
+        
+        }
 
 
 
