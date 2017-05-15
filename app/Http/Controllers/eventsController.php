@@ -91,27 +91,6 @@ class EventsController extends Controller
         }
 
 
-
-
-        // $people = array(
-        //     '+12107748500' => "Sophia",
-        //     '+12103022954' => "Kyle",
-        //     '+18187939268' => "Cam",
-        //     '+18084362462' => "Phil"
-        // );
-
-        // foreach ($people as $number => $name) {
-
-        // $newEvent = $event->title . PHP_EOL . $event->description . PHP_EOL . $event->date_of_event;
-        // $twilio = new \App\Twilio();
-        // $twilio->sendText($number, $newEvent);
-        
-        // }
-
-
-
-
-
         return redirect()->action('UsersController@displayHomepage');
     }
 
