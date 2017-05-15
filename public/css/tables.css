@@ -5,9 +5,120 @@
   padding: 2% 4%;
 }
 
+
 .hide
 {
     display: none;
+}
+
+#settingsMainContainer > div.editingRows.profilePicture > form > input
+{
+    background-color: #FFF;
+}
+
+.editFirstName
+{
+    display: none;
+    float: right;
+    width: 25%;
+    height: 30px;
+    border: none;
+    background-color: #FFF;
+}
+
+#settingsMainContainer > div.editingRows.firstName > button
+{
+    float: right;
+    margin-left: 1%;
+    background-color: #FFF;
+    border: none;
+    display: none;
+}
+
+#settingsMainContainer > div.editingRows.firstName > button:hover
+{
+    background-color: #000;
+    color: #FFF;
+}
+
+#settingsMainContainer > div.editingRows.lastName > button
+{
+    float: right;
+    margin-left: 1%;
+    background-color: #FFF;
+    border: none;
+    display: none;
+}
+
+#settingsMainContainer > div.editingRows.lastName > button:hover
+{
+    background-color: #000;
+    color: #FFF;
+}
+
+.editLastName
+{
+    display: none;
+    float: right;
+    width: 25%;
+    height: 30px;
+    border: none;
+    background-color: #FFF;
+}
+
+.editPhoneNumber
+{
+    display: none;
+    float: right;
+    width: 25%;
+    height: 30px;
+    border: none;
+    background-color: #FFF;
+}
+
+#settingsMainContainer > div.editingRows.phoneNumber > button
+{
+    float: right;
+    margin-left: 1%;
+    background-color: #FFF;
+    border: none;
+    display: none;
+}
+
+#settingsMainContainer > div.editingRows.phoneNumber > button:hover
+{
+    background-color: #000;
+    color: #FFF;
+}
+
+.uploadProfilePic
+{
+    display:none;
+    float: right;
+    width: 25%;
+    border: none;
+    background-color: #FFF;
+    height: 30px;
+}
+
+.uploadProfilePic:hover
+{
+    border-radius: 1px;
+    background-color: #000;
+    color: #FFF;
+}
+
+.profilePicUploadForm
+{
+    display: none;
+}
+.input
+{
+
+    width: 100px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid black;
 }
 
 .editIcon
@@ -23,7 +134,6 @@
 
 .editingRowsPicture
 {
-
     display: none;
     background:#FFFFFF;
     padding:20px;

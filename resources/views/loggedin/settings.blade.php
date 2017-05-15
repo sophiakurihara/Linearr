@@ -20,17 +20,42 @@
 					<div class="editingRows profilePicture">
 						<a id="profilePictureEdit">
 							<div class="editIcon" id="profilePictureEdit"></div>
-						</a>Profile Picture
+						Profile Picture</a>
+						
+							<button type="submit" class="uploadProfilePic">Upload Picture</button>
+					
 					</div>
-					<div class="editingRowsPicture profilePicture hide">
-						<input type="text" name="editProfPicture"></input>
-						<button type="submit">Save</button>
-						<div class="editIcon"></div>
+
+					<!-- form for uploading files -->
+					<!-- 	<form method="POST" enctype="multipart/form-data">
+							<input type="file" name="uploadPic" class="uploadProfilePic ">
+						</form> -->
+					<div class="editingRows firstName">
+						<a id="firstNameEdit">
+							<div class="editIcon"></div>
+							First Name
+						</a>
+						<button type="submit" class="saveFirstNameButton">save</button>
+						<input type="text" class="editFirstName">
 					</div>
-						<!-- Instead of text, insert the profile picture where the text is located .... upon click of the edit png/href a have pop up to choose from your desktop/finder etc.  -->
-					<div class="editingRows firstName"><a id="firstNameEdit"><div class="editIcon"></div></a>First Name</div>
-					<div class="editingRows lastName"><a id="lastNameEdit"><div class="editIcon"></div></a>Name</div>
-					<div class="editingRows phoneNumber"><a id="firstNameEdit"><div class="editIcon"></div></a>Phone Number</div>
+					
+					<div class="editingRows lastName">
+						<a id="lastNameEdit">
+							<div class="editIcon"></div>
+							Last Name
+						</a>
+						<button type="submit" class="saveLastNameButton">save</button>
+						<input type="text" class="editLastName">
+					</div>
+
+					<div class="editingRows phoneNumber">
+						<a id="phoneNumberEdit">
+							<div class="editIcon"></div>
+							Phone Number
+						</a>
+						<button type="submit" class="savePhoneNumberButton">save</button>
+						<input type="text" class="editPhoneNumber">
+					</div>
 				</tr>
 			</tbody>
 
@@ -42,12 +67,31 @@
 @section('js')
 <script>
 	$(document).ready(function(){
-
 		$("#profilePictureEdit").click(function(){
-		    $(this).removeClass("profilePicture");
-		    console.log('You clicked the edit button.');
-		    // $(this).removeClass("profilePicture");
-		    $(this).addClass("editingRowsPicture");
+			$(".uploadProfilePic").fadeIn(500);
+			console.log('You clicked edit profile picture');
 		});	
+
+		$("#firstNameEdit").click(function(){
+			$(".editFirstName").fadeIn(500);
+			$("#settingsMainContainer > div.editingRows.firstName > button").fadeIn(500);
+			console.log('You are trying to edit your first name');
+		});
+
+		$("#lastNameEdit").click(function(){
+			$(".editLastName").fadeIn(500);
+			$("#settingsMainContainer > div.editingRows.lastName > button").fadeIn(500);
+			console.log('You are trying to edit your first name');
+		});
+
+		$("#phoneNumberEdit").click(function(){
+			$(".editPhoneNumber").fadeIn(500);
+			$("#settingsMainContainer > div.editingRows.phoneNumber > button").fadeIn(500);
+			console.log('You are trying to edit your first name');
+		});
+
+
+
 	});
 </script>
+@stop
