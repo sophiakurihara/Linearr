@@ -1,3 +1,21 @@
+#settingsMainContainer
+{
+  width: 80%;
+  float: left;
+  padding: 2% 4%;
+}
+
+.settingsIcon
+{
+  width: 20px;
+  height: 20px;
+  margin-left: 1%;
+  float: right;
+  background-image: url('/img/editSettings.png');
+  background-position: center center;
+  background-size: cover; 
+}
+
 .add-contact-btn {
   float: right;
   margin-top: -48px;
@@ -19,7 +37,7 @@
 }
 
 div.table-title {
-   display: block;
+  display: block;
   margin: auto;
   max-width: 600px;
   padding:5px;
@@ -115,6 +133,18 @@ tr:last-child td:last-child {
 }
  
 td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+.editingRows 
+{
   background:#FFFFFF;
   padding:20px;
   text-align:left;
