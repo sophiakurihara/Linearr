@@ -123,6 +123,16 @@
 
     </script>
 
+	<script>
+		// on .click of createEvents subsection content in users panel 
+		$(document).ready(function(e){
+            e.preventDefault();
+			$('#createEvent').click(function(){
+				('.modal').css({"display" : "show", "width" : '50%'});
+			});
+		});
+	</script>
+
     @include('partials.below_banner')
 
     <!-- Bootstrap JS -->
