@@ -10,11 +10,16 @@
 
 @section('loggedin_content')
 	
-	
-	<div id="calendarContainer">
-            <h1>Contacts</h1>
-            <hr>
 
+	<div id="calendarContainer">
+            <h1>Contacts</h1><div class="add-contact-btn">Add Contact</div>
+            <hr>
+			<div class="contact-form">
+				<form action="{{ action('ContactsController@addContact') }}" method="POST">
+					<label for="first_name">First Name:</label>
+					<input name="first_name" id="first_name">
+				</form>
+			</div>
 			<table class="table-fill">
 			<thead>
 			<tr>
@@ -33,7 +38,6 @@
 					<td class="text-left">{{ $contact->phone_number}}</td>
 					<td class="text-left">{{ $contact->email}}</td>
 				</tr>
-
 			@endforeach
 			
 			</tbody>
