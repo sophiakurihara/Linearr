@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Contact;
 use Auth;
 
 class ContactsController extends Controller
@@ -51,7 +52,9 @@ class ContactsController extends Controller
 
     public function showContactsPage() {
         if(Auth::check()) {
-            return view('loggedin.contacts');
+            $contacts = Contact::where('belongs_to', '=', Auth::id())->get();
+
+            return view('loggedin.contacts')->with(['contacts' => $contacts]);
         }
         return redirect()->action('UsersController@displayHomepage');
     }
