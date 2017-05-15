@@ -81,7 +81,8 @@ class EventsController extends Controller
         // break the phone numbers into an array
         $event->save();
 
-        $phoneArray = explode(', ', $request->sent_to);
+        $phoneNumbers = str_replace('-', '', $request->sent_to);
+        $phoneArray = explode(', ', $phoneNumbers);
 
         foreach($phoneArray as $phoneNumber) {
             $newEvent = $event->title . PHP_EOL . $event->description . PHP_EOL . $event->date_of_event;
