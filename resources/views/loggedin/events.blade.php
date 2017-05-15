@@ -36,7 +36,7 @@ $( "#datepicker" ).datepicker();
 			<span class="close">&times;</span>
 
 			<form method="POST" action="{{ action('EventsController@createEvent') }}">
-			{!! csrf_field()!!}
+				{!! csrf_field()!!}
 				<div class="create-event-input-container">
 					<div class="modal-content-div">
 						<input for="title" placeholder= "Title" type="text" name="title" class="modal-content-title-input"  autocomplete="off">
