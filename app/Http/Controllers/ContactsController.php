@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Request;
-use App\Http\Requests;
+use Illuminate\Http\Request;
+
 use App\Http\Controllers\Controller;
 use App\Contact;
 use Auth;
@@ -65,7 +65,7 @@ class ContactsController extends Controller
                 'first_name' => 'required',
                 'last_name' => 'required',
                 'email' => 'required',
-                'phone_number' => 'required'
+                'phone_number' => 'required|regex:/(01)[0-9]{9}/'
             ];
 
             $this->validate($request, $rules);
@@ -73,8 +73,8 @@ class ContactsController extends Controller
             $contact = new Contact();
             $contact->first_name = $request->first_name;
             $contact->last_name = $request->last_name;
-            $contact->first_name = $request->email;
-            $contact->first_name = $request->phone_number;
+            $contact->email = $request->email;
+            $contact->phone_number = $request->phone_number;
             $contact->belongs_to = Auth::id();
 
             $contact->save();

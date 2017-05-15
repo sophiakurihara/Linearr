@@ -15,15 +15,51 @@
 
 .contact-form {
   display: none;
-  height: 1px;
+  width: 30%;
+  float: left;
 }
 
 div.table-title {
-   display: block;
+  display: block;
   margin: auto;
   max-width: 600px;
   padding:5px;
   width: 100%;
+}
+
+input, label {
+    display:block;
+}
+
+input#first_name, input#last_name, input#email, input#phone {
+  float: left;
+  width: 100%;
+}
+
+label {
+  font-size: 17px;
+  padding-bottom: 10px;
+}
+
+.submit-contact-btn {
+  float: right;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  background-color: #1b1e24;
+  color: #f1f1f1;
+  border-radius: 2px;
+  border: 0px;
+  padding: 14px;
+  transition: 0.4s;
+}
+.submit-contact-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.table-container {
+  width: 100%;
+  float: right;
 }
 
 .table-title h3 {
