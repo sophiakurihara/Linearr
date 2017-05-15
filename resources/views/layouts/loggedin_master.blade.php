@@ -33,7 +33,7 @@
         <div id="contacts" class="userLeftControllPanel-sub-sections sub-section-text"><a href="/contacts">Contacts</a></div>
         <div class="userLeftControllPanel-sub-sections sub-section-text"><a href="logout">Logout</a></div>
         
-        <div class="settings"></div>
+        <a id="settings "href="settings"><div class="settings"></div></a>
     </div>
 
     <div class="loading"><img src="../../img/loading-large.gif" width="40"></div>

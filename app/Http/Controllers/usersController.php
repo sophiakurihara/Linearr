@@ -94,4 +94,11 @@ class UsersController extends Controller
         return redirect()->action('UsersController@displayHomepage');
     }
 
+    public function settings() {
+        if(Auth::check()) {
+            return view('loggedin.settings');
+        }
+        return view('settings');
+    }
+
 }
