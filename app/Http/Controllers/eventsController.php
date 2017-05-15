@@ -67,7 +67,7 @@ class EventsController extends Controller
             'title' => 'required|max:150',
             'description' => 'required|max:150',
             'date_of_event' => 'required|date',
-            'sent_to' => 'required|max:25'
+            'sent_to' => 'required'
         ]; 
 
         $this->validate($request, $rules);
@@ -78,23 +78,34 @@ class EventsController extends Controller
         $event->date_of_event = $request->date_of_event;
         $event->created_by = Auth::id();
         $event->sent_to = $request->sent_to;
-
+        // break the phone numbers into an array
         $event->save();
 
-        $people = array(
-            '+12107748500' => "Sophia",
-            '+12103022954' => "Kyle",
-            '+18187939268' => "Cam",
-            '+18084362462' => "Phil"
-        );
+        $phoneArray = explode(', ', $request->sent_to);
 
-        foreach ($people as $number => $name) {
-
-        $newEvent = $event->title . PHP_EOL . $event->description . PHP_EOL . $event->date_of_event;
-        $twilio = new \App\Twilio();
-        $twilio->sendText($number, $newEvent);
-        
+        foreach($phoneArray as $phoneNumber) {
+            $newEvent = $event->title . PHP_EOL . $event->description . PHP_EOL . $event->date_of_event;
+            $twilio = new \App\Twilio();
+            $twilio->sendText($phoneNumber, $newEvent);            
         }
+
+
+
+
+        // $people = array(
+        //     '+12107748500' => "Sophia",
+        //     '+12103022954' => "Kyle",
+        //     '+18187939268' => "Cam",
+        //     '+18084362462' => "Phil"
+        // );
+
+        // foreach ($people as $number => $name) {
+
+        // $newEvent = $event->title . PHP_EOL . $event->description . PHP_EOL . $event->date_of_event;
+        // $twilio = new \App\Twilio();
+        // $twilio->sendText($number, $newEvent);
+        
+        // }
 
 
 
