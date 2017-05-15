@@ -26,7 +26,11 @@ Route::post('/create-event', 'EventsController@createEvent');
 
 Route::get('/get-calendar-events', 'EventsController@fullCalendarEvents');
 
+
 Route::get('/settings', 'UsersController@settings');
+
+Route::get('/contacts', 'ContactsController@showContactsPage');
+
 
 
 /* ---- API ROUTES ---- */

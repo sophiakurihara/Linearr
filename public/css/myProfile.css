@@ -15,6 +15,10 @@ body, html {
     font-family: 'Open Sans', sans-serif;
 }
 
+.contacts-content {
+    padding: 20px;
+}
+
 .userLeftControllPanel
 {
 	width: 20%;

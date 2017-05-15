@@ -33,7 +33,7 @@
         <div id="contacts" class="userLeftControllPanel-sub-sections sub-section-text"><a href="/contacts">Contacts</a></div>
         <div class="userLeftControllPanel-sub-sections sub-section-text"><a href="logout">Logout</a></div>
         
-        <a id="settings "href="settings"><div class="settings"></div></a>
+        <div class="settings"></div>
     </div>
 
     <div class="loading"><img src="../../img/loading-large.gif" width="40"></div>
@@ -55,69 +55,6 @@
             $("#calendarContainer").css("background-color", "white");
         }, 500);
 
-        // Speed up calls to hasOwnProperty
-        var hasOwnProperty = Object.prototype.hasOwnProperty;
-
-        function isEmpty(obj) {
-
-            // null and undefined are "empty"
-            if (obj == null) return true;
-
-            // Assume if it has a length property with a non-zero value
-            // that that property is correct.
-            if (obj.length > 0)    return false;
-            if (obj.length === 0)  return true;
-
-            // If it isn't an object at this point
-            // it is empty, but it can't be anything *but* empty
-            // Is it empty?  Depends on your application.
-            if (typeof obj !== "object") return true;
-
-            // Otherwise, does it have any properties of its own?
-            // Note that this doesn't handle
-            // toString and valueOf enumeration bugs in IE < 9
-            for (var key in obj) {
-                if (hasOwnProperty.call(obj, key)) return false;
-            }
-
-            return true;
-        }
-
-        setTimeout(function(){
-            $.ajax({
-                url: '/get-calendar-events',
-                method: "GET",
-                dataType: "JSON",
-                success: function(events) {
-                        var array = [];
-                        for(var i = 0; i < events.length; i++) {
-                            array.push({
-                                id: events[i].id,
-                                title: events[i].title,
-                                start: events[i].date_of_event
-                            });
-                        }
-
-                        if(!isEmpty(events[0].title)) {
-                            $('#calendar').fullCalendar({
-                                defaultDate: '2017-05-12',
-                                editable: true,
-                                eventLimit: true, // allow "more" link when too many events
-                                events: array
-                            });
-                        } else {
-                            $('#calendar').fullCalendar({
-                                defaultDate: '2017-05-12',
-                                editable: true,
-                                eventLimit: true // allow "more" link when too many events
-                            });
-                        }
-                    // run the calendar - with populated data
-                }, error: function(events) {
-                    console.log("Error");
-                }
-            });
-        }, 480);
     });
 
     </script>

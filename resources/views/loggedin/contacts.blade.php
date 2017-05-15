@@ -2,28 +2,32 @@
 
 @section('additional_css')
 
-<link href="/css/jquery-ui.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/myProfile.css">
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<!-- <link rel="stylesheet" href="/css/style.css"> -->
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-<script>
-$( function() {
-$( "#datepicker" ).datepicker();
-} );
-</script>
-
 
 @stop
 
-
 @section('loggedin_content')
-
+	
+	
 	<div id="calendarContainer">
-		<div id="calendar"></div>
+            <h1>Contacts</h1>
+            <hr>
 	</div>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	<!-- The Modal -->
 
