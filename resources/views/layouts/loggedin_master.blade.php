@@ -33,7 +33,7 @@
         <div id="contacts" class="userLeftControllPanel-sub-sections sub-section-text"> Contacts</div>
         <div class="userLeftControllPanel-sub-sections sub-section-text"><a href="logout">Logout</a></div>
         
-        <div class="settings"></div>
+        <a id="settings "href="settings"><div class="settings"></div></a>
     </div>
 
     <div class="loading"><img src="../../img/loading-large.gif" width="40"></div>
@@ -43,6 +43,8 @@
 	</div>
 
     @yield('loggedin_content')
+
+    @yield('loggedin_more')
 
 	<script src="/js/jquery/10.8.3/jquery.min.js" type="text/javascript"></script>
 	<script src="/js/jquery/jquery-3.2.0.min.js" type="text/javascript"></script>
