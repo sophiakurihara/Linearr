@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\User;
+use DB;
 use Session;
 use Auth;
 use Hash;
@@ -101,4 +102,81 @@ class UsersController extends Controller
         return view('settings');
     }
 
+    public function editAccount(Request $request)
+    {
+        // ******* UPDATE FIRST NAME *******
+        if(!Auth::check())
+        {
+            return redirect()->action('UsersController@displayHomepage');
+        }
+
+        if(isset($request->firstNameButton))
+        { // check if the request isset with first namebutton
+            //Establish the rules (parameters) for the inputs 
+            $rules = array(
+                'first_name' => 'required|max:40'
+            );
+            $this->validate($request, $rules); // this checks if the rules are good to go ... if they are then they will proceed to the next step
+
+            // defining variable of user as the user with the id of the current logged in user that is editing the profile firstname 
+            $user = User::find(Auth::id());
+
+            //calling the users first name and requesting first name update from DB
+            $user->first_name = $request->first_name;
+
+            //saving the users updates to the database. 
+            $user->save();
+
+            //redirect to the settings page..
+            return redirect()->action('UsersController@settings');
+        }
+    
+        // ******* UPDATE LAST NAME *******
+        // if the user is logged in and verified.
+      
+        //if the button editlastname isset establish rules 
+        if(isset($request->lastNameButton))
+        {
+            $rules = array(
+                'last_name' => 'required|max:40'
+            );
+            //This is going to check if the rules are good. 
+            $this->validate($request, $rules);
+
+            // define a variable of user with the id of the current user so I can reference and update their information in the database 
+            $user = User::find(Auth::id());
+
+            //requesting that the content is updated in the backend DB 
+            $user->last_name = $request->last_name;
+
+            $user->save();
+
+            //redirect to the settings page 
+            return redirect()->action('UsersController@settings');
+        }
+
+        // ****** UPDATE PHONE NUMBER ******
+        // if the phonenumberButton is clicked then esatblish rules 
+        if(isset($request->phoneNumberButton))
+        {
+            $rules = array(
+                'phone' => 'required|max:12'
+            );
+
+            // Validate the rules 
+            $this->validate($request, $rules);
+
+            //define a variable of user with the user id to be referenced. 
+            // finding the user via their Auth ID 
+            $user = User::find(Auth::id());
+
+            // what column we are going to request to update
+            $user->phone = $request->phone;
+
+            //saving the info in the database
+            $user->save();
+
+            return redirect()->action('UsersController@settings');
+        }
+    }
 }
