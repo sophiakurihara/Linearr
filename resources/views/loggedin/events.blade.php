@@ -55,14 +55,3 @@ $( "#datepicker" ).datepicker();
 		</div>
 	</div> 
 @stop
-@section('js')
-
-	<script>
-		// on .click of createEvents subsection content in users panel 
-		$(document).ready(function(){
-			$('#createEvent').click(function(){
-				('.modal').css({"display" : "show", "width" : '50%'});
-			});
-		});
-	</script>
-@stop
