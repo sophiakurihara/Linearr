@@ -17,7 +17,8 @@
 </head>
 <body>
 	<div class="logo">
-        <a href="/">Vigley</a>
+        <!-- <a href="/">Vigley</a> -->
+        <div class="vigleyLogo"></div>
 	</div>
 
     <div class="userLeftControllPanel-arrow"></div>
