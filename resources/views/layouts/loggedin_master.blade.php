@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="/css/head.css">
         <link rel="stylesheet" href="/css/footer.css">
         @yield ('additional_css')
+        @yield ('additional_css_tables')
 </head>
 <body>
 	<div class="logo">
