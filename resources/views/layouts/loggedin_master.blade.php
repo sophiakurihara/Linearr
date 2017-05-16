@@ -16,10 +16,11 @@
         @yield ('additional_css_tables')
 </head>
 <body>
-	<div class="logo">
-        <!-- <a href="/">Vigley</a> -->
-        <div class="vigleyLogo"></div>
-	</div>
+    <div class="header">
+        <div class="vigleyLogoContainer">
+            <div class="vigleyLogo"></div>
+        </div>  
+    </div>
 
     <div class="userLeftControllPanel-arrow"></div>
 
