@@ -109,7 +109,7 @@
 			if($clicked == 1) {
 				$(".table-container").css("float", "right");
 				$(".table-container").animate({
-					"width":"60%"
+					"width":"64%"
 				}, 300);
 				setTimeout(function(){
 					$(".contact-form").fadeIn(400);
@@ -119,7 +119,7 @@
 			$('.add-contact-btn').click(function(){
 				$(".table-container").css("float", "right");
 				$(".table-container").animate({
-					"width":"60%"
+					"width":"64%"
 				}, 300);
 				setTimeout(function(){
 					$(".contact-form").fadeIn(400);
