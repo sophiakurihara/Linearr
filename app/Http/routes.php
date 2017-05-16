@@ -28,9 +28,12 @@ Route::get('/get-calendar-events', 'EventsController@fullCalendarEvents');
 
 
 Route::get('/settings', 'UsersController@settings');
+Route::put('/settings', 'UsersController@editAccount');
 
 Route::get('/contacts', 'ContactsController@showContactsPage');
 Route::post('/contacts', 'ContactsController@addContact');
+
+
 
 
 

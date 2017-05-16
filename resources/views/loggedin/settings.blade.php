@@ -15,40 +15,101 @@
             <h1>Settings</h1>
             <hr>
 
-			<!-- <table class="table-fill">
-			<thead>
-			<tr>
-				<th class="text-left" id="profilePicture">Profile Picture</th>
-				<th class="text-left" id="firstName">First Name</th>
-				<th class="text-left" id="lastName">Last Name</th>
-				<th class="text-left" id="phone">Phone</th>
-				<th class="text-left" id="email">Email</th>
-			</tr>
-			</thead> -->
-
 			<tbody class="table-hover">
-
 				<tr>
-					<div class="editingRows profilePicture"><div class="settingsIcon"></div>Profile Picture</div>
-						<!-- Instead of text, insert the profile picture where the text is located .... upon click of the edit png/href a have pop up to choose from your desktop/finder etc.  -->
-					<div class="editingRows firstName"><div class="settingsIcon"></div>First Name</div>
-					<div class="editingRows lastName"><div class="settingsIcon"></div>Last Name</div>
-					<div class="editingRows phoneNumber"><div class="settingsIcon"></div>Phone Number</div>
-				</tr>
+					<div class="editingRows profilePicture">
+						<a id="profilePictureEdit">
+							<div class="editIcon" id="profilePictureEdit"></div>
+						Profile Picture</a>
+						
+							<button type="submit" name="editPictureButton" class="uploadProfilePic">Upload Picture</button>
+					
+					</div>
 
+					<!-- form for uploading files -->
+					<!-- 	<form method="POST" enctype="multipart/form-data">
+							<input type="file" name="uploadPic" class="uploadProfilePic ">
+						</form> -->
+					<div class="editingRows firstName">
+						<!-- chosing post method to populate... Choosing what controller function we need to access for the form to work -->
+						<form method="POST" action="{{ action('UsersController@editAccount') }}">
+						{!! csrf_field() !!}
+						<!-- PUT is for updating as to originally POSTing something to the DB -->
+						{{ method_field('PUT')}} 
+
+							<a id="firstNameEdit">
+								<div class="editIcon"></div>
+								First Name
+							</a>
+							<button type="submit" name="firstNameButton" class="saveFirstNameButton">save</button>
+							<input type="text" name="first_name" class="editFirstName">
+						</form>
+					</div>
+
+					<div class="editingRows lastName">
+						<!-- chosing post method to populate... Choosing what controller function we need to access for the form to work -->
+						<form method="POST" action="{{ action('UsersController@editAccount') }}">
+						{!! csrf_field() !!}
+						<!-- updates information -->
+						{{ method_field('PUT') }} 
+
+							<a id="lastNameEdit">
+								<div class="editIcon"></div>
+								Last Name
+							</a>
+							<button type="submit" name="lastNameButton" class="saveLastNameButton">save</button>
+							<input type="text" name="last_name" class="editLastName">
+						</form>
+					</div>
+
+					<div class="editingRows phoneNumber">
+						<!-- chosing post method to populate... Choosing what controller function we need to access for the form to work -->
+						<form method="POST" action="{{ action('UsersController@editAccount') }}">
+						{!! csrf_field() !!} 
+						{{ method_field('PUT') }}
+
+							<a id="phoneNumberEdit">
+								<div class="editIcon"></div>
+								Phone Number
+							</a>
+							<!-- creating a name to be referenced in the controller's function -->
+							<button type="submit" name="phoneNumberButton" class="savePhoneNumberButton">save</button>
+							<input type="text" name="phone" class="editPhoneNumber">
+						</form>
+					</div>
+				</tr>
 			</tbody>
-			</table>
 	</div>	
 
 @stop
 
 @section('js')
 <script>
-	$("tr").hover(function(){
-	    $(this).css("background-color", "yellow");
-	    }, function(){
-	    $(this).css("background-color", "pink");
-	});	
+	$(document).ready(function(){
+		$("#profilePictureEdit").click(function(){
+			$(".uploadProfilePic").fadeIn(500);
+			console.log('You clicked edit profile picture');
+		});	
+
+		$("#firstNameEdit").click(function(){
+			$(".editFirstName").fadeIn(500);
+			$("#settingsMainContainer > div.editingRows.firstName > form > button").fadeIn(500);
+			console.log('You are trying to edit your first name');
+		});
+
+		$("#lastNameEdit").click(function(){
+			$(".editLastName").fadeIn(500);
+			$("#settingsMainContainer > div.editingRows.lastName > form > button").fadeIn(500);
+			console.log('You are trying to edit your first name');
+		});
+
+		$("#phoneNumberEdit").click(function(){
+			$(".editPhoneNumber").fadeIn(500);
+			$("#settingsMainContainer > div.editingRows.phoneNumber > form > button").fadeIn(500);
+			console.log('You are trying to edit your first name');
+		});
 
 
+	});
 </script>
+@stop
