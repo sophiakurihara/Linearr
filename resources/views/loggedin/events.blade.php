@@ -17,13 +17,13 @@
 
 @section('loggedin_content')
 
-	<div id="calendarContainer">
+	<!-- <div id="calendarContainer">
 		<div id="calendar"></div>
-	</div>	
+	</div>	 -->
 	<!-- The Modal -->
-	<div id="myModal" class="modal">
+	<!-- <div id="myModal" class="modal"> -->
 		<!-- Modal content -->
-		<div class="modal-content">
+	<!-- 	<div class="modal-content">
 			<span class="close">&times;</span>
 
 			<form method="POST" action="{{ action('EventsController@createEvent') }}">
@@ -37,19 +37,11 @@
 					</div>
 					
 					<div class="modal-content-div">
-					<script>
 					
-					$('#datepicker').click(function(){
-						console.log('datepicker clicked');
-					});
-
-					$(function(){
-						$("#datepicker").datepicker();
-					});
-					</script>
+					
 						<p>Date: <input type="text" id="datepicker"></p>
-			           <!--  <input type="text" for="date_of_event" placeholder="Date" id="datepicker" value="{{ $errors->has('date_of_event') ? '' : old('date_of_event') }}"> -->
-			        </div>
+			           <!  <input type="text" for="date_of_event" placeholder="Date" id="datepicker" value="{{ $errors->has('date_of_event') ? '' : old('date_of_event') }}"> -->
+			<!--         </div>
 			        <div class="modal-content-div">         
 			            <input for="sent_to" placeholder="Contacts" type="text" name="sent_to" id="sent_to" value="{{ $errors->has('sent_to') ? '' : old('sent_to') }}" autocomplete="off">
 					</div>
@@ -58,6 +50,14 @@
 				<button type="submit" class="create-event-button">Create Event</button>
 		    </form>	
 		</div>
-	</div> 
+	</div>  -->
+	<!-- <script>
+		$('#datepicker').click(function(){
+			console.log('datepicker clicked');
+		});
 
+		$(function(){
+			$("#datepicker").datepicker();
+		});
+	</script> --> 
 @stop
