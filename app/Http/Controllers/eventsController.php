@@ -90,7 +90,6 @@ class EventsController extends Controller
             $twilio->sendText($phoneNumber, $newEvent);            
         }
 
-
         return redirect()->action('UsersController@displayHomepage');
     }
 
