@@ -99,7 +99,7 @@ class UsersController extends Controller
         if(Auth::check()) {
             return view('loggedin.settings');
         }
-        return view('settings');
+        return view('login');
     }
 
     public function editAccount(Request $request)
