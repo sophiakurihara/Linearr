@@ -29,7 +29,7 @@
 			            <textarea rows="3" cols="40" type="text" for="description" placeholder="Description" name="description" id="description" value="{{ $errors->has('description') ? '' : old('description') }}" autocomplete="off"></textarea>
 					</div>
 					<div class="modal-content-div">
-			            <input type="text" for="date_of_event" name="date_of_event" placeholder="Date" id="datepicker" value="{{ $errors->has('date_of_event') ? '' : old('date_of_event') }}">
+			            <p>Date: <input id="datepicker"></p>
 			        </div>
 			        <div class="modal-content-div">         
 			            <input for="sent_to" placeholder="Contacts" type="text" name="sent_to" id="sent_to" value="{{ $errors->has('sent_to') ? '' : old('sent_to') }}" autocomplete="off">
@@ -40,7 +40,19 @@
 		    </form>	
 		</div>
 	</div> 
+	<script>
+	$(document).ready(function(){
 
+
+		$('#datepicker').click(function(){
+			console.log('datepicker clicked');
+		});
+
+		$(function(){
+			$("#datepicker").datepicker();
+		});
+	});
+	</script>
 	<div id="myEventsRight">
 		<div class="x-right"><b>x</b></div>
 		<div class="userRightControllPanel">

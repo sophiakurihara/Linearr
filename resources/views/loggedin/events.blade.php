@@ -5,6 +5,7 @@
 <link href="/css/jquery-ui.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/myProfile.css">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="/css/style.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -21,7 +22,7 @@
 	</div>	
 	<!-- The Modal -->
 	<div id="myModal" class="modal">
-		 <!-- Modal content -->
+		<!-- Modal content -->
 		<div class="modal-content">
 			<span class="close">&times;</span>
 
@@ -36,8 +37,18 @@
 					</div>
 					
 					<div class="modal-content-div">
-						
-			            <input type="text" for="date_of_event" placeholder="Date" id="datepicker" value="{{ $errors->has('date_of_event') ? '' : old('date_of_event') }}">
+					<script>
+					
+					$('#datepicker').click(function(){
+						console.log('datepicker clicked');
+					});
+
+					$(function(){
+						$("#datepicker").datepicker();
+					});
+					</script>
+						<p>Date: <input type="text" id="datepicker"></p>
+			           <!--  <input type="text" for="date_of_event" placeholder="Date" id="datepicker" value="{{ $errors->has('date_of_event') ? '' : old('date_of_event') }}"> -->
 			        </div>
 			        <div class="modal-content-div">         
 			            <input for="sent_to" placeholder="Contacts" type="text" name="sent_to" id="sent_to" value="{{ $errors->has('sent_to') ? '' : old('sent_to') }}" autocomplete="off">
@@ -48,9 +59,5 @@
 		    </form>	
 		</div>
 	</div> 
-<script>
-	$(function(){
-		$("#datepicker").datepicker();
-	});
-</script>
+
 @stop
