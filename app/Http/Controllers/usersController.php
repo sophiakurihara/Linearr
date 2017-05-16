@@ -178,5 +178,28 @@ class UsersController extends Controller
 
             return redirect()->action('UsersController@settings');
         }
+
+        //****** UPDATE EMAIL ****** 
+        //if the email button is clicked 
+        if(isset($request->emailButton)){
+            $rules = array(
+                'email' => 'required|max:255'
+            );
+        //makes sure that the rules are working 
+        $this->validate($request, $rules);
+
+        //defining a variable for the user and id 
+        $user = User::find(Auth::id());
+
+        // What we want to pull from the user
+        $user->email = $request->email;
+
+        //save the new information
+        $user->save();
+
+        //redirect to the settings page 
+        return redirect()->action('UsersController@settings');
+
+        }
     }
 }

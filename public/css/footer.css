@@ -1,9 +1,18 @@
+.footerTopBorder
+{
+	clear:left;
+	height: 60px;
+	width: 100%;
+	
+}
 .footer
 {
-	height: 400px;
+	height: 170px;
+	padding-bottom: 60px;
 	width: 100%;
+	clear:left;
 	margin-top: 200px;
-	background-color: #114b5f;
+	background-color: #e5e4e1;
 }
 
 .contactUsIcons
@@ -11,7 +20,7 @@
 	width: 600px;
 	height: 100px;
 	margin-left: 39%;
-	margin-top: 160px;
+	margin-top: 60px;
 	display: inline-block;
 }
 
@@ -55,7 +64,7 @@
 		
 		width: 100%;
 		margin: auto 0;
-		background-color: #114b5f;
+		background-color: #e5e4e1;
 	}
 
 }
