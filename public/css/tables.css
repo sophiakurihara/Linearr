@@ -40,6 +40,21 @@
     color: #FFF;
 }
 
+#settingsMainContainer > div.editingRows.email > form > button
+{
+    float: right;
+    margin-left: 1%;
+    background-color: #FFF;
+    border: none;
+    display: none;
+}
+
+#settingsMainContainer > div.editingRows.email > form > button:hover
+{
+    background-color: #000;
+    color: #FFF;
+}
+
 #settingsMainContainer > div.editingRows.lastName > form > button
 {
     float: right;
@@ -81,6 +96,16 @@
 }
 
 .editPhoneNumber
+{
+    display: none;
+    float: right;
+    width: 25%;
+    height: 30px;
+    border: none;
+    background-color: #FFF;
+}
+
+.editEmail
 {
     display: none;
     float: right;
@@ -175,6 +200,11 @@
 }
 
 .phoneNumber:hover
+{
+    background-color: #d6d6d6;
+}
+
+.email:hover
 {
     background-color: #d6d6d6;
 }
