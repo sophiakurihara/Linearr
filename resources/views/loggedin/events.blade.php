@@ -19,9 +19,7 @@
 	<div id="calendarContainer">
 		<div id="calendar"></div>
 	</div>	
-	
 	<!-- The Modal -->
-
 	<div id="myModal" class="modal">
 		 <!-- Modal content -->
 		<div class="modal-content">

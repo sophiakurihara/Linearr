@@ -14,10 +14,10 @@
         @yield ('additional_css')
 </head>
 <body>
-	<div class="logo">
-        <a href="/">
-		    <img class="linearr" src="/img/Linearr_logo_transparent.png">
-        </a>
+	<div class="header">
+        <div class="vigleyLogoContainer">
+            <div class="vigleyLogo"></div>
+        </div>  
 	</div>
 
 	<!-- place navbar here in master -->
