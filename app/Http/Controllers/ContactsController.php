@@ -65,7 +65,7 @@ class ContactsController extends Controller
                 'first_name' => 'required',
                 'last_name' => 'required',
                 'email' => 'required',
-                'phone_number' => 'required|regex:/(01)[0-9]{9}/'
+                'phone_number' => 'required|phone'
             ];
 
             $this->validate($request, $rules);
