@@ -59,6 +59,11 @@
             $("#calendarContainer").css("background-color", "white");
         }, 500);
 
+        setTimeout(function(){
+
+            $('.userLeftControllPanel').css('height', '1000px');
+        }, 600);
+
         // Speed up calls to hasOwnProperty
         var hasOwnProperty = Object.prototype.hasOwnProperty;
 

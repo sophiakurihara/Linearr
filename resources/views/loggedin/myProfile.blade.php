@@ -7,7 +7,6 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
     <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
 	<script src="https://unpkg.com/flatpickr"></script>
 
@@ -77,10 +76,10 @@
 	    enableTime: true,
 	    altInputClass: "form-control",
 	    allowInput: true,
-	    dateFormat: 'Y-m-d H:i:S',
+	    dateFormat: "Y-m-d h:i K",
 	    weekNumbers: true,
 	    minDate: "today",
-	    enable: [
+	    disable: [
 	        {
 	            from: "today",
 	            to: new Date().fp_incr(2)
