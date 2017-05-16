@@ -33,6 +33,7 @@
 
         <div id="myEvents" class="userLeftControllPanel-sub-sections firstControlPanel-sub-section sub-section-text"><a href="/">My Events</a></div>
         <div class="userLeftControllPanel-sub-sections sub-section-text"><a id="createEvent"href="create-event">Create Event</a></div>
+        <div id="manageEvents" class="userLeftControllPanel-sub-sections sub-section-text"><a href="/events">Manage Events</a></div>
         <div id="contacts" class="userLeftControllPanel-sub-sections sub-section-text"><a href="/contacts">Contacts</a></div>
         <div class="userLeftControllPanel-sub-sections sub-section-text"><a href="logout">Logout</a></div>
         

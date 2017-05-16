@@ -19,7 +19,11 @@ class EventsController extends Controller
      */
     public function index()
     {
-        //
+        if(!Auth::check()){
+            return redirect()->action('UsersController@displayLogin');
+        }
+
+        return view('loggedin.manage');
     }
      public function showCreateEvent()
     {
