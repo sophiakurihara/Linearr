@@ -19,11 +19,12 @@ class EventsController extends Controller
      */
     public function index()
     {
-        if(!Auth::check()){
-            return redirect()->action('UsersController@displayLogin');
+        if(Auth::check()) {
+            $events = Event::where('created_by', '=', Auth::id())->get();
+            return view('loggedin.manage')->with(['events' => $events]);
         }
+            return redirect()->action('UsersController@displayLogin');
 
-        return view('loggedin.manage');
     }
      public function showCreateEvent()
     {
