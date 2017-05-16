@@ -5,7 +5,137 @@
   padding: 2% 4%;
 }
 
-.settingsIcon
+.editFirstName
+{
+    display: none;
+    float: right;
+    width: 25%;
+    height: 30px;
+    border: none;
+    background-color: #FFF;
+}
+
+.hide
+{
+    display: none;
+}
+
+#settingsMainContainer > div.editingRows.profilePicture > form > input
+{
+    background-color: #FFF;
+}
+
+#settingsMainContainer > div.editingRows.firstName > form > button
+{
+    float: right;
+    margin-left: 1%;
+    background-color: #FFF;
+    border: none;
+    display: none;
+}
+
+#settingsMainContainer > div.editingRows.firstName > form > button:hover
+{
+    background-color: #000;
+    color: #FFF;
+}
+
+#settingsMainContainer > div.editingRows.lastName > form > button
+{
+    float: right;
+    margin-left: 1%;
+    background-color: #FFF;
+    border: none;
+    display: none;
+}
+
+#settingsMainContainer > div.editingRows.lastName > form > button:hover
+{
+    background-color: #000;
+    color: #FFF;
+}
+
+#settingsMainContainer > div.editingRows.phoneNumber > form > button
+{
+    float: right;
+    margin-left: 1%;
+    background-color: #FFF;
+    border: none;
+    display: none;
+}
+
+#settingsMainContainer > div.editingRows.phoneNumber > form > button:hover
+{
+    background-color: #000;
+    color: #FFF;
+}
+
+.editLastName
+{
+    display: none;
+    float: right;
+    width: 25%;
+    height: 30px;
+    border: none;
+    background-color: #FFF;
+}
+
+.editPhoneNumber
+{
+    display: none;
+    float: right;
+    width: 25%;
+    height: 30px;
+    border: none;
+    background-color: #FFF;
+}
+
+#settingsMainContainer > div.editingRows.phoneNumber > button
+{
+    float: right;
+    margin-left: 1%;
+    background-color: #FFF;
+    border: none;
+    display: none;
+}
+
+#settingsMainContainer > div.editingRows.phoneNumber > button:hover
+{
+    background-color: #000;
+    color: #FFF;
+}
+
+.uploadProfilePic
+{
+    display:none;
+    float: right;
+    width: 25%;
+    border: none;
+    background-color: #FFF;
+    height: 30px;
+}
+
+.uploadProfilePic:hover
+{
+    border-radius: 1px;
+    background-color: #000;
+    color: #FFF;
+}
+
+.profilePicUploadForm
+{
+    display: none;
+}
+.input
+{
+
+    width: 100px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.editIcon
 {
   width: 20px;
   height: 20px;
@@ -14,6 +144,39 @@
   background-image: url('/img/editSettings.png');
   background-position: center center;
   background-size: cover; 
+}
+
+.editingRowsPicture
+{
+    display: none;
+    background:#FFFFFF;
+    padding:20px;
+    text-align:left;
+    vertical-align:middle;
+    font-weight:300;
+    font-size:18px;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #C1C3D1;
+}
+
+.profilePicture:hover
+{
+  background-color: #d6d6d6;
+}
+
+.firstName:hover
+{
+    background-color: #d6d6d6;
+}
+
+.lastName:hover
+{
+    background-color: #d6d6d6;
+}
+
+.phoneNumber:hover
+{
+    background-color: #d6d6d6;
 }
 
 .add-contact-btn {
