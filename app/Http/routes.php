@@ -26,6 +26,8 @@ Route::post('/create-event', 'EventsController@createEvent');
 
 Route::get('/get-calendar-events', 'EventsController@fullCalendarEvents');
 
+Route::get('/events', 'EventsController@index');
+
 
 Route::get('/settings', 'UsersController@settings');
 Route::put('/settings', 'UsersController@editAccount');
