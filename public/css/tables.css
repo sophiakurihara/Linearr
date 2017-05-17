@@ -411,3 +411,35 @@ td.text-center {
 td.text-right {
   text-align: right;
 }
+
+.editTitle {
+  display: none;
+}
+
+.editDescription {
+  display: none;
+}
+
+.editDate {
+  display: none;
+}
+
+.editSent {
+  display: none;
+}
+
+.saveTitle {
+  display: none;
+}
+
+.saveDescription {
+  display: none;
+}
+
+.saveDate {
+  display: none;
+}
+
+.saveSent {
+  display: none;
+}
