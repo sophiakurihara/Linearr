@@ -26,6 +26,54 @@ class EventsController extends Controller
             return redirect()->action('UsersController@displayLogin');
 
     }
+
+    public function editEvent(Request $request, $id)
+    {
+        if(!Auth::check()) 
+        {
+            return redirect()->action('UsersController@displayHomepage');
+        }
+        if(isset($request->titleButton))
+        {
+            $rules = array('title' => 'required|max:150');
+            $this->validate($request, $rules);
+            $event = Event::find($id);
+            $event->title = $request->title;
+            $event->save();
+
+            return redirect()->action('EventsController@index');
+        }
+        if(isset($request->descriptionButton))
+        {
+            $rules = array('description' => 'required|max:150');
+            $this->validate($request, $rules);
+            $event = Event::find($id);
+            $event->description = $request->description;
+            $event->save();
+
+            return redirect()->action('EventsController@index');
+        }
+        if(isset($request->dateButton))
+        {
+            $rules = array('date_of_event' => 'required|date');
+            $this->validate($request, $rules);
+            $event = Event::find($id);
+            $event->date_of_event = $request->date_of_event;
+            $event->save();
+
+            return redirect()->action('EventsController@index');
+        }
+        if(isset($request->sentButton))
+        {
+            $rules = array('sent_to' => 'required');
+            $this->validate($request, $rules);
+            $event = Event::find($id);
+            $event->sent_to = $request->sent_to;
+            $event->save();
+
+            return redirect()->action('EventsController@index');
+        }
+    }
      public function showCreateEvent()
     {
         if(!Auth::check()){
