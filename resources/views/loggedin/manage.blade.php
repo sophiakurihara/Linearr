@@ -28,10 +28,57 @@
 			<tbody class="table-hover">
 			@foreach($events as $event)
 				<tr>
-					<td class="text-left">{{ $event->title}}</td>
-					<td class="text-left">{{ $event->description}}</td>
-					<td class="text-left">{{ $event->date_of_event}}</td>
-					<td class="text-left">{{ $event->sent_to}}</td>
+					<td class="text-left">
+					<form method="POST" action="{{ action('EventsController@editEvent', $event->id) }}">
+						{!! csrf_field() !!}
+						{{ method_field('PUT') }}
+						<a id="titleEdit">
+							{{ $event->title}}
+							<div class="editIcon"></div>
+						</a>
+						<input type="text" name="title" class="editTitle">
+						<button type="submit" name="titleButton" class="saveTitle">Save</button>
+					</form>
+					</td>
+
+					<td class="text-left">
+					<form method="POST" action="{{ action ('EventsController@editEvent', $event->id) }}">
+						{!! csrf_field() !!}
+						{{ method_field('PUT') }}
+						<a id="descriptionEdit">
+							{{ $event->description}}
+							<div class="editIcon"></div>
+						</a>
+						<input type="text" name="description" class="editDescription">
+						<button type="submit" name="descriptionButton" class="saveDescription">Save</button>
+					</form>
+					</td>
+
+					<td class="text-left">
+					<form method="POST" action="{{ action ('EventsController@editEvent', $event->id) }}">
+						{!! csrf_field() !!}
+						{{ method_field('PUT') }}
+						<a id="dateEdit">
+							{{ $event->date_of_event}}
+							<div class="editIcon"></div>
+						</a>
+						<input type="text" name="date_of_event" class="editDate">
+						<button type="submit" name="dateButton" class="saveDate">Save</button>
+					</form>
+					</td>
+
+					<td class="text-left">
+					<form method="POST" action="{{ action('EventsController@editEvent', $event->id) }}">
+						{!! csrf_field() !!}
+						{{ method_field('PUT') }}
+						<a id="sentEdit">
+							{{ $event->sent_to}}
+							<div class="editIcon"></div>
+						</a>
+						<input type="text" name="sent_to" class="editSent">
+						<button type="submit" name="sentButton" class="saveSent">Save</button>
+					</form>
+					</td>
 				</tr>
 			@endforeach
 			
@@ -40,4 +87,27 @@
 		</div>
 	</div>
 
+@stop
+
+@section('js')
+<script>
+	$(document).ready(function (){
+		$("#titleEdit").click(function (){
+			$(".editTitle").fadeIn(500);
+			$(".saveTitle").fadeIn(500);
+		});
+		$("#descriptionEdit").click(function (){
+			$(".editDescription").fadeIn(500);
+			$(".saveDescription").fadeIn(500);
+		});
+		$("#dateEdit").click(function (){
+			$(".editDate").fadeIn(500);
+			$(".saveDate").fadeIn(500);
+		});
+		$("#sentEdit").click(function (){
+			$(".editSent").fadeIn(500);
+			$(".saveSent").fadeIn(500);
+		});
+	});
+</script>
 @stop
