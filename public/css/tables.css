@@ -171,6 +171,114 @@
   background-size: cover; 
 }
 
+.editEventsIcon-0
+{
+  width: 20px;
+  height: 20px;
+  display: none;
+  margin-left: 1%;
+  float: right;
+  background-image: url('/img/editSettings.png');
+  background-position: center center;
+  background-size: cover; 
+}
+
+.editEventsIcon-1
+{
+  width: 20px;
+  height: 20px;
+  display: none;
+  margin-left: 1%;
+  float: right;
+  background-image: url('/img/editSettings.png');
+  background-position: center center;
+  background-size: cover; 
+}
+
+.editEventsIcon-2
+{
+  width: 20px;
+  height: 20px;
+  display: none;
+  margin-left: 1%;
+  float: right;
+  background-image: url('/img/editSettings.png');
+  background-position: center center;
+  background-size: cover; 
+}
+
+.editEventsIcon-3
+{
+  width: 20px;
+  height: 20px;
+  display: none;
+  margin-left: 1%;
+  float: right;
+  background-image: url('/img/editSettings.png');
+  background-position: center center;
+  background-size: cover; 
+}
+
+.editEventsIcon-4
+{
+  width: 20px;
+  height: 20px;
+  display: none;
+  margin-left: 1%;
+  float: right;
+  background-image: url('/img/editSettings.png');
+  background-position: center center;
+  background-size: cover; 
+}
+
+.editEventsIcon-5
+{
+  width: 20px;
+  height: 20px;
+  display: none;
+  margin-left: 1%;
+  float: right;
+  background-image: url('/img/editSettings.png');
+  background-position: center center;
+  background-size: cover; 
+}
+
+.editEventsIcon-6
+{
+  width: 20px;
+  height: 20px;
+  display: none;
+  margin-left: 1%;
+  float: right;
+  background-image: url('/img/editSettings.png');
+  background-position: center center;
+  background-size: cover; 
+}
+
+.editEventsIcon-7
+{
+  width: 20px;
+  height: 20px;
+  display: none;
+  margin-left: 1%;
+  float: right;
+  background-image: url('/img/editSettings.png');
+  background-position: center center;
+  background-size: cover; 
+}
+
+.editEventsIcon-8
+{
+  width: 20px;
+  height: 20px;
+  display: none;
+  margin-left: 1%;
+  float: right;
+  background-image: url('/img/editSettings.png');
+  background-position: center center;
+  background-size: cover; 
+}
+
 .editingRowsPicture
 {
     display: none;
@@ -392,6 +500,8 @@ th.text-left {
   text-align: left;
 }
 
+
+
 th.text-center {
   text-align: center;
 }
@@ -404,6 +514,10 @@ td.text-left {
   text-align: left;
 }
 
+td.text-left-manage-0 {
+  text-align: left;
+}
+
 td.text-center {
   text-align: center;
 }
@@ -412,34 +526,323 @@ td.text-right {
   text-align: right;
 }
 
-.editTitle {
+.editTitle-0 {
   display: none;
 }
 
-.editDescription {
+.editDescription-0 {
   display: none;
 }
 
-.editDate {
+.editDate-0 {
   display: none;
 }
 
-.editSent {
+.editSent-0 {
   display: none;
 }
 
-.saveTitle {
+.saveTitle-0 {
   display: none;
 }
 
-.saveDescription {
+.saveDescription-0 {
   display: none;
 }
 
-.saveDate {
+.saveDate-0 {
   display: none;
 }
 
-.saveSent {
+.saveSent-0 {
   display: none;
 }
+
+.editTitle-1 {
+  display: none;
+}
+
+.editDescription-1 {
+  display: none;
+}
+
+.editDate-1 {
+  display: none;
+}
+
+.editSent-1 {
+  display: none;
+}
+
+.saveTitle-1 {
+  display: none;
+}
+
+.saveDescription-1 {
+  display: none;
+}
+
+.saveDate-1 {
+  display: none;
+}
+
+.saveSent-1 {
+  display: none;
+}
+
+.editTitle-2 {
+  display: none;
+}
+
+.editDescription-2 {
+  display: none;
+}
+
+.editDate-2 {
+  display: none;
+}
+
+.editSent-2 {
+  display: none;
+}
+
+.saveTitle-2 {
+  display: none;
+}
+
+.saveDescription-2 {
+  display: none;
+}
+
+.saveDate-2 {
+  display: none;
+}
+
+.saveSent-2 {
+  display: none;
+}
+
+.editTitle-3 {
+  display: none;
+}
+
+.editDescription-3 {
+  display: none;
+}
+
+.editDate-3 {
+  display: none;
+}
+
+.editSent-3 {
+  display: none;
+}
+
+.saveTitle-3 {
+  display: none;
+}
+
+.saveDescription-3 {
+  display: none;
+}
+
+.saveDate-3 {
+  display: none;
+}
+
+.saveSent-3 {
+  display: none;
+}
+
+.editTitle-4 {
+  display: none;
+}
+
+.editDescription-4 {
+  display: none;
+}
+
+.editDate-4 {
+  display: none;
+}
+
+.editSent-4 {
+  display: none;
+}
+
+.saveTitle-4 {
+  display: none;
+}
+
+.saveDescription-4 {
+  display: none;
+}
+
+.saveDate-4 {
+  display: none;
+}
+
+.saveSent-4 {
+  display: none;
+}
+
+.editTitle-5 {
+  display: none;
+}
+
+.editDescription-5 {
+  display: none;
+}
+
+.editDate-5 {
+  display: none;
+}
+
+.editSent-5 {
+  display: none;
+}
+
+.saveTitle-5 {
+  display: none;
+}
+
+.saveDescription-5 {
+  display: none;
+}
+
+.saveDate-5 {
+  display: none;
+}
+
+.saveSent-5 {
+  display: none;
+}
+
+.editTitle-6 {
+  display: none;
+}
+
+.editDescription-6 {
+  display: none;
+}
+
+.editDate-6 {
+  display: none;
+}
+
+.editSent-6 {
+  display: none;
+}
+
+.saveTitle-6 {
+  display: none;
+}
+
+.saveDescription-6 {
+  display: none;
+}
+
+.saveDate-6 {
+  display: none;
+}
+
+.saveSent-6 {
+  display: none;
+}
+
+.editTitle-7 {
+  display: none;
+}
+
+.editDescription-7 {
+  display: none;
+}
+
+.editDate-7 {
+  display: none;
+}
+
+.editSent-7 {
+  display: none;
+}
+
+.saveTitle-7 {
+  display: none;
+}
+
+.saveDescription-7 {
+  display: none;
+}
+
+.saveDate-7 {
+  display: none;
+}
+
+.saveSent-7 {
+  display: none;
+}
+
+.editTitle-8 {
+  display: none;
+}
+
+.editDescription-8 {
+  display: none;
+}
+
+.editDate-8 {
+  display: none;
+}
+
+.editSent-8 {
+  display: none;
+}
+
+.saveTitle-8 {
+  display: none;
+}
+
+.saveDescription-8 {
+  display: none;
+}
+
+.saveDate-8 {
+  display: none;
+}
+
+.saveSent-8 {
+  display: none;
+}
+
+.editTitle-9 {
+  display: none;
+}
+
+.editDescription-9 {
+  display: none;
+}
+
+.editDate-9 {
+  display: none;
+}
+
+.editSent-9 {
+  display: none;
+}
+
+.saveTitle-9 {
+  display: none;
+}
+
+.saveDescription-9 {
+  display: none;
+}
+
+.saveDate-9 {
+  display: none;
+}
+
+.saveSent-9 {
+  display: none;
+}
+
