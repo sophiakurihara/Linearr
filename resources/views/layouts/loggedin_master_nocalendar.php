@@ -60,7 +60,7 @@
 
     </script>
 
-    @include('partials.below_banner')
+    @include('partials.below_banner_loggedin')
 
     <!-- Bootstrap JS -->
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
