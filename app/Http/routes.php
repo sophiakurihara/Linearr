@@ -31,6 +31,7 @@ Route::put('/events/{id}', 'EventsController@editEvent');
 
 
 Route::get('/settings', 'UsersController@settings');
+Route::post('/settings', 'UsersController@updateProfilePicture');
 Route::put('/settings', 'UsersController@editAccount');
 
 Route::get('/contacts', 'ContactsController@showContactsPage');

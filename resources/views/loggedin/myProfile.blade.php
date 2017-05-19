@@ -7,8 +7,8 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
-    <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
 	<script src="https://unpkg.com/flatpickr"></script>
 
     
@@ -48,7 +48,6 @@
 		    </form>	
 		</div>
 	</div> 
-
 	<div id="myEventsRight">
 		<div class="x-right"><b>x</b></div>
 		<div class="userRightControllPanel">
@@ -70,14 +69,15 @@
 	// new Flatpickr(Element.dateTimePick, defaultDate);
 
 	$(document).ready(function(){
-		$(".datepicker").click(function(){
-		document.getElementsByClassName("datepicker").flatpickr({
+		$("#datepicker").click(function(){
+			console.log('datePicker ID Clicked ');
+		document.getElementsById("datepicker").flatpickr({
 	    
 	    altFormat: "l j M Y",
 	    enableTime: true,
 	    altInputClass: "form-control",
 	    allowInput: true,
-	    dateFormat: 'Y-m-d H:i:S',
+	    dateFormat: "Y-m-d h:i K",
 	    weekNumbers: true,
 	    minDate: "today",
 	    enable: [
