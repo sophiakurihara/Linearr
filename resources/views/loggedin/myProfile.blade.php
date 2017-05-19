@@ -69,8 +69,9 @@
 	// new Flatpickr(Element.dateTimePick, defaultDate);
 
 	$(document).ready(function(){
-		$(".datepicker").click(function(){
-		document.getElementsByClassName("datepicker").flatpickr({
+		$("#datepicker").click(function(){
+			console.log('datePicker ID Clicked ');
+		document.getElementsById("datepicker").flatpickr({
 	    
 	    altFormat: "l j M Y",
 	    enableTime: true,

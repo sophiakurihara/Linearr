@@ -37,7 +37,7 @@
 					</div>
 					
 					<div class="modal-content-div">
-						<p>Date: <input type="text" id="datepicker"></p>
+						
 			            <input type="text" for="date_of_event" placeholder="Date" id="datepicker" value="{{ $errors->has('date_of_event') ? '' : old('date_of_event') }}">
 			        </div>
 			        <div class="modal-content-div">         
