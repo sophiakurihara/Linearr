@@ -17,5 +17,6 @@
             <a href="register" id="register">Register</a>
         </div>
     </div>
+
 @stop
 
