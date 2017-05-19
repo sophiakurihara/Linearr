@@ -2,10 +2,10 @@
 
 @section('additional_css')
 
-<link rel="stylesheet" href="/css/myProfile.css">
-<link href="/css/jquery-ui.css" rel="stylesheet">
+	<link rel="stylesheet" href="/css/myProfile.css">
+	<link href="/css/jquery-ui.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+   	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
     <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
@@ -33,10 +33,10 @@
 					<div class="modal-content-div">
 						<input for="title" placeholder= "Title" type="text" name="title" class="modal-content-title-input"  autocomplete="off">
 					</div>
-					<div class="modal-content-div">
+					<div class="modal-content-div-textarea">
 			            <textarea rows="3" cols="40" type="text" for="description" placeholder="Description" name="description" id="description" value="{{ $errors->has('description') ? '' : old('description') }}" autocomplete="off"></textarea>
 					</div>
-					<div class="modal-content-div">
+					<div class="modal-content-div-datepicker">
 			            <input type="text" for="date_of_event" name="date_of_event" placeholder="Date" class="datepicker" value="{{ $errors->has('date_of_event') ? '' : old('date_of_event') }}">
 			        </div>
 			        <div class="modal-content-div">         
@@ -64,34 +64,33 @@
 			</div>
 		</div>
 	</div>
-	<script>
 
-	
+	<script>
 	// new Flatpickr(Element.dateTimePick, defaultDate);
 
 	$(document).ready(function(){
-		$(".datepicker").click(function(){
-		document.getElementsByClassName("datepicker").flatpickr({
-	    
-	    altFormat: "l j M Y",
-	    enableTime: true,
-	    altInputClass: "form-control",
-	    allowInput: true,
-	    dateFormat: 'Y-m-d H:i:S',
-	    weekNumbers: true,
-	    minDate: "today",
-	    enable: [
-	        {
-	            from: "today",
-	            to: new Date().fp_incr(2)
-	        },
-	        function(date) {
-	            return date.getDate()%2 > 0;
-	        }
-	    ],
-	    maxDate: new Date().fp_incr(60)
-		})
-	});
+		$(".modal-content-div-datepicker").click(function(){
+			document.getElementsByClassName("datepicker").flatpickr({
+			
+			altFormat: "l j M Y",
+			enableTime: true,
+			altInputClass: "form-control",
+			allowInput: true,
+			dateFormat: 'Y-m-d H:i:S',
+			weekNumbers: true,
+			minDate: "today",
+			enable: [
+				{
+					from: "today",
+					to: new Date().fp_incr(2)
+				},
+				function(date) {
+					return date.getDate()%2 > 0;
+				}
+			],
+			maxDate: new Date().fp_incr(60)
+			})
+		});
 	});
 	</script>
 

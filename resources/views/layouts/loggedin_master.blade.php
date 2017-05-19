@@ -142,6 +142,35 @@
     <script src='/js/fullcalendar.min.js'></script>
 
 	<script>
+	// new Flatpickr(Element.dateTimePick, defaultDate);
+
+	$(document).ready(function(){
+		$(".modal-content-div-datepicker").click(function(){
+			document.getElementsByClassName("datepicker").flatpickr({
+			
+			altFormat: "l j M Y",
+			enableTime: true,
+			altInputClass: "form-control",
+			allowInput: true,
+			dateFormat: 'Y-m-d H:i:S',
+			weekNumbers: true,
+			minDate: "today",
+			enable: [
+				{
+					from: "today",
+					to: new Date().fp_incr(2)
+				},
+				function(date) {
+					return date.getDate()%2 > 0;
+				}
+			],
+			maxDate: new Date().fp_incr(60)
+			})
+		});
+	});
+	</script>
+
+	<script>
 		$(document).ready(function(){
 
 			$('.x').click(function(){
@@ -218,7 +247,35 @@
 			});
 		});
 	</script>
+    
+	<script>
+	// new Flatpickr(Element.dateTimePick, defaultDate);
 
+	$(document).ready(function(){
+		$(".modal-content-div-datepicker").click(function(){
+			document.getElementsByClassName("datepicker").flatpickr({
+			
+			altFormat: "l j M Y",
+			enableTime: true,
+			altInputClass: "form-control",
+			allowInput: true,
+			dateFormat: 'Y-m-d H:i:S',
+			weekNumbers: true,
+			minDate: "today",
+			enable: [
+				{
+					from: "today",
+					to: new Date().fp_incr(2)
+				},
+				function(date) {
+					return date.getDate()%2 > 0;
+				}
+			],
+			maxDate: new Date().fp_incr(60)
+			})
+		});
+	});
+	</script>
     <script>
     var footerResize = function() {
         $('#footer').css('position', $("body").height() + $("#footer").innerHeight() > $(window).height() ? "inherit" : "fixed");

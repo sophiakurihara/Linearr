@@ -2,6 +2,11 @@
 
 @section('additional_css')
 	<link rel="stylesheet" href="/css/myProfile.css">
+	<script src="https://unpkg.com/flatpickr"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link href="/css/jquery-ui.css" rel="stylesheet">
 @stop
 
 @section('additional_css_tables')
@@ -123,9 +128,6 @@
 		</div>
 	</div> 	
 
-@stop
-
-@section('js')
 <script>
 	$(document).ready(function(){
 		$("#profilePictureEdit").click(function(){
@@ -157,4 +159,6 @@
 		});
 	});
 </script>
+
+
 @stop
