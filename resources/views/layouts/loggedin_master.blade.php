@@ -28,7 +28,7 @@
         <div class="x">←</div>
 
         <div class="navbar-profile-picture">
-            <img src="../../img/default.png" width="50"><span class="navbar-phone-number">818-793-9268</span>
+            <img src="../../img/default.png" width="50" class="profileImage"><span class="navbar-phone-number">818-793-9268</span>
         </div>
 
         <div id="myEvents" class="userLeftControllPanel-sub-sections firstControlPanel-sub-section sub-section-text"><a href="/">My Events</a></div>
@@ -59,6 +59,11 @@
             $("#calendarContainer").fadeIn(600);
             $("#calendarContainer").css("background-color", "white");
         }, 500);
+
+        setTimeout(function(){
+
+            $('.userLeftControllPanel').css('height', '1000px');
+        }, 600);
 
         // Speed up calls to hasOwnProperty
         var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -176,12 +181,18 @@
 			$('.x').click(function(){
 				$('.userLeftControllPanel-sub-sections').addClass('hide');
 				$('.settings').addClass('hide');
+                $('.profileImage').fadeOut(100);
+                console.log('profile image has faded out');
 
-				$('.userLeftControllPanel').animate({
-					"width":"1px",
-					"padding":"0",
-					"margin":"0"
-				}, 400);
+                $('.navbar-phone-number').fadeOut(100);
+                console.log('phone number has faded out');
+
+                $('.userLeftControllPanel').animate({
+                    "width":"1px",
+                    "padding":"0",
+                    "margin":"0"
+                }, 400);
+
 				
 				setTimeout(function(){
 					$('.userLeftControllPanel').fadeOut(100);
@@ -189,9 +200,9 @@
 
 				setTimeout(function(){
 					$('.userLeftControllPanel-arrow').fadeIn(100);
-					$('.userLeftControllPanel-arrow').animate({
-						"width":"10px"
-					}, 200);
+                    $('.userLeftControllPanel-arrow').animate({
+                        "width":"10px"
+                    }, 200);
 				}, 300);
 
 				setTimeout(function(){
@@ -225,6 +236,11 @@
 						"width":"20%",
 						"padding":"2.5%"
 					}, 300);
+
+                $('.profileImage').fadeIn(700);
+                console.log('profile image has faded in');
+                $('.navbar-phone-number').fadeIn(700);
+                console.log('phone number has faded back in');
 
 					setTimeout(function(){
 						$('.userLeftControllPanel-sub-sections').fadeIn(200).removeClass('hide');

@@ -24,6 +24,7 @@
 	<div id="myModal" class="modal"> -->
 		<!-- Modal content -->
 	<div class="modal-content">
+
 			<span class="close">&times;</span>
 
 			<form method="POST" action="{{ action('EventsController@createEvent') }}">
@@ -40,6 +41,7 @@
 						<p>Date: <input type="text" id="datepicker"></p>
 			           	<input type="text" for="date_of_event" placeholder="Date" id="datepicker" value="{{ $errors->has('date_of_event') ? '' : old('date_of_event') }}"> -->
 					</div>
+
 			        <div class="modal-content-div">         
 			            <input for="sent_to" placeholder="Contacts" type="text" name="sent_to" id="sent_to" value="{{ $errors->has('sent_to') ? '' : old('sent_to') }}" autocomplete="off">
 					</div>
