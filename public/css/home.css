@@ -124,21 +124,29 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	color: #114B5F;
 }
 #login {
-	padding: 16px 64px;
+	padding: 16px 0px;
+	width: 150px;
 	background-color: #161B33;
 	color: white;
+	font-size: 13px;
 	border-radius: 4px;
 	transition: 0.5s;
+	text-align: center;
+	display: inline-block;
 }
 #login:hover {
 	opacity: 0.8;
 }
 #register {
-	padding: 15px 55.1px;
+	padding: 16px 0px;
+	width: 150px;
 	background-color: #DE0D92;
 	color: white;
+	font-size: 13px;
 	border-radius: 4px;
 	transition: 0.5s;
+	text-align: center;
+	display: inline-block;	
 }
 #register:hover {
 	opacity: 0.8;
