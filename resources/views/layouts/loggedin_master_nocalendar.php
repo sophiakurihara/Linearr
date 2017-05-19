@@ -23,7 +23,8 @@
 
     <div class="userLeftControllPanel">
         <div class="x">←</div>
-
+        <!-- Upload image for profile picture on click -->
+		<input id="profile-image-upload" class="hidden" type="file">
         <div class="navbar-profile-picture">
             <img src="../../img/default.png" width="50"><span class="navbar-phone-number">818-793-9268</span>
         </div>
@@ -75,6 +76,12 @@
 
 	<script>
 		$(document).ready(function(){
+
+			$(function(){
+    			$('.navbar-profile-picture').on('click', function() {
+        		$('#profile-image-upload').click();
+    			});
+			});
 
 			$('.x').click(function(){
 				$('.userLeftControllPanel-sub-sections').addClass('hide');

@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
+use App\FileUploadException;
 use App\User;
+use App;
 use DB;
 use Session;
 use Auth;
@@ -201,5 +203,27 @@ class UsersController extends Controller
         return redirect()->action('UsersController@settings');
 
         }
+
+    }
+    public function updateProfilePicture(Request $request) {
+    $imageErrors = [];
+    $user = User::find(Auth::id());
+    if($request->uploadPic == null || $request->uploadPic == false ){
+       echo('No data for upload Pic'); 
+    dd($request->uploadPic);    
+    }
+
+
+   try {
+        $request->uploadPic = FileUploadException::saveUploadedImage('uploadPic');
+    } catch (FileUploadException $e) {
+        $imageErrors['image'] = $e->getMessage();
+        return redirect()->action('UsersController@settings')->with(['imageErrors' => $imageErrors]);
+    }
+
+    $user->uploadPic = $request->uploadPic;
+    $user->save();
+
+    return redirect()->action('UsersController@settings');
     }
 }

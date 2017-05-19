@@ -17,19 +17,23 @@
 
 		<tbody class="table-hover">
 			<tr>
+				<form method="POST" enctype="multipart/form-data" action="{{ action('UsersController@updateProfilePicture') }}">
+				{!! csrf_field() !!}
+
+				<!-- {{ method_field('POST')}}  -->
 				<div class="editingRows profilePicture">
 					<a id="profilePictureEdit">
 						<div class="editIcon" id="profilePictureEdit"></div>
 					Profile Picture</a>
 					
-						<button type="submit" name="editPictureButton" class="uploadProfilePic">Upload Picture</button>
+				<!-- form for uploading files -->
+					<input type="file" name="uploadPic" class="uploadProfilePic">
+					<button type="submit" name="editPictureButton" class="uploadProfilePic">Upload Picture</button>
+				</form>
+					
 				
 				</div>
 
-				<!-- form for uploading files -->
-				<!-- 	<form method="POST" enctype="multipart/form-data">
-						<input type="file" name="uploadPic" class="uploadProfilePic ">
-					</form> -->
 				<div class="editingRows firstName">
 					<!-- chosing post method to populate... Choosing what controller function we need to access for the form to work -->
 					<form method="POST" action="{{ action('UsersController@editAccount') }}">

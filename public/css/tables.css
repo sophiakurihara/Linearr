@@ -846,3 +846,14 @@ td.text-right {
   display: none;
 }
 
+input.hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+#settingsMainContainer > div.editingRows.profilePicture > input
+{
+  background-color: white;
+ 
+  display: none;
+}
