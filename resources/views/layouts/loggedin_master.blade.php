@@ -28,7 +28,7 @@
         <div class="x">←</div>
 
         <div class="navbar-profile-picture">
-            <img src="../../img/default.png" width="50" class="profileImage"><span class="navbar-phone-number">818-793-9268</span>
+            <img src="../../img/default.png" width="50" class="profileImage"><span class="navbar-phone-number">{{ Auth::user()->phone }}</span>
         </div>
 
         <div id="myEvents" class="userLeftControllPanel-sub-sections firstControlPanel-sub-section sub-section-text"><a href="/">My Events</a></div>

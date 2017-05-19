@@ -26,7 +26,7 @@
         <!-- Upload image for profile picture on click -->
 		<input id="profile-image-upload" class="hidden" type="file">
         <div class="navbar-profile-picture">
-            <img src="../../img/default.png" width="50"><span class="navbar-phone-number">818-793-9268</span>
+            <img src="../../img/default.png" width="50"><span class="navbar-phone-number">{{ Auth::user()->phone }}</span>
         </div>
 
         <div id="myEvents" class="userLeftControllPanel-sub-sections firstControlPanel-sub-section sub-section-text"><a href="/">My Events</a></div>
