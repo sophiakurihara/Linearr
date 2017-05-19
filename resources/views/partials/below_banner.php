@@ -7,7 +7,7 @@
 </div>
 
 <div style="height: 400px; float: left;">
-	<img style="width: 400px; margin-top: 20px; margin-left: 320px;" src="http://www.freeiconspng.com/uploads/inspiring-typograhic-quotes-png-10.png">
+	<img style="width: 400px; margin-top: 120px; margin-left: 320px;" src="../img/keep_it_simple.png">
 </div>
 
 <div class="footer">
