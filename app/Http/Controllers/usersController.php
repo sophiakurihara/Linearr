@@ -36,6 +36,7 @@ class UsersController extends Controller
         $user->last_name = $request->last_name;
         $user->email = $request->email;
         $user->phone = $request->phone;
+        $user->uploadPic = "img/default.png";
         $user->password = Hash::make($request->password);
 
         $user->save();

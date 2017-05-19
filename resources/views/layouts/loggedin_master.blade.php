@@ -28,7 +28,11 @@
         <div class="x">←</div>
 
         <div class="navbar-profile-picture">
-            <img src="<?= Auth::user()->uploadPic; ?>" width="50" class="profileImage"><span class="navbar-phone-number">{{ Auth::user()->phone }}</span>
+        @if(Auth::user()->uploadPic == "")
+            <img src="../img/default.png" width="50" class="profileImage"><span class="navbar-phone-number">{{ Auth::user()->phone }}</span>
+        @else
+            <img src="../<?= Auth::user()->uploadPic; ?>" width="50" class="profileImage"><span class="navbar-phone-number">{{ Auth::user()->phone }}</span>
+        @endif
         </div>
 
         <div id="myEvents" class="userLeftControllPanel-sub-sections firstControlPanel-sub-section sub-section-text"><a href="/">My Events</a></div>
