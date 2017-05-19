@@ -88,9 +88,6 @@
 			</table>
 		</div>
 	</div>
-<<<<<<< HEAD
-=======
-
 	<div id="myModal" class="modal">
 		 <!-- Modal content -->
 		<div class="modal-content">
@@ -119,7 +116,6 @@
 		</div>
 	</div> 
 
->>>>>>> master
 @stop
 @section('js')
 <script>
