@@ -9,10 +9,11 @@
 .vigleyLogo
 {
 
-	height: 60px;
+	height: 40px;
 	width: 100%;
 	margin: auto;
-	padding-top: 6px;
+	margin-top: 10px;
+	padding-top: 16px;
 	background-image: url('/img/Vigley.png');
 	background-position: center center;
 	-webkit-background-size: contain;

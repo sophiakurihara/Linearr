@@ -11,6 +11,20 @@
         <link rel="stylesheet" href="/css/footer.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        .footer {
+            height: 170px;
+            padding-bottom: 60px;
+            width: 100%;
+            clear:left;
+            margin-top: 200px;
+            background-color: black;
+            position: fixed; 
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        </style>
         @yield ('additional_css')
 </head>
 <body>
@@ -32,5 +46,12 @@
   <!-- jQuery JS -->
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+
+    <script>
+    var footerResize = function() {
+        $('.footer').css('position', $("body").height() + $("#footer").innerHeight() > $(window).height() ? "inherit" : "fixed");
+    };
+    $(window).resize(footerResize).ready(footerResize);
+    </script>
 </body>
 </html>
