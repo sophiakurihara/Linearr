@@ -259,6 +259,7 @@ textarea
     float: right;
     font-size: 28px;
     font-weight: bold;
+    margin-top: -4px;
 }
 
 .close:hover,
@@ -280,6 +281,8 @@ textarea
 	float: right;
 	color: #114B5F;
     display: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 
 .x:hover {
