@@ -33,46 +33,25 @@ class EventsController extends Controller
         {
             return redirect()->action('UsersController@displayHomepage');
         }
-        if(isset($request->titleButton))
+        if(isset($request->title) && isset($request->description) && isset($request->date_of_event) && isset($request->sent_to))
         {
-            $rules = array('title' => 'required|max:150');
+            $rules = array(
+                'title' => 'max:150',
+                'description' => 'max:150',
+                'date_of_event' => 'date',
+                'sent_to' => 'min:10'
+            );
             $this->validate($request, $rules);
             $event = Event::find($id);
             $event->title = $request->title;
-            $event->save();
-
-            return redirect()->action('EventsController@index');
-        }
-        if(isset($request->descriptionButton))
-        {
-            $rules = array('description' => 'required|max:150');
-            $this->validate($request, $rules);
-            $event = Event::find($id);
             $event->description = $request->description;
-            $event->save();
-
-            return redirect()->action('EventsController@index');
-        }
-        if(isset($request->dateButton))
-        {
-            $rules = array('date_of_event' => 'required|date');
-            $this->validate($request, $rules);
-            $event = Event::find($id);
             $event->date_of_event = $request->date_of_event;
-            $event->save();
-
-            return redirect()->action('EventsController@index');
-        }
-        if(isset($request->sentButton))
-        {
-            $rules = array('sent_to' => 'required');
-            $this->validate($request, $rules);
-            $event = Event::find($id);
             $event->sent_to = $request->sent_to;
             $event->save();
 
             return redirect()->action('EventsController@index');
         }
+        return redirect()->action('EventsController@index');
     }
      public function showCreateEvent()
     {

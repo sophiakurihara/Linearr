@@ -28,64 +28,48 @@
 				<th class="text-left">Description</th>
 				<th class="text-left">Date of Event</th>
 				<th class="text-left">Sent To</th>
+				<th class="text-left">Save</th>
 			</tr>
 			</thead>
 
 			<tbody class="table-hover">
 			@foreach($events as $event)
 				<tr>
-					<td class="<?= 'text-left-manage-' . $i ?>" data-id="<?= $i; ?>" onmouseover="hoverOverColumn('<?= $i; ?>')" >
-						<form method="POST" action="{{ action('EventsController@editEvent', $event->id) }}">
-							{!! csrf_field() !!}
-							{{ method_field('PUT') }}
-							<a id="titleEdit">
-								{{ $event->title}}
-								<div class="<?='editEventsIcon-' . $i ?> eventsIcon" data-id="<?= $i; ?>" onclick="showInputForEditing('<?= $i; ?>')"></div>
-							</a>
-							<input type="text" name="title" data-id="<?= $i; ?>" class="<?= 'editTitle-' . $i ?> ">
-							<button type="submit" data-id="<?= $i; ?>" name="titleButton" class="<?= 'saveTitle-' . $i ?>">Save</button>
-						</form>
-					</td>
-
 					<td class="text-left-manage">
 						<form method="POST" action="{{ action ('EventsController@editEvent', $event->id) }}">
-							{!! csrf_field() !!}
-							{{ method_field('PUT') }}
+						{!! csrf_field() !!}
+						{{ method_field('PUT') }}
 							<a id="descriptionEdit">
-								{{ $event->description}}
 								<div class="editEventsIcon" data-id="<?= $i; ?>"></div>
 							</a>
-							<input type="text" name="description" class="editDescription">
-							<button type="submit" data-id="<?= $i; ?>" name="descriptionButton" class="saveDescription">Save</button>
-						</form>
+							<input type="text" name="title" class="editDescription" value="{{ $event->title }}">
 					</td>
 
 					<td class="text-left-manage">
-						<form method="POST" action="{{ action ('EventsController@editEvent', $event->id) }}">
-							{!! csrf_field() !!}
-							{{ method_field('PUT') }}
+							<a id="descriptionEdit">
+								<div class="editEventsIcon" data-id="<?= $i; ?>"></div>
+							</a>
+							<input type="text" name="description" class="editDescription" value="{{ $event->description }}">
+					</td>
+
+					<td class="text-left-manage">
 							<a id="dateEdit">
-								{{ $event->date_of_event}}
 								<div class="editEventsIcon" data-id="<?= $i; ?>"></div>
 							</a>
-							<input type="text" name="date_of_event" class="editDate">
-							<button type="submit" data-id="<?= $i; ?>" name="dateButton" class="saveDate">Save</button>
-						</form>
+							<input type="text" name="date_of_event" class="editDescription" value="{{ $event->date_of_event }}">
 					</td>
 
 					<td class="text-left-manage">
-						<form method="POST" action="{{ action('EventsController@editEvent', $event->id) }}">
-							{!! csrf_field() !!}
-							{{ method_field('PUT') }}
-							<a id="sentEdit">
-								{{ $event->sent_to}}
-								<div class="editEventsIcon-" data-id="<?= $i; ?>" onclick="showInputForEditing('<?= $i; ?>')"></div>
+							<a id="dateEdit">
+								<div class="editEventsIcon" data-id="<?= $i; ?>"></div>
 							</a>
-							<input type="text" name="sent_to" class="<?= 'editSent-' . $i ?>">
-							<button type="submit" data-id="<?= $i; ?>" name="sentButton" class="saveSent">Save</button>
-						</form>
+							<input type="text" name="sent_to" class="editDescription" value="{{ $event->sent_to }}">
+					</td>
+					<td class="text-left-manage">
+						<button type="submit" data-id="<?= $i; ?>" name="sentButton" class="saveSent">Save</button>
 					</td>
 				</tr>
+						</form>
 				<?php $i++; ?>
 			@endforeach
 			</tbody>

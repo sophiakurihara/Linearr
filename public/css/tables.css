@@ -494,6 +494,7 @@ td:last-child {
 }
 
 th.text-left {
+  color: white;
   text-align: left;
 }
 
@@ -508,6 +509,7 @@ th.text-right {
 }
 
 td.text-left {
+  color: black;
   text-align: left;
 }
 
@@ -527,8 +529,9 @@ td.text-right {
   display: none;
 }
 
-.editDescription-0 {
-  display: none;
+input.editDescription {
+  border-bottom: none;
+  margin-bottom: -6px;
 }
 
 .editDate-0 {
@@ -551,8 +554,18 @@ td.text-right {
   display: none;
 }
 
-.saveSent-0 {
-  display: none;
+.saveSent {
+  background-color: #1B1E24;
+  color: white;
+  border: 0px;
+  text-transform: lowercase;
+  font-size: 14px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: 0.4s;
+}
+.saveSent:hover {
+  opacity: 0.7;
 }
 
 .editTitle-1 {
