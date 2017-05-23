@@ -99,6 +99,7 @@ ul {list-style-type: none;}
 	float: left;
     padding: 2% 4%;
     display: none;
+    box-shadow: -10px 0px 10px 0px rgba(0,0,0,0.4);
 }
 /* Month header */
 .month {
@@ -283,6 +284,10 @@ textarea
     display: none;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
+    position: relative;
+    z-index: 44441;
+    display: block;
+    box-shadow: -6px 0px 6px 0px rgba(0,0,0,0.4);
 }
 
 .x:hover {
