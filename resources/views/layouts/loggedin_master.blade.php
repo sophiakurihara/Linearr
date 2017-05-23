@@ -241,10 +241,13 @@
 						"padding":"2.5%"
 					}, 300);
 
-                $('.profileImage').fadeIn(700);
-                console.log('profile image has faded in');
-                $('.navbar-phone-number').fadeIn(700);
-                console.log('phone number has faded back in');
+                setTimeout(function(){
+                    $('.profileImage').fadeIn(700);
+                    console.log('profile image has faded in');
+                    $('.navbar-phone-number').fadeIn(700);
+                    console.log('phone number has faded back in');
+
+                }, 410);
 
 					setTimeout(function(){
 						$('.userLeftControllPanel-sub-sections').fadeIn(200).removeClass('hide');

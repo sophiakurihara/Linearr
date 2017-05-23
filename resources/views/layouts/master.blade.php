@@ -41,8 +41,6 @@
 
   <!-- jQuery JS -->
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-
     <script>
     var footerResize = function() {
         $('#footer').css('position', $("body").height() + $("#footer").innerHeight() > $(window).height() ? "inherit" : "fixed");

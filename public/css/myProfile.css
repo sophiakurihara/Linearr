@@ -31,6 +31,7 @@ textarea#description {
 	float: left;
 	padding: 2.5%;
 	background-color: #114b5f;
+    box-shadow: inset -12px 0 40px -12px rgba(0,0,0,0.4);
 }
 
 .userLeftControllPanel-arrow
@@ -99,7 +100,6 @@ ul {list-style-type: none;}
 	float: left;
     padding: 2% 4%;
     display: none;
-    box-shadow: -10px 0px 10px 0px rgba(0,0,0,0.4);
 }
 /* Month header */
 .month {
@@ -284,10 +284,7 @@ textarea
     display: none;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-    position: relative;
-    z-index: 44441;
     display: block;
-    box-shadow: -6px 0px 6px 0px rgba(0,0,0,0.4);
 }
 
 .x:hover {
@@ -461,7 +458,7 @@ label
 span.navbar-phone-number {
     font-family: 'Open Sans', sans-serif;
     color: whitesmoke;
-    font-size: 16px;
+    font-size: 14px;
     padding-left: 20px;
 }
 
