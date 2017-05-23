@@ -31,7 +31,7 @@ textarea#description {
 	float: left;
 	padding: 2.5%;
 	background-color: #114b5f;
-    box-shadow: inset -12px 0 40px -12px rgba(0,0,0,0.4);
+    box-shadow: inset -12px 0 40px -12px rgba(0,0,0,0.6);
 }
 
 .userLeftControllPanel-arrow
